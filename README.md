@@ -4,9 +4,12 @@ Adds a menu to the Finder that allows control over files stored iCloud, allowing
 
 ![](Docs/screenshot.png)
 
+## Now updated for Apple silicon!
+Version 1.3 of iCloud Control allows for native execution on Macs based on Apple silicon. This new version also provides support for Swift 5.
+
 ## Installation
 
-- [Download the latest version here](https://github.com/Obbut/iCloud-Control/releases)
+- [Download the latest version here](https://github.com/Njmcq/iCloud-Control/releases)
 - Place the app in your Applications folder
 - Launch it by right/control clicking and choosing "Open" (to prevent gatekeeper from preventing the app to open) and follow the instructions on screen
 
@@ -20,7 +23,7 @@ The following options are provided trough a toolbar item in the Finder.
 
 ## Compatibility
 
-iCloud Control should work on macOS 10.2 Sierra, and on OS X 10.11 El Capitan.
+iCloud Control 1.3 is compatible with macOS 11 Big Sur and above. Users who wish to use iCloud Control on 10.15 or below may do so with version 1.2 published by @Obbut, found at https://github.com/Obbut/iCloud-Control/releases
 
 ## License
 
@@ -30,7 +33,7 @@ iCloud Control is licensed under the MIT license. In addition to the restriction
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Robbert Brandsma
+Copyright (c) 2016 Robbert Brandsma; (c) 2022 Nick McQuade
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
