@@ -18,7 +18,7 @@ Version 1.3 of iCloud Control allows for native execution on Macs based on Apple
 The following options are provided trough a toolbar item in the Finder.
 
 - **Remove selected item locally**: the selected item(s) will be removed from your device, while remaining in iCloud.
-- **Download selected item**: download previously removed files from iCloud. On macOS Sierra, the cloud icon provides the same functionality.
+- **Download selected item**: download previously removed files from iCloud.
 - **Publish public link**: places a link to the selected file in your clipboard.
 
 ## Compatibility
