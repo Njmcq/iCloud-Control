@@ -5,56 +5,54 @@
       "scale" : "1x"
     },
     {
-      "idiom" : "mac",
-      "scale" : "1x",
       "appearances" : [
         {
           "appearance" : "luminosity",
           "value" : "light"
         }
-      ]
+      ],
+      "idiom" : "mac",
+      "scale" : "1x"
     },
     {
-      "idiom" : "mac",
-      "scale" : "1x",
       "appearances" : [
         {
           "appearance" : "luminosity",
           "value" : "dark"
         }
-      ]
+      ],
+      "idiom" : "mac",
+      "scale" : "1x"
     },
     {
       "idiom" : "mac",
-      "filename" : "cloud-1.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "mac",
-      "scale" : "2x",
       "appearances" : [
         {
           "appearance" : "luminosity",
           "value" : "light"
         }
-      ]
+      ],
+      "filename" : "icloudcontrol1.3-64.png",
+      "idiom" : "mac",
+      "scale" : "2x"
     },
     {
-      "idiom" : "mac",
-      "scale" : "2x",
       "appearances" : [
         {
           "appearance" : "luminosity",
           "value" : "dark"
         }
-      ]
+      ],
+      "filename" : "icloudcontrol1.3-64-darkmode.png",
+      "idiom" : "mac",
+      "scale" : "2x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
-  },
-  "properties" : {
-    "template-rendering-intent" : "template"
+    "author" : "xcode",
+    "version" : 1
   }
 }
