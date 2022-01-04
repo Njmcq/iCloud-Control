@@ -11,15 +11,21 @@ Version 1.3 of iCloud Control allows for native execution on Macs based on Apple
 
 - [Download the latest version here](https://github.com/Njmcq/iCloud-Control/releases)
 - Place the app in your Applications folder
-- Launch it by right/control clicking and choosing "Open" (to prevent gatekeeper from preventing the app to open) and follow the instructions on screen
+- Launch it by right/control clicking and choosing "Open" (to prevent Gatekeeper from preventing the app to open) and follow the instructions on screen
 
 ## Usage
 
-The following options are provided trough a toolbar item in the Finder.
+The following options are provided through a toolbar item in the Finder.
 
 - **Remove selected item locally**: the selected item(s) will be removed from your device, while remaining in iCloud.
 - **Download selected item**: download previously removed files from iCloud.
 - **Publish public link**: places a link to the selected file in your clipboard.
+
+While Apple incorporated similar functionality into macOS 10.15 Catalina, the native method does not allow for removing local selected items in bulk if the mass selection includes files already removed.
+
+![](Docs/locally-bulked-issue.png)
+
+iCloud Control solves this, and allows for the removal of a selection of files even if already-removed files exist.
 
 ## Compatibility
 
