@@ -2,7 +2,7 @@
 
 Adds a menu to the Finder that allows control over files stored iCloud, allowing user-controlled selective synchronization.
 
-![](Docs/screenshot.png)
+![](Docs/new-screenshot.png)
 
 ## Now updated for Apple silicon!
 Version 1.3 of iCloud Control allows for native execution on Macs based on Apple silicon. This new version also provides support for Swift 5.
