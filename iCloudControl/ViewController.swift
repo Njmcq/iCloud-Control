@@ -12,7 +12,8 @@ import Cocoa
 class ViewController: NSViewController {
 
     @IBAction func openSystemPreferences(_ sender: AnyObject) {
-        NSWorkspace.shared.openFile("/System/Library/PreferencePanes/Extensions.prefPane")
+    NSWorkspace.shared.open(URL(fileURLWithPath:("/System/Library/PreferencePanes/Extensions.prefPane")
+                        ))
     }
 
 }
