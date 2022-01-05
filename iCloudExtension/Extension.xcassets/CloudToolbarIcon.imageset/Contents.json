@@ -35,7 +35,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "cloud-1.png",
+      "filename" : "icloudcontrol1.3-toolbar-lightmode.png",
       "idiom" : "mac",
       "scale" : "2x"
     },
@@ -46,7 +46,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "cloud-2.png",
+      "filename" : "icloudcontrol1.3-toolbar-darkmode.png",
       "idiom" : "mac",
       "scale" : "2x"
     }

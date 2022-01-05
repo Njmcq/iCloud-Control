@@ -86,11 +86,11 @@
             <objects>
                 <viewController title="iCloud Control" id="XfG-lQ-9wD" customClass="ViewController" customModule="iCloud_Control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="916" height="903"/>
+                        <rect key="frame" x="0.0" y="0.0" width="918" height="903"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-dW-aai">
-                                <rect key="frame" x="395" y="855" width="127" height="28"/>
+                                <rect key="frame" x="396" y="855" width="127" height="28"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Hello there!" id="0r4-5a-Be9">
                                     <font key="font" metaFont="system" size="24"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -98,19 +98,19 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DK5-zi-dcO">
-                                <rect key="frame" x="79" y="831" width="759" height="16"/>
-                                <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="To get started, enable the iCloud Control finder extension in System Preferences. You can then close this app and get going!" id="5MP-A7-IYf">
+                                <rect key="frame" x="79" y="787" width="761" height="16"/>
+                                <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="To get started, enable the iCloud Control Finder extension in System Preferences. You can then close this app and get going!" id="5MP-A7-IYf">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mHR-u6-m2f">
-                                <rect key="frame" x="0.0" y="0.0" width="916" height="771"/>
+                                <rect key="frame" x="0.0" y="0.0" width="918" height="771"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="SysprefScreenshot" id="2OD-uQ-xS0"/>
                             </imageView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Sq-N1Q">
-                                <rect key="frame" x="362" y="784" width="192" height="32"/>
+                                <rect key="frame" x="363" y="744" width="192" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open System Preferences" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fZL-4i-FEA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -119,20 +119,31 @@
                                     <action selector="openSystemPreferences:" target="XfG-lQ-9wD" id="Ixn-BB-CYm"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3lO-e5-sc3">
+                                <rect key="frame" x="282" y="814" width="355" height="33"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Welcome to iCloud Control!" id="hsR-bQ-JpV">
+                                    <font key="font" metaFont="systemSemibold" size="28"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="DK5-zi-dcO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="80" id="7gZ-sF-k9L"/>
                             <constraint firstAttribute="trailing" secondItem="mHR-u6-m2f" secondAttribute="trailing" id="9IP-zg-BEI"/>
-                            <constraint firstItem="mHR-u6-m2f" firstAttribute="top" secondItem="vJp-Sq-N1Q" secondAttribute="bottom" constant="20" id="CzJ-9D-hZU"/>
-                            <constraint firstItem="DK5-zi-dcO" firstAttribute="top" secondItem="Byb-dW-aai" secondAttribute="bottom" constant="8" id="L0K-gR-xnj"/>
+                            <constraint firstItem="mHR-u6-m2f" firstAttribute="top" secondItem="vJp-Sq-N1Q" secondAttribute="bottom" constant="-20" id="CzJ-9D-hZU"/>
+                            <constraint firstItem="DK5-zi-dcO" firstAttribute="top" secondItem="Byb-dW-aai" secondAttribute="bottom" constant="52" id="L0K-gR-xnj"/>
                             <constraint firstItem="Byb-dW-aai" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="NF5-7b-g69"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DK5-zi-dcO" secondAttribute="trailing" constant="80" id="T3j-ll-EJX"/>
                             <constraint firstItem="mHR-u6-m2f" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="WsV-5O-XV9"/>
                             <constraint firstAttribute="bottom" secondItem="mHR-u6-m2f" secondAttribute="bottom" id="XiS-DK-BUa"/>
                             <constraint firstItem="vJp-Sq-N1Q" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Zei-l1-cpl"/>
+                            <constraint firstItem="3lO-e5-sc3" firstAttribute="top" secondItem="Byb-dW-aai" secondAttribute="bottom" constant="8" symbolic="YES" id="eTp-55-b8S"/>
+                            <constraint firstItem="3lO-e5-sc3" firstAttribute="centerX" secondItem="DK5-zi-dcO" secondAttribute="centerX" id="fDZ-FZ-WI5"/>
                             <constraint firstItem="DK5-zi-dcO" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fan-vt-LY7"/>
                             <constraint firstItem="Byb-dW-aai" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="hrQ-Ty-vIq"/>
-                            <constraint firstItem="vJp-Sq-N1Q" firstAttribute="top" secondItem="DK5-zi-dcO" secondAttribute="bottom" constant="20" id="wec-3t-AHH"/>
+                            <constraint firstItem="3lO-e5-sc3" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="n1n-VN-afJ"/>
+                            <constraint firstItem="vJp-Sq-N1Q" firstAttribute="top" secondItem="DK5-zi-dcO" secondAttribute="bottom" constant="16" id="wec-3t-AHH"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -142,6 +153,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SysprefScreenshot" width="780" height="620"/>
+        <image name="SysprefScreenshot" width="780" height="634"/>
     </resources>
 </document>
