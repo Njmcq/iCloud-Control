@@ -35,7 +35,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "icloudcontrol1.3-toolbar-lightmode.png",
+      "filename" : "icloudcontrol1.3-toolbar-darkmode.png",
       "idiom" : "mac",
       "scale" : "2x"
     },
@@ -46,7 +46,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "icloudcontrol1.3-toolbar-darkmode.png",
+      "filename" : "icloudcontrol1.3-toolbar-lightmode.png",
       "idiom" : "mac",
       "scale" : "2x"
     }
@@ -54,5 +54,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "template"
   }
 }
