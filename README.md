@@ -29,7 +29,7 @@ iCloud Control solves this, and allows for the removal of a selection of files e
 
 ## Compatibility
 
-iCloud Control 1.3 is compatible with macOS 11 Big Sur and above. Users who wish to use iCloud Control on 10.15 or below may do so with version 1.2 published by @Obbut, found at https://github.com/Obbut/iCloud-Control/releases
+iCloud Control 1.3 is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2 published by @Obbut, found at https://github.com/Obbut/iCloud-Control/releases
 
 ## License
 
