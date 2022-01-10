@@ -1,6 +1,6 @@
 # iCloud Control
 
-Adds a menu to the Finder that allows control over files stored iCloud, allowing user-controlled selective synchronization.
+Adds a menu to the Finder that allows control over files stored in iCloud, allowing user-controlled selective synchronisation.
 
 ![](Docs/new-screenshot.png)
 
