@@ -11,7 +11,7 @@ Version 1.3 of iCloud Control allows for native execution on Macs based on Apple
 
 - [Download the latest version here](https://github.com/Njmcq/iCloud-Control/releases)
 - Place the app in your Applications folder
-- Launch it by right/control clicking and choosing "Open" (to prevent Gatekeeper from preventing the app to open) and follow the instructions on screen
+- Launch it by right/control clicking and choosing "Open" (to keep Gatekeeper from preventing the app to open) and follow the instructions on screen
 
 ## Usage
 
@@ -21,6 +21,9 @@ The following options are provided through a toolbar item in the Finder.
 - **Download selected item**: download previously removed files from iCloud.
 - **Publish public link**: places a link to the selected file in your clipboard.
 - **Exclude selected item from iCloud**: using the .nosync file extension, files in an iCloud-based directory will not sync with the service.
+
+***And soon to be released:*** 
+- **Restore selected item from iCloud**: reverts the .nosync file extension, even if iCloud Control did not generate it.
 
 While Apple incorporated similar functionality into macOS 10.15 Catalina, the native method does not allow for removing local selected items in bulk if the mass selection includes files already removed.
 
