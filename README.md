@@ -35,6 +35,22 @@ iCloud Control solves this, and allows for the removal of a selection of files e
 
 iCloud Control 1.3 is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2 published by @Obbut, found at https://github.com/Obbut/iCloud-Control/releases
 
+## Known Issues
+### Disappearing Finder Extension
+**Issue:** Finder extensions icon may disappear after repeated use.
+
+**Workaround:** Open System Preferences > Extensions, and disable iCloud Control from the Added Extensions or Finder Extensions categories. Then open the Apple menu () > Force Quit (Command-Option-Escape) and relaunch the Finder. Then re-enable iCloud Control from System Preferences.
+
+**Resolution:** To be addressed in release 1.3.0.5
+
+---
+### Issue with 'Exclude selected item from iCloud' option
+**Issue:** 'Exclude selected item from iCloud' hides files and thus makes them inaccessible to the general user.
+
+**Workaround:** In the Finder, press Command-Shift-.(period). This will enable visibility of all hidden files and folders within the Finder. Open the directory of your missing file, right-click on the now-present file and select 'Get Info'. Change the file extension proceeding the file's name to remove the '.nosync' extension (but **DO NOT** remove any other extension, such as _.png_, _.jpg_, _.pdf_, etc)
+
+**Resolution:** To be addressed in release 1.3.0.5 with better transparency to the user, and an option to restore any files which are kept as '.nosync'
+
 ## License
 
 iCloud Control is licensed under the MIT license. In addition to the restrictions placed by the MIT license, **you are not permitted and will not get permission to list iCloud Control or any derivative work on software catalogue websites like Mac Informer or MacUpdate.**
