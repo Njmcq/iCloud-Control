@@ -37,11 +37,11 @@ iCloud Control 1.3 is compatible with macOS 10.13 and above. Users who wish to u
 
 ## Known Issues
 ### Disappearing Finder Extension
-**Issue:** Finder extensions icon may disappear after repeated use.
+**Issue:** iCloud Control Finder extension may crash under excessive-load, or due to bugs
 
 **Workaround:** 
 Relaunch both iCloud Control and the Finder, and re-add the extension to the Finder toolbar.
-If this does not work, also try the following: open System Preferences > Extensions, and disable iCloud Control from the Added Extensions or Finder Extensions categories. Then open the Apple menu () > Force Quit (Command-Option-Escape) and relaunch the Finder. Then re-enable iCloud Control from System Preferences.
+If this does not work, also try the following: open System Preferences > Extensions, and disable iCloud Control from the Added Extensions or Finder Extensions categories. Then open the Apple menu () > Force Quit (Command-Option-Escape) and relaunch both the Finder and iCloud Control. Then re-enable iCloud Control from System Preferences, and reopen both the app and the Finder.
 
 **Resolution:** To be addressed in release 1.3.0.5
 
