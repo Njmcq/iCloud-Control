@@ -36,8 +36,8 @@ iCloud Control solves this, and allows for the removal of a selection of files e
 iCloud Control 1.3 is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2 published by @Obbut, found at https://github.com/Obbut/iCloud-Control/releases
 
 ## Known Issues
-### Disappearing Finder Extension
-**Issue:** iCloud Control Finder extension may crash under excessive-load, or due to bugs
+### Crashing Finder Extension
+**Issue:** iCloud Control Finder extension may crash when experiencing an error
 
 **Workaround:** 
 Relaunch both iCloud Control and the Finder, and re-add the extension to the Finder toolbar.
