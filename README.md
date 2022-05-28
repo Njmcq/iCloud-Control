@@ -22,28 +22,35 @@ The following options are provided through a toolbar item in the Finder.
 - **Publish public link**: places a link to the selected file in your clipboard.
 - **Exclude selected item from iCloud**: using the .nosync file extension, files in an iCloud-based directory will not sync with the service.
 
-***And soon to be released:*** 
-- **Restore selected item from iCloud**: reverts the .nosync file extension, even if iCloud Control did not generate it.
 
 While Apple incorporated similar functionality into macOS 10.15 Catalina, the native method does not allow for removing local selected items in bulk if the mass selection includes files already removed.
 
 ![](Docs/locally-bulked-issue.png)
 
-iCloud Control solves this, and allows for the removal of a selection of files even if already-removed files exist.
+iCloud Control solves this, and allows for the removal of a selection of files even if already-removed files exist
 
 ## Compatibility
 
 iCloud Control 1.3 is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2 published by @Obbut, found at https://github.com/Obbut/iCloud-Control/releases
 
 ## Known Issues
-### Crashing Finder Extension
+### Potential conflicts with ScreenFlow file types
+**Issue:** iCloud Control may cause files to inadvertently revert to older versions
+
+**Workaround:**
+While this is not confirmed to be related to iCloud Control, users who wish to use ScreenFlow files are advised to either make regular backups of their files, store ScreenFlow files outside of iCloud Drive, or uninstall iCloud Control (inclusive of versions 1.3, 1.2 and earlier)
+
+**Resolution:** iCloud Control to provide warning before interacting with ScreenFlow file types. To be published in future release
+
+---
+### Crashing Finder extension
 **Issue:** iCloud Control Finder extension may crash when experiencing an error
 
 **Workaround:** 
 Relaunch both iCloud Control and the Finder, and re-add the extension to the Finder toolbar.
 If this does not work, also try the following: open System Preferences > Extensions, and disable iCloud Control from the Added Extensions or Finder Extensions categories. Then open the Apple menu () > Force Quit (Command-Option-Escape) and relaunch both the Finder and iCloud Control. Then re-enable iCloud Control from System Preferences, and reopen both the app and the Finder.
 
-**Resolution:** To be addressed in release 1.3.0.5
+**Resolution:** To be addressed in future release
 
 ---
 ### Issue with 'Exclude selected item from iCloud' option
@@ -51,7 +58,7 @@ If this does not work, also try the following: open System Preferences > Extensi
 
 **Workaround:** In the Finder, press Command-Shift-.(period). This will enable visibility of all hidden files and folders within the Finder. Open the directory of your missing file, right-click on the now-present file and select 'Get Info'. Change the file extension proceeding the file's name to remove the '.nosync' extension (but **DO NOT** remove any other extension, such as _.png_, _.jpg_, _.pdf_, etc)
 
-**Resolution:** To be addressed in release 1.3.0.5 with better transparency to the user, and an option to restore any files which are kept as '.nosync'
+**Resolution:** To be addressed in future release with better transparency to the user, and an option to restore any files which are kept as '.nosync'
 
 ## License
 
