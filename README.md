@@ -20,8 +20,6 @@ The following options are provided through a toolbar item in the Finder.
 - **Remove selected item locally**: the selected item(s) will be removed from your device, while remaining in iCloud.
 - **Download selected item**: download previously removed files from iCloud.
 - **Publish public link**: places a link to the selected file in your clipboard.
-- **Exclude selected item from iCloud**: using the .nosync file extension, files in an iCloud-based directory will not sync with the service.
-
 
 While Apple incorporated similar functionality into macOS 10.15 Catalina, the native method does not allow for removing local selected items in bulk if the mass selection includes files already removed.
 
@@ -34,13 +32,13 @@ iCloud Control solves this, and allows for the removal of a selection of files e
 iCloud Control 1.3 is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2 published by @Obbut, found at https://github.com/Obbut/iCloud-Control/releases
 
 ## Known Issues
-### Potential conflicts with ScreenFlow file types
-**Issue:** iCloud Control may cause files to inadvertently revert to older versions
+### MAJOR - Potential for files to revert to older versions
+**Issue:** iCloud Control may cause files to inadvertently revert to older versions. This issue is only based on a single user report.
 
-**Workaround:**
-While this is not confirmed to be related to iCloud Control, users who wish to use ScreenFlow files are advised to either make regular backups of their files, store ScreenFlow files outside of iCloud Drive, or uninstall iCloud Control (inclusive of versions 1.3, 1.2 and earlier)
+**Disclaimer:**
+While this is not confirmed to be related to iCloud Control, users who wish to use iCloud Control are advised to proceed with caution. Any data which is stored on the same device that iCloud Control is installed is stored at the user's own risk. If you do not wish to agree to these terms, please uninstall iCloud Control.
 
-**Resolution:** iCloud Control to provide warning before interacting with ScreenFlow file types. To be published in future release
+**but...:** If you agree to these terms, please feel free to email me at nick.mcq100@icloud.com for a copy of the app. Releases are not stored in this repository anymore as to protect users who choose to ignore this README file and disclaimer.
 
 ---
 ### Crashing Finder extension
