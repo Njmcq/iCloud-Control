@@ -9,7 +9,7 @@ Version 1.3 of iCloud Control allows for native execution on Macs based on Apple
 
 ## Installation
 
-- [Download the latest version here](https://github.com/Njmcq/iCloud-Control/releases)
+- Download the latest version by emailing me at [nick.mcq100@icloud.com](mailto:nick.mcq100@icloud.com)
 - Place the app in your Applications folder
 - Launch it by right/control clicking and choosing "Open" (to keep Gatekeeper from preventing the app to open) and follow the instructions on screen
 
