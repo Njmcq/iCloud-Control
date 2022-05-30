@@ -56,7 +56,7 @@ If this does not work, also try the following: open System Preferences > Extensi
 
 **Workaround:** In the Finder, press Command-Shift-.(period). This will enable visibility of all hidden files and folders within the Finder. Open the directory of your missing file, right-click on the now-present file and select 'Get Info'. Change the file extension proceeding the file's name to remove the '.nosync' extension (but **DO NOT** remove any other extension, such as _.png_, _.jpg_, _.pdf_, etc)
 
-**Resolution:** To be addressed in future release with better transparency to the user, and an option to restore any files which are kept as '.nosync'
+**Resolution:** Feature to be removed in a future release
 
 ## License
 
