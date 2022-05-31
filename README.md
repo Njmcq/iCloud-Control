@@ -9,7 +9,7 @@ Version 1.3 of iCloud Control allows for native execution on Macs based on Apple
 
 ## Installation
 
-- Download the latest version by reading the Known Issues section below to confirm that you accept the risks.
+- [Download the latest version here](https://github.com/Njmcq/iCloud-Control/releases)
 - Place the app in your Applications folder
 - Launch it by right/control clicking and choosing "Open" (to keep Gatekeeper from preventing the app to open) and follow the instructions on screen
 
@@ -20,35 +20,27 @@ The following options are provided through a toolbar item in the Finder.
 - **Remove selected item locally**: the selected item(s) will be removed from your device, while remaining in iCloud.
 - **Download selected item**: download previously removed files from iCloud.
 - **Publish public link**: places a link to the selected file in your clipboard.
+- **Exclude selected item from iCloud**: using the .nosync file extension, files in an iCloud-based directory will not sync with the service.
 
 While Apple incorporated similar functionality into macOS 10.15 Catalina, the native method does not allow for removing local selected items in bulk if the mass selection includes files already removed.
 
 ![](Docs/locally-bulked-issue.png)
 
-iCloud Control solves this, and allows for the removal of a selection of files even if already-removed files exist
+iCloud Control solves this, and allows for the removal of a selection of files even if already-removed files exist.
 
 ## Compatibility
 
 iCloud Control 1.3 is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2 published by @Obbut, found at https://github.com/Obbut/iCloud-Control/releases
 
 ## Known Issues
-### MAJOR - Potential for files to revert to older versions
-**Issue:** iCloud Control may cause files to inadvertently revert to older versions. This issue is only based on a single user report.
-
-**Disclaimer:**
-While this is not confirmed to be related to iCloud Control, users who wish to use iCloud Control are advised to proceed with caution. Any data which is stored on the same device that iCloud Control is installed is stored at the user's own risk. If you do not wish to agree to these terms, please uninstall iCloud Control.
-
-**but...:** If you agree to these terms, please feel free to email me at nick.mcq100@icloud.com for a copy of the app. Releases are not stored in this repository anymore as to protect users who choose to ignore this README file and disclaimer.
-
----
-### Crashing Finder extension
+### Crashing Finder Extension
 **Issue:** iCloud Control Finder extension may crash when experiencing an error
 
 **Workaround:** 
 Relaunch both iCloud Control and the Finder, and re-add the extension to the Finder toolbar.
 If this does not work, also try the following: open System Preferences > Extensions, and disable iCloud Control from the Added Extensions or Finder Extensions categories. Then open the Apple menu () > Force Quit (Command-Option-Escape) and relaunch both the Finder and iCloud Control. Then re-enable iCloud Control from System Preferences, and reopen both the app and the Finder.
 
-**Resolution:** To be addressed in future release
+**Resolution:** To be addressed in release 1.3.1
 
 ---
 ### Issue with 'Exclude selected item from iCloud' option
@@ -56,7 +48,7 @@ If this does not work, also try the following: open System Preferences > Extensi
 
 **Workaround:** In the Finder, press Command-Shift-.(period). This will enable visibility of all hidden files and folders within the Finder. Open the directory of your missing file, right-click on the now-present file and select 'Get Info'. Change the file extension proceeding the file's name to remove the '.nosync' extension (but **DO NOT** remove any other extension, such as _.png_, _.jpg_, _.pdf_, etc)
 
-**Resolution:** Feature to be removed in a future release
+**Resolution:** To be addressed in release 1.3.0.5 with better transparency to the user, and an option to restore any files which are kept as '.nosync'
 
 ## License
 
