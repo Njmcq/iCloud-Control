@@ -3,17 +3,29 @@
 //  iCloudExtension
 //
 //  Created by Robbert Brandsma on 30-06-16.
-//  Updated by Nick McQuade on 04-01-22.
+//  Updated by Nick McQuade on 28-05-22.
 //  Copyright © 2016 Robbert Brandsma. All rights reserved.
 //  Copyright © 2022 Nick McQuade. All rights reserved.
 //
 
 import Cocoa
 import FinderSync
+import Foundation
+
 
 class FinderSync: FIFinderSync {
-
+    
     let fm = FileManager.default
+
+    var currentTargets: [URL] {
+        var targets = FIFinderSyncController.default().selectedItemURLs() ?? []
+        
+        if let targetedUrl = FIFinderSyncController.default().targetedURL(), targets.count == 0 {
+            targets.append(targetedUrl)
+        }
+        
+        return targets
+    }
     
     // MARK: - Menu and toolbar item support
     
@@ -32,12 +44,15 @@ class FinderSync: FIFinderSync {
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
         NSLog("menu(for:)")
         let menu = NSMenu(title: "")
-        menu.addItem(withTitle: "Remove selected item locally", action: #selector(removeLocal(_:)), keyEquivalent: "")
-        menu.addItem(withTitle: "Download selected item", action: #selector(downloadItem(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Remove selected items locally", action: #selector(removeLocal(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Download selected items", action: #selector(downloadItem(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Publish public link", action: #selector(publish(_:)), keyEquivalent: "")
-        menu.addItem(withTitle: "Exclude selected item from iCloud", action: #selector(excludeItem(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Exclude selected items from iCloud", action: #selector(excludeItem(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Restore selected items", action: #selector(restoreItem(_:)), keyEquivalent: "")
+        
         return menu
     }
+    
     
     @IBAction func removeLocal(_ sender: AnyObject?) {
         NSLog("removeLocal")
@@ -52,6 +67,7 @@ class FinderSync: FIFinderSync {
             }
         }
     }
+    
     
     @IBAction func publish(_ sender: AnyObject?) {
         var urls = [URL]()
@@ -88,30 +104,37 @@ class FinderSync: FIFinderSync {
     }
     
     @IBAction func excludeItem(_ sender: AnyObject?) {
-          NSLog("Exclude requested")
-
-          for target in currentTargets {
-              let name = target.lastPathComponent
-              let parentUrl = target.deletingLastPathComponent()
-              let noSyncUrl = URL(fileURLWithPath: ".\(name).nosync", isDirectory: false, relativeTo: parentUrl)
-              do {
-                  try fm.moveItem(at: target, to: noSyncUrl)
-                  try fm.createSymbolicLink(at: target, withDestinationURL: noSyncUrl)
-              } catch {
-                  NSLog("Exclude of \(target) failed with error \(error)")
-              }
-          }
-      }
-    
-    var currentTargets: [URL] {
-        var targets = FIFinderSyncController.default().selectedItemURLs() ?? []
+        NSLog("Exclude requested")
         
-        if let targetedUrl = FIFinderSyncController.default().targetedURL(), targets.count == 0 {
-            targets.append(targetedUrl)
+            for target in currentTargets {
+                let name = target.lastPathComponent
+                let parentUrl = target.deletingLastPathComponent()
+                let noSyncUrl = URL(fileURLWithPath: "\(name).nosync", isDirectory: false, relativeTo: parentUrl)
+                do {
+                    try fm.moveItem(at: target, to: noSyncUrl)
+                } catch {
+                    NSLog("Exclude of \(target) failed with error \(error)")
+                }
+            }
         }
-        
-        return targets
+    
+
+    @IBAction func restoreItem(_ sender: AnyObject?) {
+        NSLog("Include requested")
+        for target in currentTargets {
+            let name = target.lastPathComponent
+            let parentUrl = target.deletingLastPathComponent()
+            let originalUrl = URL(fileURLWithPath: name.replacingOccurrences(of: ".nosync", with: ""), isDirectory: false, relativeTo: parentUrl)
+            do {
+                try fm.moveItem(at: target, to: originalUrl)
+            } catch {
+                NSLog("Include of \(target) failed with error \(error)")
+            }
+        }
     }
 
-}
 
+    
+    
+
+}
