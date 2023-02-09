@@ -17,9 +17,9 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let version = ProcessInfo.processInfo.operatingSystemVersion
-
+        
         if version.majorVersion >= 13 {
             explainLabel.stringValue = "To get started, enable the iCloud Control Finder extension in System Settings. You can then close this app and get going!"
             openButton.title = "Open System Settings"
@@ -29,5 +29,10 @@ class ViewController: NSViewController {
             openButton.title = "Open System Preferences"
             demoImage.image = NSImage(named: "SysPrefsPane")
         }
+    }
+    
+    @IBAction func openSystemPreferences(_ sender: AnyObject) {
+        NSWorkspace.shared.open(URL(fileURLWithPath:("/System/Library/PreferencePanes/Extensions.prefPane")
+                                   ))
     }
 }
