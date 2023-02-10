@@ -103,7 +103,7 @@
                                     <constraint firstAttribute="width" constant="351" id="cdi-c4-Dhg"/>
                                     <constraint firstAttribute="height" constant="55" id="nJ3-y9-lr5"/>
                                 </constraints>
-                                <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="To get started, enable the iCloud Control Finder extension in System Preferences. You can then close this app and get going!" id="5MP-A7-IYf">
+                                <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="To get started, enable the iCloud Control Finder extension in System Settings. You can then close this app and get going!" id="5MP-A7-IYf">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -137,7 +137,7 @@
                             </imageView>
                             <button identifier="openButton" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Sq-N1Q">
                                 <rect key="frame" x="154" y="84" width="193" height="32"/>
-                                <buttonCell key="cell" type="push" title="Open System Preferences" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fZL-4i-FEA">
+                                <buttonCell key="cell" type="push" title="Open System Settings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fZL-4i-FEA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
