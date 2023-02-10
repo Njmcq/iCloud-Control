@@ -34,11 +34,13 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who
 
 ## Resolved Issues
 ### Crashing Finder Extension
-**Issue:** iCloud Control Finder extension may crash when experiencing an error
+**Issue:** iCloud Control Finder extension may crash when experiencing an error.
+
 **Solved:** Fixed in release 1.4
 
 ### Issue with 'Exclude selected item from iCloud' option
 **Issue:** 'Exclude selected item from iCloud' hides files and thus makes them inaccessible to the general user.
+
 **Solved:** Files should remain visible as of release 1.4
 
 ## Known Issues
