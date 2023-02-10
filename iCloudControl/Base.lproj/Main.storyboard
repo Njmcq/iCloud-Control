@@ -85,12 +85,12 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController title="iCloud Control" id="XfG-lQ-9wD" customClass="ViewController" customModule="iCloud_Control" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="919" height="903"/>
+                    <view key="view" wantsLayer="YES" misplaced="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-dW-aai">
-                                <rect key="frame" x="396" y="855" width="127" height="28"/>
+                                <rect key="frame" x="396" y="252" width="127" height="28"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Hello there!" id="0r4-5a-Be9">
                                     <font key="font" metaFont="system" size="24"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -98,19 +98,15 @@
                                 </textFieldCell>
                             </textField>
                             <textField identifier="explainLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DK5-zi-dcO">
-                                <rect key="frame" x="79" y="787" width="761" height="16"/>
+                                <rect key="frame" x="79" y="184" width="761" height="16"/>
                                 <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="To get started, enable the iCloud Control Finder extension in System Preferences. You can then close this app and get going!" id="5MP-A7-IYf">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <imageView identifier="demoImage" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mHR-u6-m2f">
-                                <rect key="frame" x="0.0" y="0.0" width="919" height="771"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="SysPrefsPane" id="2OD-uQ-xS0"/>
-                            </imageView>
                             <button identifier="openButton" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Sq-N1Q">
-                                <rect key="frame" x="364" y="744" width="192" height="32"/>
+                                <rect key="frame" x="363" y="141" width="192" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open System Preferences" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fZL-4i-FEA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -120,7 +116,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3lO-e5-sc3">
-                                <rect key="frame" x="282" y="814" width="355" height="33"/>
+                                <rect key="frame" x="282" y="211" width="355" height="33"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Welcome to iCloud Control!" id="hsR-bQ-JpV">
                                     <font key="font" metaFont="systemSemibold" size="28"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -128,7 +124,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bf2-yt-FQi">
-                                <rect key="frame" x="812" y="4" width="103" height="32"/>
+                                <rect key="frame" x="811" y="4" width="103" height="32"/>
                                 <buttonCell key="cell" type="push" title="Need help?" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vUw-5q-wuE">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -137,15 +133,11 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="DK5-zi-dcO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="80" id="7gZ-sF-k9L"/>
-                            <constraint firstAttribute="trailing" secondItem="mHR-u6-m2f" secondAttribute="trailing" id="9IP-zg-BEI"/>
-                            <constraint firstItem="mHR-u6-m2f" firstAttribute="top" secondItem="vJp-Sq-N1Q" secondAttribute="bottom" constant="-20" id="CzJ-9D-hZU"/>
                             <constraint firstItem="bf2-yt-FQi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="818" id="GRU-SC-gvW"/>
                             <constraint firstItem="DK5-zi-dcO" firstAttribute="top" secondItem="Byb-dW-aai" secondAttribute="bottom" constant="52" id="L0K-gR-xnj"/>
                             <constraint firstAttribute="bottom" secondItem="bf2-yt-FQi" secondAttribute="bottom" constant="11" id="LGE-hQ-lOw"/>
                             <constraint firstItem="Byb-dW-aai" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="NF5-7b-g69"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DK5-zi-dcO" secondAttribute="trailing" constant="80" id="T3j-ll-EJX"/>
-                            <constraint firstItem="mHR-u6-m2f" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="WsV-5O-XV9"/>
-                            <constraint firstAttribute="bottom" secondItem="mHR-u6-m2f" secondAttribute="bottom" id="XiS-DK-BUa"/>
                             <constraint firstItem="vJp-Sq-N1Q" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Zei-l1-cpl"/>
                             <constraint firstItem="3lO-e5-sc3" firstAttribute="top" secondItem="Byb-dW-aai" secondAttribute="bottom" constant="8" symbolic="YES" id="eTp-55-b8S"/>
                             <constraint firstItem="3lO-e5-sc3" firstAttribute="centerX" secondItem="DK5-zi-dcO" secondAttribute="centerX" id="fDZ-FZ-WI5"/>
@@ -157,7 +149,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="demoImage" destination="mHR-u6-m2f" id="WgZ-6d-deB"/>
                         <outlet property="explainLabel" destination="DK5-zi-dcO" id="GDU-YM-Trk"/>
                         <outlet property="openButton" destination="vJp-Sq-N1Q" id="UFg-37-gaY"/>
                     </connections>
@@ -167,7 +158,4 @@
             <point key="canvasLocation" x="207" y="1082"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="SysPrefsPane" width="780" height="634"/>
-    </resources>
 </document>
