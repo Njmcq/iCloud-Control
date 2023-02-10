@@ -128,7 +128,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bf2-yt-FQi">
-                                <rect key="frame" x="811" y="4" width="104" height="32"/>
+                                <rect key="frame" x="812" y="4" width="103" height="32"/>
                                 <buttonCell key="cell" type="push" title="Need help?" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vUw-5q-wuE">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
