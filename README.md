@@ -50,7 +50,7 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who
 ### Outdated graphics
 **Issue:** Some graphics have elements which are outdated (such as old icons). This is a simple image error, and does not affect app functionality in any way.
 
-### restoreItem function has outdated NSLog codes
+### 'restoreItem' function has outdated NSLog codes
 **Issue** The 'restoreItem' function in FinderSync.swift has NSLog messages stating "include" instead of "restore". This was a placeholder for debugging the function since the restoreItem function went through multiple rewrites. Although incredibly minor, this will be amended in a future release.
 
 ## License
