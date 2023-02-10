@@ -53,7 +53,6 @@ class FinderSync: FIFinderSync {
         return menu
     }
     
-    
     @IBAction func removeLocal(_ sender: AnyObject?) {
         NSLog("removeLocal")
         
@@ -67,7 +66,6 @@ class FinderSync: FIFinderSync {
             }
         }
     }
-    
     
     @IBAction func publish(_ sender: AnyObject?) {
         var urls = [URL]()
@@ -120,7 +118,7 @@ class FinderSync: FIFinderSync {
     
 
     @IBAction func restoreItem(_ sender: AnyObject?) {
-        NSLog("Include requested")
+        NSLog("Restore requested")
         for target in currentTargets {
             let name = target.lastPathComponent
             let parentUrl = target.deletingLastPathComponent()
@@ -128,7 +126,7 @@ class FinderSync: FIFinderSync {
             do {
                 try fm.moveItem(at: target, to: originalUrl)
             } catch {
-                NSLog("Include of \(target) failed with error \(error)")
+                NSLog("Restore of \(target) failed with error \(error)")
             }
         }
     }

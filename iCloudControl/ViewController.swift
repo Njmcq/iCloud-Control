@@ -13,7 +13,6 @@ import Cocoa
 class ViewController: NSViewController {
     @IBOutlet weak var openButton: NSButton!
     @IBOutlet weak var explainLabel: NSTextField!
-    @IBOutlet weak var demoImage: NSImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +22,19 @@ class ViewController: NSViewController {
         if version.majorVersion >= 13 {
             explainLabel.stringValue = "To get started, enable the iCloud Control Finder extension in System Settings. You can then close this app and get going!"
             openButton.title = "Open System Settings"
-            demoImage.image = NSImage(named: "SysSettingsPane")
         } else {
             explainLabel.stringValue = "To get started, enable the iCloud Control Finder extension in System Preferences. You can then close this app and get going!"
             openButton.title = "Open System Preferences"
-            demoImage.image = NSImage(named: "SysPrefsPane")
         }
     }
     
     @IBAction func openSystemPreferences(_ sender: AnyObject) {
         NSWorkspace.shared.open(URL(fileURLWithPath:("/System/Library/PreferencePanes/Extensions.prefPane")
                                    ))
+    }
+    
+    @IBAction func openHelp(_ sender: AnyObject) {
+        let helpUrl = URL(string: "https://github.com/Njmcq/iCloud-Control/blob/master/HELPME.md")!
+        NSWorkspace.shared.open(helpUrl)
     }
 }
