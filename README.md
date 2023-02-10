@@ -30,25 +30,23 @@ iCloud Control solves this, and allows for the removal of a selection of files e
 
 ## Compatibility
 
-iCloud Control 1.3 is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2 published by @Obbut, found at https://github.com/Obbut/iCloud-Control/releases
+iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2 published by @Obbut, found at https://github.com/Obbut/iCloud-Control/releases
 
-## Known Issues
+## Resolved Issues
 ### Crashing Finder Extension
 **Issue:** iCloud Control Finder extension may crash when experiencing an error
+**Solved:** Fixed in release 1.4
 
-**Workaround:** 
-Relaunch both iCloud Control and the Finder, and re-add the extension to the Finder toolbar.
-If this does not work, also try the following: open System Preferences > Extensions, and disable iCloud Control from the Added Extensions or Finder Extensions categories. Then open the Apple menu () > Force Quit (Command-Option-Escape) and relaunch both the Finder and iCloud Control. Then re-enable iCloud Control from System Preferences, and reopen both the app and the Finder.
-
-**Resolution:** To be addressed in release 1.3.1
-
----
 ### Issue with 'Exclude selected item from iCloud' option
 **Issue:** 'Exclude selected item from iCloud' hides files and thus makes them inaccessible to the general user.
+**Solved:** Files should remain visible as of release 1.4
 
-**Workaround:** In the Finder, press Command-Shift-.(period). This will enable visibility of all hidden files and folders within the Finder. Open the directory of your missing file, right-click on the now-present file and select 'Get Info'. Change the file extension proceeding the file's name to remove the '.nosync' extension (but **DO NOT** remove any other extension, such as _.png_, _.jpg_, _.pdf_, etc)
+## Known Issues
+### Size of graphics between different Appearance modes
+**Issue:** macOS Ventura grpahics in the iCloud Control app are not of equal dimensions between Appearance modes (light/dark). This is a simple image error, and does not affect app functionality in any way.
 
-**Resolution:** To be addressed in release 1.3.0.5 with better transparency to the user, and an option to restore any files which are kept as '.nosync'
+### Outdated graphics
+**Issue:** Some graphics have elements which are outdated (such as old icons). This is a simple image error, and does not affect app functionality in any way.
 
 ## License
 
@@ -58,7 +56,7 @@ iCloud Control is licensed under the MIT license. In addition to the restriction
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Robbert Brandsma; (c) 2022 Nick McQuade
+Copyright (c) 2016 Robbert Brandsma; (c) 2023 Nick McQuade
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
