@@ -127,14 +127,6 @@
                                     <action selector="openHelp:" target="XfG-lQ-9wD" id="7NW-4N-I7J"/>
                                 </connections>
                             </button>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KUQ-7c-ubx">
-                                <rect key="frame" x="227" y="288" width="48" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="WyU-Ou-Jqm"/>
-                                    <constraint firstAttribute="width" constant="48" id="sxc-Ue-BeH"/>
-                                </constraints>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="iCloud-Control-1.4.0.1-Icon-1024" id="TL8-jY-9vf"/>
-                            </imageView>
                             <button identifier="openButton" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Sq-N1Q">
                                 <rect key="frame" x="154" y="84" width="193" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open System Settings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fZL-4i-FEA">
@@ -145,16 +137,24 @@
                                     <action selector="openSystemPreferences:" target="XfG-lQ-9wD" id="eWQ-g8-Mjw"/>
                                 </connections>
                             </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KUQ-7c-ubx">
+                                <rect key="frame" x="218" y="279" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="WyU-Ou-Jqm"/>
+                                    <constraint firstAttribute="width" constant="65" id="sxc-Ue-BeH"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="iCloud-Control-1.4.1-Icon-1024" id="TL8-jY-9vf"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="vJp-Sq-N1Q" firstAttribute="top" secondItem="DK5-zi-dcO" secondAttribute="bottom" constant="34" id="3Vk-cX-rab"/>
                             <constraint firstItem="DK5-zi-dcO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="75" id="AAZ-7B-MLE"/>
                             <constraint firstItem="vJp-Sq-N1Q" firstAttribute="centerX" secondItem="iTd-f3-bxz" secondAttribute="centerX" id="AuE-bI-Vlz"/>
                             <constraint firstItem="3lO-e5-sc3" firstAttribute="leading" secondItem="DK5-zi-dcO" secondAttribute="leading" id="I8b-Ne-bOx"/>
-                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="14" id="MJP-qx-Npm"/>
+                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="6" id="MJP-qx-Npm"/>
                             <constraint firstItem="DK5-zi-dcO" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="bkr-GJ-5nM"/>
                             <constraint firstAttribute="bottom" secondItem="iTd-f3-bxz" secondAttribute="bottom" constant="20" symbolic="YES" id="cZi-9C-oIg"/>
-                            <constraint firstItem="Byb-dW-aai" firstAttribute="top" secondItem="KUQ-7c-ubx" secondAttribute="bottom" constant="8" id="dNy-oX-h3S"/>
+                            <constraint firstItem="Byb-dW-aai" firstAttribute="top" secondItem="KUQ-7c-ubx" secondAttribute="bottom" constant="-1" id="dNy-oX-h3S"/>
                             <constraint firstItem="iTd-f3-bxz" firstAttribute="top" secondItem="vJp-Sq-N1Q" secondAttribute="bottom" constant="51" id="h1q-OT-BMF"/>
                             <constraint firstItem="Byb-dW-aai" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="hcr-eF-gpp"/>
                             <constraint firstItem="3lO-e5-sc3" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="hop-D3-TDC"/>
@@ -172,10 +172,10 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="838"/>
+            <point key="canvasLocation" x="128.5" y="838"/>
         </scene>
     </scenes>
     <resources>
-        <image name="iCloud-Control-1.4.0.1-Icon-1024" width="1024" height="1024"/>
+        <image name="iCloud-Control-1.4.1-Icon-1024" width="341.33334350585938" height="341.33334350585938"/>
     </resources>
 </document>

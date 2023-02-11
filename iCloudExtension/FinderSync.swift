@@ -3,7 +3,7 @@
 //  iCloudExtension
 //
 //  Created by Robbert Brandsma on 30-06-16.
-//  Updated by Nick McQuade on 10-02-23.
+//  Updated by Nick McQuade on 04-01-22.
 //  Copyright © 2016 Robbert Brandsma. All rights reserved.
 //  Copyright © 2023 Nick McQuade. All rights reserved.
 //
@@ -11,7 +11,6 @@
 import Cocoa
 import FinderSync
 import Foundation
-
 
 class FinderSync: FIFinderSync {
     
@@ -115,7 +114,6 @@ class FinderSync: FIFinderSync {
                 }
             }
         }
-    
 
     @IBAction func restoreItem(_ sender: AnyObject?) {
         NSLog("Restore requested")
@@ -130,9 +128,4 @@ class FinderSync: FIFinderSync {
             }
         }
     }
-
-
-    
-    
-
 }
