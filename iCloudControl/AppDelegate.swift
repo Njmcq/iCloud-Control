@@ -10,5 +10,12 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {}
+class AppDelegate: NSObject, NSApplicationDelegate {
+    
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        NSApplication.shared.terminate(self)
+        return true
+    }
+    
+}
 
