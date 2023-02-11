@@ -37,31 +37,12 @@ iCloud Control solves this, and allows for the removal of a selection of files e
 
 iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2 published by @Obbut, found at https://github.com/Obbut/iCloud-Control/releases
 
-## Resolved Issues
-### Crashing Finder Extension
-**Issue:** iCloud Control Finder extension may crash under certain conditions.
-
-**Solved:** Fixed in release 1.4
-
-### Issue with 'Exclude selected item from iCloud' option
-**Issue:** 'Exclude selected item from iCloud' hides files and thus makes them inaccessible to the general user.
-
-**Solved:** Files should remain visible as of release 1.4
-
 ## Known Issues
-### Size of graphics between different Appearance modes
-**Issue:** macOS Ventura grpahics in the iCloud Control app are not of equal dimensions between Appearance modes (light/dark). This is a simple image error, and does not affect app functionality in any way.
-
-### Outdated graphics
-**Issue:** Some graphics have elements which are outdated (such as old icons). This is a simple image error, and does not affect app functionality in any way.
-
-### 'restoreItem' function has outdated NSLog codes
-**Issue** The 'restoreItem' function in FinderSync.swift has NSLog messages stating "include" instead of "restore". This was a placeholder for debugging the function since the restoreItem function went through multiple rewrites. Although incredibly minor, this will be amended in a future release.
+If you happen to find any issues while using iCloud Control, please let me know at nick.mcq100@icloud.com.
 
 ## License
 
 iCloud Control is licensed under the MIT license. In addition to the restrictions placed by the MIT license, **you are not permitted and will not get permission to list iCloud Control or any derivative work on software catalogue websites like Mac Informer or MacUpdate.**
-
 
 
 The MIT License (MIT)
