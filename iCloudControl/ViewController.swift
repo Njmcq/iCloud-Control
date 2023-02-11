@@ -3,7 +3,7 @@
 //  iCloudControl
 //
 //  Created by Robbert Brandsma on 30-06-16.
-//  Updated by Nick McQuade on 10-02-23.
+//  Updated by Nick McQuade on 04-01-22.
 //  Copyright © 2016 Robbert Brandsma. All rights reserved.
 //  Copyright © 2023 Nick McQuade. All rights reserved.
 
@@ -33,8 +33,8 @@ class ViewController: NSViewController {
                                    ))
     }
     
-    @IBAction func openHelp(_ sender: AnyObject) {
-        let helpUrl = URL(string: "https://github.com/Njmcq/iCloud-Control/blob/master/HELPME.md")!
-        NSWorkspace.shared.open(helpUrl)
+    @IBAction func openReadMe(_ sender: AnyObject) {
+        let readMeUrl = URL(string: "https://github.com/Njmcq/iCloud-Control#readme")!
+        NSWorkspace.shared.open(readMeUrl)
     }
 }
