@@ -11,7 +11,7 @@ In version 1.3 and above, iCloud Control allows for native execution on Macs bas
 
 1. Download the latest version of iCloud Control from the [GitHub releases page](https://github.com/Njmcq/iCloud-Control/releases/latest).
 2. Move iCloud Control from your Downloads to the Applications folder.
-3. Because iCloud Control doesn't have a valid signature as of yet, Gatekeeper flags the app as unknown. iCloud Control is not in any way malicious, and if you are concerned, you are more than welcome to review the source code in the repository. To bypass Gatekeeper, control-click or right-click on the app in the Applications folder, and select open. This will bring up a similar alert, but you will be able to select "Open" to run the app.
+3. Because iCloud Control doesn't have a valid signature as of yet, Gatekeeper flags the app as unknown. iCloud Control is not in any way malicious, and if you are concerned, you are more than welcome to review the source code in the repository. To bypass Gatekeeper, control-click or right-click on the app in the Applications folder, and select "Open". This will bring up a similar alert, but you will be able to select "Open" to run the app.
 4. iCloud Control will open with a window welcoming you! As per the instructions in that window, you need to select Open System Settings (or System Preferences on older versions of macOS) to bring up the Extensions panel.
 5. In the panel, select "Added Extensions" and enable iCloud Control's Finder extension (you may have to scroll down if multiple other apps appear here).
 6. Once you have done this, you can safely close System Settings/Preferences and the iCloud Control app.
