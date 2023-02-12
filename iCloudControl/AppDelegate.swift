@@ -17,5 +17,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
     
+    @IBAction func openLatestRelease(_ sender: Any) {
+        if let url = URL(string: "https://github.com/Njmcq/iCloud-Control/releases/latest") {
+            NSWorkspace.shared.open(url)
+        }
+    }
+
+    
 }
 
