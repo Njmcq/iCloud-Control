@@ -130,7 +130,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="openHelp:" target="XfG-lQ-9wD" id="7NW-4N-I7J"/>
+                                    <action selector="openReadMe:" target="XfG-lQ-9wD" id="OVE-ZT-Dmh"/>
                                 </connections>
                             </button>
                             <button identifier="openButton" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Sq-N1Q">
