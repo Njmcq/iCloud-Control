@@ -24,6 +24,12 @@
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Check for Updates" id="ibN-Ah-oOA">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="openLatestRelease:" target="Voe-Tx-rLC" id="yGO-tb-u3f"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Hide iCloud Control" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
@@ -118,7 +124,7 @@
                                 </textFieldCell>
                             </textField>
                             <button identifier="Help Button" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iTd-f3-bxz">
-                                <rect key="frame" x="199" y="13" width="104" height="32"/>
+                                <rect key="frame" x="199" y="13" width="103" height="32"/>
                                 <buttonCell key="cell" type="push" title="Need help?" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TRa-vO-MBX">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -152,6 +158,7 @@
                             <constraint firstItem="vJp-Sq-N1Q" firstAttribute="centerX" secondItem="iTd-f3-bxz" secondAttribute="centerX" id="AuE-bI-Vlz"/>
                             <constraint firstItem="3lO-e5-sc3" firstAttribute="leading" secondItem="DK5-zi-dcO" secondAttribute="leading" id="I8b-Ne-bOx"/>
                             <constraint firstItem="KUQ-7c-ubx" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="6" id="MJP-qx-Npm"/>
+                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="218" id="Rln-kJ-V7V"/>
                             <constraint firstItem="DK5-zi-dcO" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="bkr-GJ-5nM"/>
                             <constraint firstAttribute="bottom" secondItem="iTd-f3-bxz" secondAttribute="bottom" constant="20" symbolic="YES" id="cZi-9C-oIg"/>
                             <constraint firstItem="Byb-dW-aai" firstAttribute="top" secondItem="KUQ-7c-ubx" secondAttribute="bottom" constant="-1" id="dNy-oX-h3S"/>
@@ -176,6 +183,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iCloud-Control-1.4.1-Icon-1024" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="iCloud-Control-1.4.1-Icon-1024" width="1024" height="1024"/>
     </resources>
 </document>
