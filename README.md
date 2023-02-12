@@ -7,7 +7,7 @@ Adds a menu to the Finder that allows control over files stored in iCloud, allow
 ## Now updated for Apple silicon!
 In version 1.3 and above, iCloud Control allows for native execution on Macs based on Apple silicon. These updates also provide support for Swift 5.
 
-## Installation
+## Installation & Help
 
 1. Download the latest version of iCloud Control from the [GitHub releases page](https://github.com/Njmcq/iCloud-Control/releases/latest).
 2. Move iCloud Control from your Downloads to the Applications folder.
