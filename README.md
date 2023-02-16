@@ -38,6 +38,12 @@ iCloud Control solves this, and allows for the removal of a selection of files e
 iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2 published by @Obbut, found at https://github.com/Obbut/iCloud-Control/releases
 
 ## Known Issues
+### Optimise Mac Storage may interfere with iCloud Control's features
+**Issue:** If Optimise Mac Storage is enabled in your iCloud settings, it may override some of the operations of iCloud Control (such as reversing "Remove selected items locally".
+
+**Workaround:** Unfortunately, there is no way to easily overcome this issue. As a result, you may have to select the option a couple of times if the file reverts to its original state, to force iCloud Control's operation. Otherwise, if this continues to cause issues, consider disabling Optimise Mac Storage.
+
+
 If you happen to find any issues while using iCloud Control, please let me know at nick.mcq100@icloud.com.
 
 ## License
