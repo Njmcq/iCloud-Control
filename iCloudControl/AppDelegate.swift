@@ -22,7 +22,75 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             NSWorkspace.shared.open(url)
         }
     }
+    
 
     
+    @IBAction func checkForUpdates(_ sender: Any) {
+        let owner = "Njmcq"
+        let repo = "iCloud-Control"
+        let url = URL(string: "https://api.github.com/repos/\(owner)/\(repo)/releases/latest")
+        
+        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
+            if error != nil {
+                print("Error: \(error!.localizedDescription)")
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {
+                print("Error: Invalid HTTP response status code")
+                return
+            }
+            
+            if let data = data,
+               let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+               let tagName = json["tag_name"] as? String,
+               let downloadURLString = json["html_url"] as? String {
+                let downloadURL = URL(string: downloadURLString)!
+                
+                let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+                
+                if currentVersion.compare(tagName, options: .numeric) == .orderedAscending {
+                    // A new update is available
+                    let releaseNotes = json["body"] as? String ?? ""
+                    self.showAlertWithUpdate(version: tagName, releaseNotes: releaseNotes, downloadURL: downloadURL)
+                } else {
+                    // No updates are available
+                    self.showLatestVersionInstalledAlert()
+                }
+            }
+        }
+        
+        task.resume()
+    }
+
+
+    func showAlertWithUpdate(version: String, releaseNotes: String, downloadURL: URL) {
+        DispatchQueue.main.async {
+            let alert = NSAlert()
+            alert.messageText = "A new update is available"
+            alert.informativeText = "Version \(version) is now available. Do you want to download it?"
+            alert.addButton(withTitle: "Download")
+            alert.addButton(withTitle: "Cancel")
+            
+            let modalResult = alert.runModal()
+            if modalResult == NSApplication.ModalResponse.alertFirstButtonReturn {
+                NSWorkspace.shared.open(downloadURL)
+            }
+        }
+    }
+    
+    func showLatestVersionInstalledAlert() {
+        DispatchQueue.main.async {
+            let alert = NSAlert()
+            alert.messageText = "You have the latest version installed"
+            alert.informativeText = "You are already running the latest version of the app."
+            alert.addButton(withTitle: "OK")
+            alert.runModal()
+        }
+    }
+
+
+
 }
 

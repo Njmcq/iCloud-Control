@@ -54,7 +54,7 @@ class FinderSync: FIFinderSync {
     
     @IBAction func removeLocal(_ sender: AnyObject?) {
         NSLog("removeLocal")
-        
+
         for target in currentTargets {
             NSLog("Local removal of \(target) requested")
             do {
@@ -65,7 +65,7 @@ class FinderSync: FIFinderSync {
             }
         }
     }
-    
+
     @IBAction func publish(_ sender: AnyObject?) {
         var urls = [URL]()
         

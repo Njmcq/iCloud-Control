@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,7 +28,7 @@
                                         <menuItem title="Check for Updates" id="ibN-Ah-oOA">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="openLatestRelease:" target="Voe-Tx-rLC" id="yGO-tb-u3f"/>
+                                                <action selector="checkForUpdates:" target="Voe-Tx-rLC" id="4fs-hJ-d2w"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
@@ -52,6 +53,19 @@
                                         <menuItem title="Quit iCloud Control" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Help" id="8L3-Nm-NwF">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Help" systemMenu="help" id="AAW-mk-lL0">
+                                    <items>
+                                        <menuItem title="View GitHub README..." keyEquivalent="?" id="Ii7-XK-Kjh">
+                                            <connections>
+                                                <action selector="showHelp:" target="Oky-zY-oP4" id="5Ce-Xp-HKo"/>
+                                                <segue destination="jA6-nE-e6P" kind="modal" id="Ytj-rV-Rvx"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -87,6 +101,37 @@
             </objects>
             <point key="canvasLocation" x="128" y="273"/>
         </scene>
+        <!--Help-->
+        <scene sceneID="BN0-gl-dBb">
+            <objects>
+                <viewController title="Help" id="jA6-nE-e6P" customClass="HelpViewController" customModule="iCloud_Control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="xBw-mb-KgA">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="700"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WVQ-AG-qf0">
+                                <rect key="frame" x="0.0" y="0.0" width="500" height="700"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="WVQ-AG-qf0" firstAttribute="top" secondItem="xBw-mb-KgA" secondAttribute="top" id="WHk-zx-YdD"/>
+                            <constraint firstItem="WVQ-AG-qf0" firstAttribute="leading" secondItem="xBw-mb-KgA" secondAttribute="leading" id="d3n-h5-4cI"/>
+                            <constraint firstAttribute="trailing" secondItem="WVQ-AG-qf0" secondAttribute="trailing" id="el9-70-3mc"/>
+                            <constraint firstAttribute="bottom" secondItem="WVQ-AG-qf0" secondAttribute="bottom" id="ovB-FR-027"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="HelpWebView" destination="WVQ-AG-qf0" id="C91-EU-2mb"/>
+                    </connections>
+                </viewController>
+                <customObject id="FqY-aN-piv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="282.5"/>
+        </scene>
         <!--iCloud Control-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
@@ -96,7 +141,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-dW-aai">
-                                <rect key="frame" x="187" y="252" width="127" height="28"/>
+                                <rect key="frame" x="187" y="238" width="127" height="28"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Hello there!" id="0r4-5a-Be9">
                                     <font key="font" metaFont="system" size="24"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -104,7 +149,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField identifier="explainLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DK5-zi-dcO">
-                                <rect key="frame" x="73" y="145" width="355" height="55"/>
+                                <rect key="frame" x="73" y="131" width="355" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="351" id="cdi-c4-Dhg"/>
                                     <constraint firstAttribute="height" constant="55" id="nJ3-y9-lr5"/>
@@ -116,25 +161,15 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3lO-e5-sc3">
-                                <rect key="frame" x="73" y="211" width="355" height="33"/>
+                                <rect key="frame" x="73" y="197" width="355" height="33"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Welcome to iCloud Control" id="hsR-bQ-JpV">
                                     <font key="font" metaFont="systemSemibold" size="28"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button identifier="Help Button" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iTd-f3-bxz">
-                                <rect key="frame" x="199" y="13" width="103" height="32"/>
-                                <buttonCell key="cell" type="push" title="Need help?" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TRa-vO-MBX">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="openReadMe:" target="XfG-lQ-9wD" id="OVE-ZT-Dmh"/>
-                                </connections>
-                            </button>
                             <button identifier="openButton" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Sq-N1Q">
-                                <rect key="frame" x="154" y="84" width="193" height="32"/>
+                                <rect key="frame" x="154" y="70" width="193" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open System Settings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fZL-4i-FEA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -143,8 +178,16 @@
                                     <action selector="openSystemPreferences:" target="XfG-lQ-9wD" id="eWQ-g8-Mjw"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gZj-ql-Ikj">
+                                <rect key="frame" x="41" y="12" width="419" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Need help? Go to Help in the menu bar to view the GitHub README" id="D3y-K3-Fm8">
+                                    <font key="font" metaFont="systemMedium" size="13"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KUQ-7c-ubx">
-                                <rect key="frame" x="218" y="279" width="65" height="65"/>
+                                <rect key="frame" x="218" y="274" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="WyU-Ou-Jqm"/>
                                     <constraint firstAttribute="width" constant="65" id="sxc-Ue-BeH"/>
@@ -155,14 +198,14 @@
                         <constraints>
                             <constraint firstItem="vJp-Sq-N1Q" firstAttribute="top" secondItem="DK5-zi-dcO" secondAttribute="bottom" constant="34" id="3Vk-cX-rab"/>
                             <constraint firstItem="DK5-zi-dcO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="75" id="AAZ-7B-MLE"/>
-                            <constraint firstItem="vJp-Sq-N1Q" firstAttribute="centerX" secondItem="iTd-f3-bxz" secondAttribute="centerX" id="AuE-bI-Vlz"/>
+                            <constraint firstItem="gZj-ql-Ikj" firstAttribute="top" secondItem="vJp-Sq-N1Q" secondAttribute="bottom" constant="49" id="FFE-Qt-l7S"/>
                             <constraint firstItem="3lO-e5-sc3" firstAttribute="leading" secondItem="DK5-zi-dcO" secondAttribute="leading" id="I8b-Ne-bOx"/>
-                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="6" id="MJP-qx-Npm"/>
+                            <constraint firstItem="gZj-ql-Ikj" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="IWv-wz-HuA"/>
+                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="11" id="MJP-qx-Npm"/>
+                            <constraint firstAttribute="bottom" secondItem="gZj-ql-Ikj" secondAttribute="bottom" constant="12" id="NBn-Hu-ud4"/>
                             <constraint firstItem="KUQ-7c-ubx" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="218" id="Rln-kJ-V7V"/>
                             <constraint firstItem="DK5-zi-dcO" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="bkr-GJ-5nM"/>
-                            <constraint firstAttribute="bottom" secondItem="iTd-f3-bxz" secondAttribute="bottom" constant="20" symbolic="YES" id="cZi-9C-oIg"/>
-                            <constraint firstItem="Byb-dW-aai" firstAttribute="top" secondItem="KUQ-7c-ubx" secondAttribute="bottom" constant="-1" id="dNy-oX-h3S"/>
-                            <constraint firstItem="iTd-f3-bxz" firstAttribute="top" secondItem="vJp-Sq-N1Q" secondAttribute="bottom" constant="51" id="h1q-OT-BMF"/>
+                            <constraint firstItem="Byb-dW-aai" firstAttribute="top" secondItem="KUQ-7c-ubx" secondAttribute="bottom" constant="8" id="dNy-oX-h3S"/>
                             <constraint firstItem="Byb-dW-aai" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="hcr-eF-gpp"/>
                             <constraint firstItem="3lO-e5-sc3" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="hop-D3-TDC"/>
                             <constraint firstItem="KUQ-7c-ubx" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="sM4-Qw-R7j"/>
