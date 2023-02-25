@@ -135,13 +135,14 @@
         <!--iCloud Control-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController title="iCloud Control" id="XfG-lQ-9wD" customClass="ViewController" customModule="iCloud_Control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="501" height="350"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <rect key="frame" x="0.0" y="0.0" width="502" height="350"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-dW-aai">
-                                <rect key="frame" x="187" y="238" width="127" height="28"/>
+                                <rect key="frame" x="188" y="238" width="127" height="28"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Hello there!" id="0r4-5a-Be9">
                                     <font key="font" metaFont="system" size="24"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -149,10 +150,10 @@
                                 </textFieldCell>
                             </textField>
                             <textField identifier="explainLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DK5-zi-dcO">
-                                <rect key="frame" x="73" y="131" width="355" height="55"/>
+                                <rect key="frame" x="74" y="131" width="355" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="351" id="cdi-c4-Dhg"/>
-                                    <constraint firstAttribute="height" constant="55" id="nJ3-y9-lr5"/>
+                                    <constraint firstAttribute="height" constant="55" id="0HY-ve-3Ky"/>
+                                    <constraint firstAttribute="width" constant="351" id="uKc-de-f5L"/>
                                 </constraints>
                                 <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="To get started, enable the iCloud Control Finder extension in System Settings. You can then close this app and get going!" id="5MP-A7-IYf">
                                     <font key="font" metaFont="system"/>
@@ -161,7 +162,10 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3lO-e5-sc3">
-                                <rect key="frame" x="73" y="197" width="355" height="33"/>
+                                <rect key="frame" x="78" y="197" width="346" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="dd4-bF-O3R"/>
+                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Welcome to iCloud Control" id="hsR-bQ-JpV">
                                     <font key="font" metaFont="systemSemibold" size="28"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -169,7 +173,7 @@
                                 </textFieldCell>
                             </textField>
                             <button identifier="openButton" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Sq-N1Q">
-                                <rect key="frame" x="154" y="70" width="193" height="32"/>
+                                <rect key="frame" x="166" y="70" width="170" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open System Settings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fZL-4i-FEA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -179,7 +183,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gZj-ql-Ikj">
-                                <rect key="frame" x="41" y="12" width="419" height="16"/>
+                                <rect key="frame" x="42" y="12" width="419" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Need help? Go to Help in the menu bar to view the GitHub README" id="D3y-K3-Fm8">
                                     <font key="font" metaFont="systemMedium" size="13"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -187,32 +191,32 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KUQ-7c-ubx">
-                                <rect key="frame" x="218" y="274" width="65" height="65"/>
+                                <rect key="frame" x="219" y="274" width="64" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="WyU-Ou-Jqm"/>
-                                    <constraint firstAttribute="width" constant="65" id="sxc-Ue-BeH"/>
+                                    <constraint firstAttribute="height" constant="65" id="BJP-dy-Pho"/>
+                                    <constraint firstAttribute="width" constant="64" id="kTH-C7-891"/>
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="iCloud-Control-1.4.1-Icon-1024" id="TL8-jY-9vf"/>
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="vJp-Sq-N1Q" firstAttribute="top" secondItem="DK5-zi-dcO" secondAttribute="bottom" constant="34" id="3Vk-cX-rab"/>
-                            <constraint firstItem="DK5-zi-dcO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="75" id="AAZ-7B-MLE"/>
-                            <constraint firstItem="gZj-ql-Ikj" firstAttribute="top" secondItem="vJp-Sq-N1Q" secondAttribute="bottom" constant="49" id="FFE-Qt-l7S"/>
-                            <constraint firstItem="3lO-e5-sc3" firstAttribute="leading" secondItem="DK5-zi-dcO" secondAttribute="leading" id="I8b-Ne-bOx"/>
-                            <constraint firstItem="gZj-ql-Ikj" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="IWv-wz-HuA"/>
-                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="11" id="MJP-qx-Npm"/>
-                            <constraint firstAttribute="bottom" secondItem="gZj-ql-Ikj" secondAttribute="bottom" constant="12" id="NBn-Hu-ud4"/>
-                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="218" id="Rln-kJ-V7V"/>
-                            <constraint firstItem="DK5-zi-dcO" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="bkr-GJ-5nM"/>
-                            <constraint firstItem="Byb-dW-aai" firstAttribute="top" secondItem="KUQ-7c-ubx" secondAttribute="bottom" constant="8" id="dNy-oX-h3S"/>
-                            <constraint firstItem="Byb-dW-aai" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="hcr-eF-gpp"/>
-                            <constraint firstItem="3lO-e5-sc3" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="hop-D3-TDC"/>
-                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="sM4-Qw-R7j"/>
-                            <constraint firstItem="DK5-zi-dcO" firstAttribute="top" secondItem="3lO-e5-sc3" secondAttribute="bottom" constant="11" id="uN1-vS-DcU"/>
-                            <constraint firstItem="3lO-e5-sc3" firstAttribute="top" secondItem="Byb-dW-aai" secondAttribute="bottom" constant="8" symbolic="YES" id="uOX-xJ-CDJ"/>
-                            <constraint firstItem="vJp-Sq-N1Q" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="wXm-en-Qow"/>
-                            <constraint firstAttribute="trailing" secondItem="vJp-Sq-N1Q" secondAttribute="trailing" constant="161" id="zSo-bU-bUD"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3lO-e5-sc3" secondAttribute="trailing" constant="79" id="15B-GS-OYN"/>
+                            <constraint firstItem="DK5-zi-dcO" firstAttribute="top" secondItem="3lO-e5-sc3" secondAttribute="bottom" constant="11" id="8za-GZ-lZZ"/>
+                            <constraint firstItem="Byb-dW-aai" firstAttribute="centerX" secondItem="3lO-e5-sc3" secondAttribute="centerX" id="Bao-ul-Gnz"/>
+                            <constraint firstItem="gZj-ql-Ikj" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="155" id="N05-Bf-lqo"/>
+                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="11" id="O7c-wN-6ah"/>
+                            <constraint firstItem="gZj-ql-Ikj" firstAttribute="top" secondItem="vJp-Sq-N1Q" secondAttribute="bottom" constant="49" id="PKQ-br-vL7"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gZj-ql-Ikj" secondAttribute="bottom" constant="12" id="UXW-PD-6gx"/>
+                            <constraint firstItem="vJp-Sq-N1Q" firstAttribute="top" secondItem="DK5-zi-dcO" secondAttribute="bottom" constant="34" id="Uq3-Av-DQF"/>
+                            <constraint firstItem="Byb-dW-aai" firstAttribute="top" secondItem="KUQ-7c-ubx" secondAttribute="bottom" constant="8" symbolic="YES" id="WMY-0i-kEX"/>
+                            <constraint firstItem="3lO-e5-sc3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="80" id="YO4-VI-SCn"/>
+                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="-131.5" id="eVD-tc-BTq"/>
+                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fqd-JB-sO5"/>
+                            <constraint firstItem="vJp-Sq-N1Q" firstAttribute="centerX" secondItem="gZj-ql-Ikj" secondAttribute="centerX" id="qnG-fe-8Sa"/>
+                            <constraint firstItem="3lO-e5-sc3" firstAttribute="centerX" secondItem="DK5-zi-dcO" secondAttribute="centerX" id="rWn-VG-nhT"/>
+                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="centerX" secondItem="Byb-dW-aai" secondAttribute="centerX" id="tGK-Jt-Eik"/>
+                            <constraint firstItem="DK5-zi-dcO" firstAttribute="centerX" secondItem="vJp-Sq-N1Q" secondAttribute="centerX" id="y0q-H2-gUp"/>
+                            <constraint firstItem="3lO-e5-sc3" firstAttribute="top" secondItem="Byb-dW-aai" secondAttribute="bottom" constant="8" symbolic="YES" id="zzJ-Yg-WT0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -220,7 +224,6 @@
                         <outlet property="openButton" destination="vJp-Sq-N1Q" id="UFg-37-gaY"/>
                     </connections>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="128.5" y="838"/>
         </scene>

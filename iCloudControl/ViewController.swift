@@ -10,12 +10,17 @@
 import Foundation
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSWindowDelegate {
     @IBOutlet weak var openButton: NSButton!
     @IBOutlet weak var explainLabel: NSTextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        // Set the window behavior to zoom instead of maximize
+        view.window?.collectionBehavior = .fullScreenNone
+        
+        view.window?.delegate = self
         
         let version = ProcessInfo.processInfo.operatingSystemVersion
         
@@ -37,4 +42,23 @@ class ViewController: NSViewController {
         let readMeUrl = URL(string: "https://github.com/Njmcq/iCloud-Control#readme")!
         NSWorkspace.shared.open(readMeUrl)
     }
+    
+    var isNotZoomed = true
+    let originalSize = NSRect(x: 0, y: 0, width: 500, height: 350)
+
+    func windowWillUseStandardFrame(_ window: NSWindow, defaultFrame newFrame: NSRect) -> NSRect {
+        var newFrame = isNotZoomed ? originalSize : NSRect(x: 0, y: 0, width: 500, height: 350)
+
+        let screenRect = NSScreen.main!.visibleFrame
+        let screenCenter = NSPoint(x: screenRect.midX, y: screenRect.midY)
+        
+        newFrame.origin.x = screenCenter.x - (newFrame.size.width / 2)
+        newFrame.origin.y = screenCenter.y - (newFrame.size.height / 2)
+        
+        return newFrame
+    }
+
+
+
+
 }

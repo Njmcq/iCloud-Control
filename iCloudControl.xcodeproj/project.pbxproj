@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11D9E8F429A9C3670047F2E3 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9E8F329A9C3670047F2E3 /* HelpViewController.swift */; };
+		11D9E8F629A9DC490047F2E3 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9E8F529A9DC490047F2E3 /* WindowController.swift */; };
 		11DC8FC9284A105200607E61 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B54FC1D2568E000C4B4D9 /* FinderSync.swift */; };
 		F21B54E61D2568A400C4B4D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B54E51D2568A400C4B4D9 /* AppDelegate.swift */; };
 		F21B54E81D2568A400C4B4D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B54E71D2568A400C4B4D9 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		113D48F027FA7295002B3C73 /* iCloud Extension.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "iCloud Extension.xctestplan"; path = "iCloudControl.xcodeproj/iCloud Extension.xctestplan"; sourceTree = "<group>"; };
 		11D9E8F329A9C3670047F2E3 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		11D9E8F529A9DC490047F2E3 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		F21B54E21D2568A400C4B4D9 /* iCloud Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iCloud Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21B54E51D2568A400C4B4D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F21B54E71D2568A400C4B4D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				F21B54E51D2568A400C4B4D9 /* AppDelegate.swift */,
+				11D9E8F529A9DC490047F2E3 /* WindowController.swift */,
 				F21B54E71D2568A400C4B4D9 /* ViewController.swift */,
 				11D9E8F329A9C3670047F2E3 /* HelpViewController.swift */,
 				F21B54E91D2568A400C4B4D9 /* Assets.xcassets */,
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21B54E81D2568A400C4B4D9 /* ViewController.swift in Sources */,
+				11D9E8F629A9DC490047F2E3 /* WindowController.swift in Sources */,
 				11DC8FC9284A105200607E61 /* FinderSync.swift in Sources */,
 				F21B54E61D2568A400C4B4D9 /* AppDelegate.swift in Sources */,
 				11D9E8F429A9C3670047F2E3 /* HelpViewController.swift in Sources */,
