@@ -57,8 +57,4 @@ class ViewController: NSViewController, NSWindowDelegate {
         
         return newFrame
     }
-
-
-
-
 }
