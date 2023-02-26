@@ -67,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DispatchQueue.main.async {
             let alert = NSAlert()
             alert.messageText = "A new update is available"
-            alert.informativeText = "Version \(version) is now available. Do you want to download it?"
+            alert.informativeText = "Version \(version) is now available. Do you want to download it? \n(This will open GitHub in your browser)"
             alert.addButton(withTitle: "Download")
             alert.addButton(withTitle: "Cancel")
             
