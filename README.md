@@ -5,7 +5,7 @@ Adds a menu to the Finder that allows control over files stored in iCloud, allow
 ![](Docs/1.4-Extension-Menu.png)
 
 ## Now updated for Apple silicon!
-In version 1.3 and above, iCloud Control allows for native execution on Macs based on Apple silicon. Every release of iCloud Control since 1.3 is built as a Universal binary. These updates also add support for Swift 5.
+In version 1.3 and above, iCloud Control allows for native execution on Macs based on Apple silicon, with every release built as a Universal binary. These updates also add support for Swift 5.
 
 ## Installation & Help
 
