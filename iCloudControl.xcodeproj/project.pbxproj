@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		11D9E8F429A9C3670047F2E3 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9E8F329A9C3670047F2E3 /* HelpViewController.swift */; };
-		11D9E8F629A9DC490047F2E3 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9E8F529A9DC490047F2E3 /* WindowController.swift */; };
 		11DC8FC9284A105200607E61 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B54FC1D2568E000C4B4D9 /* FinderSync.swift */; };
 		F21B54E61D2568A400C4B4D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B54E51D2568A400C4B4D9 /* AppDelegate.swift */; };
 		F21B54E81D2568A400C4B4D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B54E71D2568A400C4B4D9 /* ViewController.swift */; };
@@ -47,7 +46,6 @@
 /* Begin PBXFileReference section */
 		113D48F027FA7295002B3C73 /* iCloud Extension.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "iCloud Extension.xctestplan"; path = "iCloudControl.xcodeproj/iCloud Extension.xctestplan"; sourceTree = "<group>"; };
 		11D9E8F329A9C3670047F2E3 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
-		11D9E8F529A9DC490047F2E3 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		F21B54E21D2568A400C4B4D9 /* iCloud Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iCloud Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21B54E51D2568A400C4B4D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F21B54E71D2568A400C4B4D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				F21B54E51D2568A400C4B4D9 /* AppDelegate.swift */,
-				11D9E8F529A9DC490047F2E3 /* WindowController.swift */,
 				F21B54E71D2568A400C4B4D9 /* ViewController.swift */,
 				11D9E8F329A9C3670047F2E3 /* HelpViewController.swift */,
 				F21B54E91D2568A400C4B4D9 /* Assets.xcassets */,
@@ -251,7 +248,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21B54E81D2568A400C4B4D9 /* ViewController.swift in Sources */,
-				11D9E8F629A9DC490047F2E3 /* WindowController.swift in Sources */,
 				11DC8FC9284A105200607E61 /* FinderSync.swift in Sources */,
 				F21B54E61D2568A400C4B4D9 /* AppDelegate.swift in Sources */,
 				11D9E8F429A9C3670047F2E3 /* HelpViewController.swift in Sources */,
@@ -412,7 +408,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "25-02-23";
+				CURRENT_PROJECT_VERSION = "26-02-23";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
@@ -424,7 +420,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.4.4;
+				MARKETING_VERSION = 1.4.5;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickmcquade.iCloudControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,7 +436,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "25-02-23";
+				CURRENT_PROJECT_VERSION = "26-02-23";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
@@ -452,7 +448,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.4.4;
+				MARKETING_VERSION = 1.4.5;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickmcquade.iCloudControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,7 +463,7 @@
 				CODE_SIGN_ENTITLEMENTS = iCloudExtension/iCloudExtension.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "25-02-23";
+				CURRENT_PROJECT_VERSION = "26-02-23";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
 				INFOPLIST_FILE = iCloudExtension/Info.plist;
@@ -477,7 +473,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.4.4;
+				MARKETING_VERSION = 1.4.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickmcquade.iCloudControl.iCloudExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -492,7 +488,7 @@
 				CODE_SIGN_ENTITLEMENTS = iCloudExtension/iCloudExtension.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "25-02-23";
+				CURRENT_PROJECT_VERSION = "26-02-23";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
 				INFOPLIST_FILE = iCloudExtension/Info.plist;
@@ -502,7 +498,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.4.4;
+				MARKETING_VERSION = 1.4.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickmcquade.iCloudControl.iCloudExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

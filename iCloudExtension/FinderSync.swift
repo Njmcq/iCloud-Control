@@ -52,6 +52,7 @@ class FinderSync: FIFinderSync {
         return menu
     }
     
+    // Remove local items function
     @IBAction func removeLocal(_ sender: AnyObject?) {
         NSLog("removeLocal")
 
@@ -65,7 +66,23 @@ class FinderSync: FIFinderSync {
             }
         }
     }
-
+    
+    // Download items function
+    @IBAction func downloadItem(_ sender: AnyObject?) {
+        NSLog("Download requested")
+        
+        for target in currentTargets {
+            NSLog("Download of \(target) requested")
+            do {
+                try fm.startDownloadingUbiquitousItem(at: target)
+                NSLog("Download of \(target) succeeded")
+            } catch {
+                NSLog("Download of \(target) failed with error \(error)")
+            }
+        }
+    }
+    
+    // Publish items function (iCloud URL share)
     @IBAction func publish(_ sender: AnyObject?) {
         var urls = [URL]()
         
@@ -86,20 +103,7 @@ class FinderSync: FIFinderSync {
         pb.writeObjects(urls as [NSPasteboardWriting])
     }
     
-    @IBAction func downloadItem(_ sender: AnyObject?) {
-        NSLog("Download requested")
-        
-        for target in currentTargets {
-            NSLog("Download of \(target) requested")
-            do {
-                try fm.startDownloadingUbiquitousItem(at: target)
-                NSLog("Download of \(target) succeeded")
-            } catch {
-                NSLog("Download of \(target) failed with error \(error)")
-            }
-        }
-    }
-    
+    // Exclude items function (.nosync)
     @IBAction func excludeItem(_ sender: AnyObject?) {
         NSLog("Exclude requested")
         
@@ -114,7 +118,8 @@ class FinderSync: FIFinderSync {
                 }
             }
         }
-
+    
+    // Restore items function (undo .nosync)
     @IBAction func restoreItem(_ sender: AnyObject?) {
         NSLog("Restore requested")
         for target in currentTargets {

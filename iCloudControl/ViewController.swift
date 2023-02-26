@@ -22,6 +22,7 @@ class ViewController: NSViewController, NSWindowDelegate {
         
         view.window?.delegate = self
         
+        // MARK: - Change UI based on OS version
         let version = ProcessInfo.processInfo.operatingSystemVersion
         
         if version.majorVersion >= 13 {
@@ -38,11 +39,7 @@ class ViewController: NSViewController, NSWindowDelegate {
                                    ))
     }
     
-    @IBAction func openReadMe(_ sender: AnyObject) {
-        let readMeUrl = URL(string: "https://github.com/Njmcq/iCloud-Control#readme")!
-        NSWorkspace.shared.open(readMeUrl)
-    }
-    
+    // MARK: - Main UI zoom management
     var isNotZoomed = true
     let originalSize = NSRect(x: 0, y: 0, width: 500, height: 350)
 
@@ -56,5 +53,5 @@ class ViewController: NSViewController, NSWindowDelegate {
         newFrame.origin.y = screenCenter.y - (newFrame.size.height / 2)
         
         return newFrame
-    }
+        }
 }

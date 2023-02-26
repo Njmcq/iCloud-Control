@@ -19,6 +19,24 @@ class HelpViewController: NSViewController {
         if let url = URL(string: "https://github.com/Njmcq/iCloud-Control#installation--help") {
             let request = URLRequest(url: url)
             helpWebView.load(request)
+        } else {
+            // This alert will be replaced by an identical string by the system, but I've left it here as a contingency.
+            showAlert(message: "The Internet connection appears to be offline.")
         }
+        
+        helpWebView.navigationDelegate = self
+    }
+    
+    private func showAlert(message: String) {
+        let alert = NSAlert()
+        alert.messageText = message
+        alert.informativeText = "Check your connection and try again."
+        alert.runModal()
+    }
+}
+
+extension HelpViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        showAlert(message: error.localizedDescription)
     }
 }

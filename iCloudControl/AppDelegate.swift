@@ -22,9 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             NSWorkspace.shared.open(url)
         }
     }
-    
 
-    
+    // MARK: - Check For Updates function
     @IBAction func checkForUpdates(_ sender: Any) {
         let owner = "Njmcq"
         let repo = "iCloud-Control"
@@ -64,7 +63,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         task.resume()
     }
 
-
     func showAlertWithUpdate(version: String, releaseNotes: String, downloadURL: URL) {
         DispatchQueue.main.async {
             let alert = NSAlert()
@@ -87,10 +85,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             alert.informativeText = "You are already running the latest version of the app."
             alert.addButton(withTitle: "OK")
             alert.runModal()
+            }
         }
-    }
-
-
-
 }
-

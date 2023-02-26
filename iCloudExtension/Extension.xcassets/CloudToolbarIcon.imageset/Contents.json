@@ -35,7 +35,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "1.3-Toolbar-Light.png",
+      "filename" : "1.4.5-Toolbar-Light.png",
       "idiom" : "mac",
       "scale" : "2x"
     },
@@ -46,7 +46,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "1.3-Toolbar-Dark.png",
+      "filename" : "1.4.5-Toolbar-Dark.png",
       "idiom" : "mac",
       "scale" : "2x"
     }
