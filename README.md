@@ -55,7 +55,7 @@ If you happen to find any issues while using iCloud Control, please let me know 
 MIT License
 
 Copyright (c) 2016 Robbert Brandsma  
-Copyright (c) 2023 Nick McQuade, as of version 1.3
+Copyright (c) 2022-2023 Nick McQuade
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
