@@ -1,3 +1,4 @@
+![](iCloudControl/Assets.xcassets/AppIcon.appiconset/iCloud-Control-1.4.0.1-Icon-128.png)
 # iCloud Control
 
 Adds a menu to the Finder that allows control over files stored in iCloud, allowing user-controlled selective synchronisation.
