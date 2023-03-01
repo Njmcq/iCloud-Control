@@ -15,7 +15,7 @@ import Foundation
 class FinderSync: FIFinderSync {
     
     let fm = FileManager.default
-
+    
     var currentTargets: [URL] {
         var targets = FIFinderSyncController.default().selectedItemURLs() ?? []
         
@@ -51,7 +51,7 @@ class FinderSync: FIFinderSync {
         
         return menu
     }
-    
+
     // Remove local items function
     @IBAction func removeLocal(_ sender: AnyObject?) {
         NSLog("removeLocal")

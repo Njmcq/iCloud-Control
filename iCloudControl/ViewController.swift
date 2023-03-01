@@ -11,16 +11,35 @@ import Foundation
 import Cocoa
 
 class ViewController: NSViewController, NSWindowDelegate {
-    @IBOutlet weak var openButton: NSButton!
+    
+    @IBOutlet weak var greetingLabel: NSTextField!
     @IBOutlet weak var explainLabel: NSTextField!
+    @IBOutlet weak var openButton: NSButton!
     
     override func viewDidAppear() {
         super.viewDidAppear()
         
+        //MARK: - Change window behaviour
         // Set the window behavior to zoom instead of maximize
         view.window?.collectionBehavior = .fullScreenNone
-        
         view.window?.delegate = self
+        
+        // Hide the title of the window
+        view.window?.titleVisibility = .hidden
+        
+        // Disable the transparent appearance of the title bar
+        view.window?.titlebarAppearsTransparent = false
+        
+        // MARK: - Adjust greeting label based on time of day
+        let hour = Calendar.current.component(.hour, from: Date())
+        
+        if hour >= 0 && hour < 12 {
+            greetingLabel.stringValue = "Good morning!"
+        } else if hour >= 12 && hour < 18 {
+            greetingLabel.stringValue = "Good afternoon!"
+        } else {
+            greetingLabel.stringValue = "Good evening!"
+        }
         
         // MARK: - Change UI based on OS version
         let version = ProcessInfo.processInfo.operatingSystemVersion
@@ -42,10 +61,10 @@ class ViewController: NSViewController, NSWindowDelegate {
     // MARK: - Main UI zoom management
     var isNotZoomed = true
     let originalSize = NSRect(x: 0, y: 0, width: 500, height: 350)
-
+    
     func windowWillUseStandardFrame(_ window: NSWindow, defaultFrame newFrame: NSRect) -> NSRect {
         var newFrame = isNotZoomed ? originalSize : NSRect(x: 0, y: 0, width: 500, height: 350)
-
+        
         let screenRect = NSScreen.main!.visibleFrame
         let screenCenter = NSPoint(x: screenRect.midX, y: screenRect.midY)
         
@@ -53,5 +72,5 @@ class ViewController: NSViewController, NSWindowDelegate {
         newFrame.origin.y = screenCenter.y - (newFrame.size.height / 2)
         
         return newFrame
-        }
+    }
 }

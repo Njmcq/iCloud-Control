@@ -11,7 +11,8 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    
+
+    // Simple function which forces the app to terminate when the last window is closed by the user
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         NSApplication.shared.terminate(self)
         return true
@@ -87,4 +88,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             alert.runModal()
             }
         }
-}
+    }

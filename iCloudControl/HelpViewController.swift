@@ -15,18 +15,19 @@ class HelpViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // MARK: - Load README page in the ViewController WebView
         if let url = URL(string: "https://github.com/Njmcq/iCloud-Control#installation--help") {
             let request = URLRequest(url: url)
             helpWebView.load(request)
         } else {
-            // This alert will be replaced by an identical string by the system, but I've left it here as a contingency.
+            // This alert will be replaced with an identical string by the system, but I've left it here as a contingency.
             showAlert(message: "The Internet connection appears to be offline.")
         }
         
         helpWebView.navigationDelegate = self
     }
-    
+    // MARK: - Show alert if internet connection is unavailable.
     private func showAlert(message: String) {
         let alert = NSAlert()
         alert.messageText = message

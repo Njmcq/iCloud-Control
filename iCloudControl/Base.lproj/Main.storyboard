@@ -58,6 +58,31 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Window" id="gca-99-wGw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Window" systemMenu="window" id="oUR-Cp-rfU">
+                                    <items>
+                                        <menuItem title="Minimize" keyEquivalent="m" id="aTx-ae-fXF">
+                                            <connections>
+                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="Q93-FX-rcy"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Zoom" id="5HH-G2-6de">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="performZoom:" target="Ady-hI-5gd" id="bcl-3n-lhg"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="CDU-Au-8of"/>
+                                        <menuItem title="Bring All to Front" id="p80-Ce-bg3">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="8LH-HE-evP"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                             <menuItem title="Help" id="8L3-Nm-NwF">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="AAW-mk-lL0">
@@ -78,7 +103,7 @@
                     </connections>
                 </application>
             </objects>
-            <point key="canvasLocation" x="120" y="-26"/>
+            <point key="canvasLocation" x="122" y="-119"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -130,7 +155,7 @@
                 </viewController>
                 <customObject id="FqY-aN-piv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749" y="282.5"/>
+            <point key="canvasLocation" x="749" y="282"/>
         </scene>
         <!--iCloud Control-->
         <scene sceneID="hIz-AP-VOD">
@@ -221,7 +246,8 @@
                     </view>
                     <connections>
                         <outlet property="explainLabel" destination="DK5-zi-dcO" id="GDU-YM-Trk"/>
-                        <outlet property="openButton" destination="vJp-Sq-N1Q" id="UFg-37-gaY"/>
+                        <outlet property="greetingLabel" destination="Byb-dW-aai" id="NUy-nC-eNH"/>
+                        <outlet property="openButton" destination="vJp-Sq-N1Q" id="1Pv-M6-XbR"/>
                     </connections>
                 </viewController>
             </objects>
