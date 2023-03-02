@@ -45,6 +45,10 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who
 
 **Workaround:** Unfortunately, there is no way to easily overcome this issue. As a result, you may have to select the option a couple of times if the file reverts to its original state, to force iCloud Control's operation. Otherwise, if this continues to cause issues, consider disabling Optimise Mac Storage.
 
+### Releases do not abide by Semantic Versioning guidelines
+**Issue:** Releases since 1.3 do not follow the Semantic Versioning rules that are recommended on GitHub. This is simply due to the fact that I only learned about Semantic Versioning recently. I currently have plans to release 1.5.0 as the first version to abide by the rules.
+
+---
 
 If you happen to find any issues while using iCloud Control, please let me know at nick.mcq100@icloud.com.
 
