@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  iCloudControl
+//  iCloud Control
 //
 //  Created by Robbert Brandsma on 30-06-16.
 //  Updated by Nick McQuade on 04-01-22.
@@ -28,7 +28,7 @@ class ViewController: NSViewController, NSWindowDelegate {
         view.window?.titleVisibility = .hidden
         
         // Disable the transparent appearance of the title bar
-        view.window?.titlebarAppearsTransparent = false
+        view.window?.titlebarAppearsTransparent = true
         
         // MARK: - Adjust greeting label based on time of day
         let hour = Calendar.current.component(.hour, from: Date())

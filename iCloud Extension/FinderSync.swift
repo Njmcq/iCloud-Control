@@ -1,6 +1,6 @@
 //
 //  FinderSync.swift
-//  iCloudExtension
+//  iCloud Extension
 //
 //  Created by Robbert Brandsma on 30-06-16.
 //  Updated by Nick McQuade on 04-01-22.

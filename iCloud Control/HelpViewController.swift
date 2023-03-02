@@ -1,6 +1,6 @@
 //
 //  HelpViewController.swift
-//  iCloudControl
+//  iCloud Control
 //
 //  Created by Nick McQuade on 25-02-23.
 //  Copyright © 2016 Robbert Brandsma. All rights reserved.
