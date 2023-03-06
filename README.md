@@ -5,6 +5,11 @@ Adds a menu to the Finder that allows control over files stored in iCloud, allow
 
 ![](Docs/1.4-Extension-Menu.png)
 
+# :warning: An important message
+With a handy find by [@jerome71](https://github.com/jerome71), I have made the difficult decision to discontinue development of iCloud Control as of version 1.5.0. The contents of this update will be announced when it is released on March 10, 2023. In addition to this release, I will modify the README to include instructions on how to use Apple's native implementation of iCloud management features. Unless any major issues arise which require a patch, I have no plans to continue work on it after March 10.
+
+Since I took over maintenance of the project in early-2022, I have loved developing iCloud Control into a great app. I am incredibly proud of what it has become, and I am very thankful for the support of the community! :heart:
+
 ## Now updated for Apple silicon!
 In version 1.3 and above, iCloud Control allows for native execution on Macs based on Apple silicon, with every release compiled as a Universal binary. These updates also add support for Swift 5.
 
@@ -47,6 +52,11 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who
 
 ### Releases do not abide by Semantic Versioning guidelines
 **Issue:** Releases since 1.3 do not follow the Semantic Versioning rules that are recommended on GitHub. This is simply due to the fact that I only learned about Semantic Versioning recently. I currently have plans to release 1.5.0 as the first version to abide by the rules.
+
+### Some files may cause the iCloud Control extension to crash
+**Issue:** Some files may cause the FinderSync extension to unexpectedly crash.
+
+**Workaround:** None found.
 
 ---
 
