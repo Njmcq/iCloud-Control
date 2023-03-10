@@ -72,8 +72,6 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who
 
 ---
 
-If you happen to find any issues while using iCloud Control, please let me know at nick.mcq100@icloud.com.
-
 ## License
 
 [View the LICENSE.md file](https://github.com/Njmcq/iCloud-Control/blob/master/LICENSE.md)
