@@ -8,11 +8,20 @@ Adds a menu to the Finder that allows control over files stored in iCloud, allow
 # :warning: iCloud Control has been discontinued
 As of March 10, 2023, iCloud Control has been discontinued with the release of version 1.5.0. This is due to the fact that the app has become redundant with the implementation of similar features in macOS in recent years, and even though the app is quite user-friendly by design, development slowly became stale. Below are instructions to assist with using the native macOS features in the Finder:
 
-**Remove selected item locally:** this can be accomplished by selecting files in the Finder, control- or right-clicking the selection, and selecting **Remove Download**. In a selection of files with both local and non-local files, you can hold the **Option** key in the menu to bring up the same action.
-**Download selected item:** this is available through the same control- or right-click method as the **Remove selected item locally** option.
-**Publish public link:** this can be achieved through the **Share** option in the control-click menu.
-**Exclude selected item from iCloud:** go to the Finder item in the menu bar, and select Settings (or Preferences on older versions of macOS). In the Advanced panel, enable **Show all filename extensions**. Then, with the files you wish to exclude, go to rename the file and add **.nosync** to the end of the filename.
-**Restore selected item:** simply remove **.nosync** from the filename. Make sure to retain the original file type extension.
+### Remove selected item locally:
+This can be accomplished by selecting files in the Finder, control- or right-clicking the selection, and selecting **Remove Download**. In a selection of files with both local and non-local files, you can hold the **Option** key in the menu to bring up the same action.
+
+### Download selected item:
+This is available through the same control- or right-click method as the **Remove selected item locally** option.
+
+### Publish public link:
+This can be achieved through the **Share** option in the control-click menu.
+
+### Exclude selected item from iCloud:
+Go to the Finder item in the menu bar, and select Settings (or Preferences on older versions of macOS). In the Advanced panel, enable **Show all filename extensions**. Then, with the files you wish to exclude, go to rename the file and add **.nosync** to the end of the filename.
+
+### Restore selected item:
+Simply remove **.nosync** from the filename. Make sure to retain the original file type extension.
 
 ---
 
