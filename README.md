@@ -49,12 +49,6 @@ The following options are provided through a toolbar item in the Finder.
 - **Exclude selected item from iCloud**: using the .nosync file extension, files in an iCloud-based directory will not sync with the service.
 - **Restore selected items**: removes the .nosync extension from files, reverting them to their original file type.
 
-While Apple incorporated similar functionality into macOS 10.15 Catalina, the native method does not allow for removing local selected items in bulk if the mass selection includes files already removed.
-
-![](Docs/locally-bulked-issue.png)
-
-iCloud Control solves this, and allows for the removal of a selection of files even if already-removed files exist.
-
 ## Compatibility
 
 iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2 published by [@Obbut](https://github.com/Obbut), found at https://github.com/Obbut/iCloud-Control/releases
