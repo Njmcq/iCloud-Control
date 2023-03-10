@@ -11,6 +11,7 @@
 import Cocoa
 import FinderSync
 import Foundation
+import UserNotifications
 
 class FinderSync: FIFinderSync {
     
@@ -45,13 +46,13 @@ class FinderSync: FIFinderSync {
         let menu = NSMenu(title: "")
         menu.addItem(withTitle: "Remove selected items locally", action: #selector(removeLocal(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Download selected items", action: #selector(downloadItem(_:)), keyEquivalent: "")
-        menu.addItem(withTitle: "Publish public link", action: #selector(publish(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Publish public link?", action: #selector(publish(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Exclude selected items from iCloud", action: #selector(excludeItem(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Restore selected items", action: #selector(restoreItem(_:)), keyEquivalent: "")
         
         return menu
     }
-
+    
     // Remove local items function
     @IBAction func removeLocal(_ sender: AnyObject?) {
         NSLog("removeLocal")
@@ -87,20 +88,51 @@ class FinderSync: FIFinderSync {
         var urls = [URL]()
         
         for target in currentTargets {
-            NSLog("Publishing \(target) requested")
-            do {
-                let url = try fm.url(forPublishingUbiquitousItemAt: target, expiration: nil)
-                NSLog("Publishing \(target) succeeded, url: \(url)")
-                urls.append(url)
-            } catch {
-                NSLog("Publishing \(target) failed with error \(error)")
+                NSLog("Publishing \(target) requested")
+                do {
+                    let url = try fm.url(forPublishingUbiquitousItemAt: target, expiration: nil)
+                    NSLog("Publishing \(target) succeeded, url: \(url)")
+                    urls.append(url)
+                } catch {
+                    NSLog("Publishing \(target) failed with error \(error)")
             }
         }
         
-        let pb = NSPasteboard.general
-        pb.clearContents()
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
         
-        pb.writeObjects(urls as [NSPasteboardWriting])
+        pasteboard.writeObjects(urls as [NSPasteboardWriting])
+        
+        // Create a notification declaring that the link has been copied
+        if #available(macOSApplicationExtension 10.14, *) {
+            let content = UNMutableNotificationContent()
+            if urls.count == 1 {
+                content.title = "Link copied to clipboard"
+                content.body = "1 link has been copied to the clipboard."
+            } else if urls.count == 0 {
+                content.title = "No links found"
+                content.body = "No links were found in the selection."
+            } else {
+                 content.title = "Links copied to clipboard"
+                content.body = "\(urls.count) links have been copied to the clipboard."
+            }
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
+            let request = UNNotificationRequest(identifier: "clipboardCopy", content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        } else {
+            // Fallback on earlier versions
+            let notification = NSUserNotification()
+            notification.title = "Link copied to clipboard"
+            if urls.count == 1 {
+                notification.informativeText = "1 link has been copied to the clipboard."
+            } else {
+                notification.informativeText = "\(urls.count) links have been copied to the clipboard."
+            }
+            notification.soundName = nil
+            
+            let center = NSUserNotificationCenter.default
+            center.deliver(notification)
+        }
     }
     
     // Exclude items function (.nosync)

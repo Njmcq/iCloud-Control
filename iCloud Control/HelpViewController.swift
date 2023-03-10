@@ -10,7 +10,7 @@ import Cocoa
 import WebKit
 
 class HelpViewController: NSViewController {
-    
+
     @IBOutlet weak var helpWebView: WKWebView!
     
     override func viewDidLoad() {

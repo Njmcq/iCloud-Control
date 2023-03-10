@@ -5,10 +5,16 @@ Adds a menu to the Finder that allows control over files stored in iCloud, allow
 
 ![](Docs/1.4-Extension-Menu.png)
 
-# :warning: An important message
-With a handy find by [@jerome71](https://github.com/jerome71), I have made the difficult decision to discontinue development of iCloud Control as of version 1.5.0. The contents of this update will be announced when it is released on March 10, 2023. In addition to this release, I will modify the README to include instructions on how to use Apple's native implementation of iCloud management features. Unless any major issues arise which require a patch, I have no plans to continue work on it after March 10.
+# :warning: iCloud Control has been discontinued
+As of March 10, 2023, iCloud Control has been discontinued with the release of version 1.5.0. This is due to the fact that the app has become redundant with the implementation of similar features in macOS in recent years, and even though the app is quite user-friendly by design, development slowly became stale. Below are instructions to assist with using the native macOS features in the Finder:
 
-Since I took over maintenance of the project in early-2022, I have loved developing iCloud Control into a great app. I am incredibly proud of what it has become, and I am very thankful for the support of the community! :heart:
+**Remove selected item locally:** this can be accomplished by selecting files in the Finder, control- or right-clicking the selection, and selecting **Remove Download**. In a selection of files with both local and non-local files, you can hold the **Option** key in the menu to bring up the same action.
+**Download selected item:** this is available through the same control- or right-click method as the **Remove selected item locally** option.
+**Publish public link:** this can be achieved through the **Share** option in the control-click menu.
+**Exclude selected item from iCloud:** go to the Finder item in the menu bar, and select Settings (or Preferences on older versions of macOS). In the Advanced panel, enable **Show all filename extensions**. Then, with the files you wish to exclude, go to rename the file and add **.nosync** to the end of the filename.
+**Restore selected item:** simply remove **.nosync** from the filename. Make sure to retain the original file type extension.
+
+---
 
 ## Now updated for Apple silicon!
 In version 1.3 and above, iCloud Control allows for native execution on Macs based on Apple silicon, with every release compiled as a Universal binary. These updates also add support for Swift 5.

@@ -153,7 +153,7 @@
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -196,7 +196,7 @@
                                 </textFieldCell>
                             </textField>
                             <button identifier="openButton" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yrL-6H-WYT">
-                                <rect key="frame" x="167" y="70" width="169" height="32"/>
+                                <rect key="frame" x="166" y="70" width="170" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open System Settings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bMm-Gl-TCa">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -205,14 +205,6 @@
                                     <action selector="openSystemPreferences:" target="Emz-QZ-WFy" id="ga3-Pn-I9a"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BlO-6e-3zq">
-                                <rect key="frame" x="42" y="12" width="419" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Need help? Go to Help in the menu bar to view the GitHub README" id="uaP-dq-IgX">
-                                    <font key="font" metaFont="systemMedium" size="13"/>
-                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CQ2-EY-0KP">
                                 <rect key="frame" x="214" y="274" width="75" height="76"/>
                                 <constraints>
@@ -232,24 +224,34 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dch-eQ-UNi">
+                                <rect key="frame" x="238" y="16" width="25" height="25"/>
+                                <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PSE-ya-GJr">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="U6K-ko-eb8" kind="modal" id="y2u-fF-vtK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="CQ2-EY-0KP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="acI-ku-Nnh" secondAttribute="top" id="0Ny-rv-4ZN"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dch-eQ-UNi" secondAttribute="bottom" constant="20" symbolic="YES" id="3xa-Ik-AZe"/>
                             <constraint firstItem="cCz-kc-5tb" firstAttribute="top" secondItem="CQ2-EY-0KP" secondAttribute="bottom" constant="8" id="4B3-Zo-8TC"/>
                             <constraint firstItem="cCz-kc-5tb" firstAttribute="centerX" secondItem="CQ2-EY-0KP" secondAttribute="centerX" id="5lS-ix-UFk"/>
                             <constraint firstItem="cOh-1A-bec" firstAttribute="centerX" secondItem="yrL-6H-WYT" secondAttribute="centerX" id="6Hr-nf-nSu"/>
                             <constraint firstItem="CQ2-EY-0KP" firstAttribute="centerX" secondItem="acI-ku-Nnh" secondAttribute="centerX" id="B5b-Mi-hWN"/>
-                            <constraint firstItem="BlO-6e-3zq" firstAttribute="centerY" secondItem="acI-ku-Nnh" secondAttribute="centerY" constant="155" id="ILq-l9-5cN"/>
+                            <constraint firstItem="dch-eQ-UNi" firstAttribute="top" secondItem="yrL-6H-WYT" secondAttribute="bottom" constant="37" id="Jwn-Eb-olL"/>
                             <constraint firstItem="5OT-nP-ob5" firstAttribute="centerX" secondItem="cOh-1A-bec" secondAttribute="centerX" id="KUh-Ue-ebf"/>
                             <constraint firstItem="5OT-nP-ob5" firstAttribute="leading" secondItem="acI-ku-Nnh" secondAttribute="leading" constant="80" id="Svw-L7-2Iz"/>
                             <constraint firstItem="5OT-nP-ob5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="acI-ku-Nnh" secondAttribute="leading" constant="80" id="UMB-xh-ve3"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5OT-nP-ob5" secondAttribute="trailing" constant="79" id="WaS-Rg-LSO"/>
-                            <constraint firstItem="BlO-6e-3zq" firstAttribute="top" secondItem="yrL-6H-WYT" secondAttribute="bottom" constant="49" id="XYS-Uk-ewE"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BlO-6e-3zq" secondAttribute="bottom" constant="12" id="YPy-qy-lkF"/>
+                            <constraint firstItem="dch-eQ-UNi" firstAttribute="centerY" secondItem="acI-ku-Nnh" secondAttribute="centerY" constant="145" id="apu-x3-LsW"/>
                             <constraint firstItem="yrL-6H-WYT" firstAttribute="top" secondItem="cOh-1A-bec" secondAttribute="bottom" constant="34" id="lQK-Jz-D7k"/>
                             <constraint firstItem="cCz-kc-5tb" firstAttribute="centerX" secondItem="5OT-nP-ob5" secondAttribute="centerX" id="lho-qb-GiS"/>
+                            <constraint firstItem="dch-eQ-UNi" firstAttribute="centerX" secondItem="acI-ku-Nnh" secondAttribute="centerX" id="sOh-KH-JgJ"/>
                             <constraint firstItem="5OT-nP-ob5" firstAttribute="top" secondItem="cCz-kc-5tb" secondAttribute="bottom" constant="8" symbolic="YES" id="th9-kj-Uih"/>
-                            <constraint firstItem="yrL-6H-WYT" firstAttribute="centerX" secondItem="BlO-6e-3zq" secondAttribute="centerX" id="v7L-pa-muY"/>
                             <constraint firstItem="cOh-1A-bec" firstAttribute="top" secondItem="5OT-nP-ob5" secondAttribute="bottom" constant="11" id="xJf-Mb-j40"/>
                         </constraints>
                     </view>
@@ -294,6 +296,9 @@
             <point key="canvasLocation" x="749" y="282"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="y2u-fF-vtK"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="iCloud-Control-1.4.1-Icon-1024" width="1024" height="1024"/>
     </resources>
