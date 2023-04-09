@@ -12,10 +12,15 @@ As of March 10 2023, iCloud Control has been discontinued with the release of ve
 This can be accomplished by selecting files in the Finder, control- or right-clicking the selection, and selecting **Remove Download**. In a selection of files with both local and non-local files, you can hold the **Option** key in the menu to bring up the same action.
 
 ### Download selected item:
-This is available through the same control- or right-click method as the **Remove selected item locally** option.
+This is available through the same Control- or right-click method as the **Remove selected item locally** option.
 
 ### Publish public link:
-This can be achieved through the **Share** option in the control-click menu.
+This can be achieved through the **Share** option on macOS Ventura and later, and the **Share File** option in macOS Monterey and older, through the Control-click menu.
+
+#### In macOS Ventura and later:
+Select **Collaborate** from the menu, and choose **Anyone with the link can edit** below it (this is a little difficult to see, but it should bring up additional sharing options. Choose **Anyone with the link** and manage permissions as you wish. Then select **Invite with Link** in the Sharing options. This will copy the public link to your clipboard.
+#### In macOS Monterey and older:
+Once **Share File** has been selected, a new window will appear. Select **Copy Link**, and adjust the settings to **Anyone with the link can edit**. Manage your preferred permission settings and press **Share** when you are done. This will copy the public link to your clipboard.
 
 ### Exclude selected item from iCloud:
 Go to the Finder item in the menu bar, and select Settings (or Preferences on older versions of macOS). In the Advanced panel, enable **Show all filename extensions**. Then, with the files you wish to exclude, go to rename the file and add **.nosync** to the end of the filename.
@@ -51,7 +56,7 @@ The following options are provided through a toolbar item in the Finder.
 
 ## Compatibility
 
-iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2 published by [@Obbut](https://github.com/Obbut), found at https://github.com/Obbut/iCloud-Control/releases
+iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2.0 published by [@Obbut](https://github.com/Obbut), found at https://github.com/Obbut/iCloud-Control/releases
 
 ## Known Issues
 ### Optimise Mac Storage may interfere with iCloud Control's features
@@ -63,6 +68,11 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who
 **Issue:** Some files may cause the FinderSync extension to unexpectedly crash.
 
 **Workaround:** None found.
+
+### Notifications on macOS 10.13 may not work as expected
+**Issue:** This feature was included in 1.5.0 at the last minute, in order to preserve compatibility with 10.13. It was not tested, only the 10.14 and above code for notifications.
+
+**Workaround:** If notifications happen to be broken on 10.13 and you would like to have it patched, feel free to contact me via email to discuss it further. There is no guarantee for additional support though, as the project has been discontinued.
 
 ---
 
