@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "117BCDFE29B0777800B77728"
+               BlueprintIdentifier = "F21B54E11D2568A300C4B4D9"
                BuildableName = "iCloud Control.app"
                BlueprintName = "iCloud Control"
-               ReferencedContainer = "container:iCloud Control.xcodeproj">
+               ReferencedContainer = "container:iCloudControl.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,9 +31,9 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      buildConfiguration = "Release"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -44,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "117BCDFE29B0777800B77728"
+            BlueprintIdentifier = "F21B54E11D2568A300C4B4D9"
             BuildableName = "iCloud Control.app"
             BlueprintName = "iCloud Control"
-            ReferencedContainer = "container:iCloud Control.xcodeproj">
+            ReferencedContainer = "container:iCloudControl.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "117BCDFE29B0777800B77728"
+            BlueprintIdentifier = "F21B54E11D2568A300C4B4D9"
             BuildableName = "iCloud Control.app"
             BlueprintName = "iCloud Control"
-            ReferencedContainer = "container:iCloud Control.xcodeproj">
+            ReferencedContainer = "container:iCloudControl.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  iCloud Control
+//  iCloudControl
 //
 //  Created by Robbert Brandsma on 30-06-16.
 //  Updated by Nick McQuade on 04-01-22.
@@ -8,39 +8,14 @@
 //  Copyright © 2022 Nick McQuade. All rights reserved.
 
 import Cocoa
-import UserNotifications
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     // Simple function which forces the app to terminate when the last window is closed by the user
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        NSApplication.shared.reply(toApplicationShouldTerminate: true)
+        NSApplication.shared.terminate(self)
         return true
-    }
-
-    func requestAuthorisation() {
-        // Since UNNotificationCenter is not available on anything prior to macOS 10.14, the function below allows the user to still receive notifications if they are running 10.13. 
-        if #available(macOS 10.14, *) {
-            let center = UNUserNotificationCenter.current()
-
-            center.requestAuthorization(options: [.alert]) { (granted, error) in
-                if granted {
-                    print("Notification authorisation granted")
-                } else {
-                    print("Notification authorisation denied")
-                    if let error = error {
-                        print("Error: \(error.localizedDescription)")
-                    }
-                }
-            }
-        } else {
-            print("Notification authorisation not available")
-        }
-    }
-    
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        requestAuthorisation()
     }
     
     @IBAction func openLatestRelease(_ sender: Any) {

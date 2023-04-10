@@ -1,6 +1,6 @@
 //
 //  HelpViewController.swift
-//  iCloud Control
+//  iCloudControl
 //
 //  Created by Nick McQuade on 25-02-23.
 //  Copyright © 2016 Robbert Brandsma. All rights reserved.
@@ -10,7 +10,7 @@ import Cocoa
 import WebKit
 
 class HelpViewController: NSViewController {
-
+    
     @IBOutlet weak var helpWebView: WKWebView!
     
     override func viewDidLoad() {

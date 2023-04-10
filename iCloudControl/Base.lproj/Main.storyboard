@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="21701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="iCloud_Control" customModuleProvider="target"/>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="iCloud Control" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="iCloud Control" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About iCloud Control" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Check for Updates" id="ibN-Ah-oOA">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="checkForUpdates:" target="Voe-Tx-rLC" id="4fs-hJ-d2w"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Hide iCloud Control" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit iCloud Control" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Window" id="gca-99-wGw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Window" systemMenu="window" id="oUR-Cp-rfU">
+                                    <items>
+                                        <menuItem title="Minimize" keyEquivalent="m" id="aTx-ae-fXF">
+                                            <connections>
+                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="Q93-FX-rcy"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Zoom" id="5HH-G2-6de">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="performZoom:" target="Ady-hI-5gd" id="bcl-3n-lhg"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="CDU-Au-8of"/>
+                                        <menuItem title="Bring All to Front" id="p80-Ce-bg3">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="8LH-HE-evP"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Help" id="8L3-Nm-NwF">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Help" systemMenu="help" id="AAW-mk-lL0">
+                                    <items>
+                                        <menuItem title="View GitHub README..." keyEquivalent="?" id="Ii7-XK-Kjh">
+                                            <connections>
+                                                <action selector="showHelp:" target="Oky-zY-oP4" id="5Ce-Xp-HKo"/>
+                                                <segue destination="jA6-nE-e6P" kind="modal" id="Ytj-rV-Rvx"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+            </objects>
+            <point key="canvasLocation" x="122" y="-119"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="iCloud Control" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="242" width="624" height="408"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="dki-bW-X7o"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="M8g-cn-8s3"/>
+                    </connections>
+                </windowController>
+            </objects>
+            <point key="canvasLocation" x="128" y="274"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="BN0-gl-dBb">
+            <objects>
+                <viewController title="Help" id="jA6-nE-e6P" customClass="HelpViewController" customModule="iCloud_Control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="xBw-mb-KgA">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="700"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WVQ-AG-qf0">
+                                <rect key="frame" x="0.0" y="0.0" width="500" height="700"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="WVQ-AG-qf0" firstAttribute="top" secondItem="xBw-mb-KgA" secondAttribute="top" id="WHk-zx-YdD"/>
+                            <constraint firstItem="WVQ-AG-qf0" firstAttribute="leading" secondItem="xBw-mb-KgA" secondAttribute="leading" id="d3n-h5-4cI"/>
+                            <constraint firstAttribute="trailing" secondItem="WVQ-AG-qf0" secondAttribute="trailing" id="el9-70-3mc"/>
+                            <constraint firstAttribute="bottom" secondItem="WVQ-AG-qf0" secondAttribute="bottom" id="ovB-FR-027"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="HelpWebView" destination="WVQ-AG-qf0" id="C91-EU-2mb"/>
+                    </connections>
+                </viewController>
+                <customObject id="FqY-aN-piv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="282"/>
+        </scene>
+        <!--iCloud Control-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController title="iCloud Control" id="XfG-lQ-9wD" customClass="ViewController" customModule="iCloud_Control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="502" height="350"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-dW-aai">
+                                <rect key="frame" x="188" y="238" width="127" height="28"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Hello there!" id="0r4-5a-Be9">
+                                    <font key="font" metaFont="system" size="24"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField identifier="explainLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DK5-zi-dcO">
+                                <rect key="frame" x="74" y="131" width="355" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="0HY-ve-3Ky"/>
+                                    <constraint firstAttribute="width" constant="351" id="uKc-de-f5L"/>
+                                </constraints>
+                                <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="To get started, enable the iCloud Control Finder extension in System Settings. You can then close this app and get going!" id="5MP-A7-IYf">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3lO-e5-sc3">
+                                <rect key="frame" x="78" y="197" width="346" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="dd4-bF-O3R"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Welcome to iCloud Control" id="hsR-bQ-JpV">
+                                    <font key="font" metaFont="systemSemibold" size="28"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button identifier="openButton" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Sq-N1Q">
+                                <rect key="frame" x="166" y="70" width="170" height="32"/>
+                                <buttonCell key="cell" type="push" title="Open System Settings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fZL-4i-FEA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="openSystemPreferences:" target="XfG-lQ-9wD" id="eWQ-g8-Mjw"/>
+                                </connections>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KUQ-7c-ubx">
+                                <rect key="frame" x="219" y="274" width="64" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="BJP-dy-Pho"/>
+                                    <constraint firstAttribute="width" constant="64" id="kTH-C7-891"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="iCloud-Control-1.4.1-Icon-1024" id="TL8-jY-9vf"/>
+                            </imageView>
+                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5sP-iD-kUb">
+                                <rect key="frame" x="238" y="16" width="25" height="25"/>
+                                <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vzu-mW-uBO">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="jA6-nE-e6P" kind="modal" id="oI3-6o-bbm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3lO-e5-sc3" secondAttribute="trailing" constant="79" id="15B-GS-OYN"/>
+                            <constraint firstItem="DK5-zi-dcO" firstAttribute="top" secondItem="3lO-e5-sc3" secondAttribute="bottom" constant="11" id="8za-GZ-lZZ"/>
+                            <constraint firstItem="Byb-dW-aai" firstAttribute="centerX" secondItem="3lO-e5-sc3" secondAttribute="centerX" id="Bao-ul-Gnz"/>
+                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="11" id="O7c-wN-6ah"/>
+                            <constraint firstItem="vJp-Sq-N1Q" firstAttribute="top" secondItem="DK5-zi-dcO" secondAttribute="bottom" constant="34" id="Uq3-Av-DQF"/>
+                            <constraint firstItem="Byb-dW-aai" firstAttribute="top" secondItem="KUQ-7c-ubx" secondAttribute="bottom" constant="8" symbolic="YES" id="WMY-0i-kEX"/>
+                            <constraint firstItem="3lO-e5-sc3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="80" id="YO4-VI-SCn"/>
+                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="-131.5" id="eVD-tc-BTq"/>
+                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fqd-JB-sO5"/>
+                            <constraint firstItem="5sP-iD-kUb" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="l9a-Lb-mUl"/>
+                            <constraint firstItem="5sP-iD-kUb" firstAttribute="top" secondItem="vJp-Sq-N1Q" secondAttribute="bottom" constant="37" id="mzJ-ck-VZd"/>
+                            <constraint firstItem="3lO-e5-sc3" firstAttribute="centerX" secondItem="DK5-zi-dcO" secondAttribute="centerX" id="rWn-VG-nhT"/>
+                            <constraint firstItem="KUQ-7c-ubx" firstAttribute="centerX" secondItem="Byb-dW-aai" secondAttribute="centerX" id="tGK-Jt-Eik"/>
+                            <constraint firstItem="DK5-zi-dcO" firstAttribute="centerX" secondItem="vJp-Sq-N1Q" secondAttribute="centerX" id="y0q-H2-gUp"/>
+                            <constraint firstItem="3lO-e5-sc3" firstAttribute="top" secondItem="Byb-dW-aai" secondAttribute="bottom" constant="8" symbolic="YES" id="zzJ-Yg-WT0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="explainLabel" destination="DK5-zi-dcO" id="GDU-YM-Trk"/>
+                        <outlet property="greetingLabel" destination="Byb-dW-aai" id="NUy-nC-eNH"/>
+                        <outlet property="openButton" destination="vJp-Sq-N1Q" id="1Pv-M6-XbR"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="128.5" y="838"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oI3-6o-bbm"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="iCloud-Control-1.4.1-Icon-1024" width="1024" height="1024"/>
+    </resources>
+</document>
