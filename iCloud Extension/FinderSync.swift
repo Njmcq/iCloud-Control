@@ -33,7 +33,7 @@ class FinderSync: FIFinderSync {
         if #available(macOS 10.14, *) {
             let content = UNMutableNotificationContent()
                 content.title = "An error has occurred"
-                content.body = "The selected function has not been completed."
+                content.body = "The selected action has not been completed."
                 content.sound = UNNotificationSound.default
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
                 let request = UNNotificationRequest(identifier: "funcError", content: content, trigger: trigger)
@@ -42,7 +42,7 @@ class FinderSync: FIFinderSync {
             // Fallback on macOS 10.13
             let notification = NSUserNotification()
             notification.title = "An error has occurred"
-            notification.informativeText = "The selected function has not been completed."
+            notification.informativeText = "The selected action has not been completed."
             notification.soundName = NSUserNotificationDefaultSoundName
             let center = NSUserNotificationCenter.default
             center.deliver(notification)
@@ -107,6 +107,7 @@ class FinderSync: FIFinderSync {
         }
     }
     
+    // Publish items function
     @IBAction func publish(_ sender: AnyObject?) {
         var urls = [URL]()
         print("'publish' requested")

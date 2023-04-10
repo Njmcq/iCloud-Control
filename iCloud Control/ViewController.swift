@@ -53,7 +53,7 @@ class ViewController: NSViewController, NSWindowDelegate {
         }
     }
     
-    @IBAction func openSystemPreferences(_ sender: AnyObject) {
+    @IBAction func openSystemSettings(_ sender: AnyObject) {
         NSWorkspace.shared.open(URL(fileURLWithPath:("/System/Library/PreferencePanes/Extensions.prefPane")
                                    ))
     }
