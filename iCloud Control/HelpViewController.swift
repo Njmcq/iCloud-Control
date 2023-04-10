@@ -4,7 +4,7 @@
 //
 //  Created by Nick McQuade on 25-02-23.
 //  Copyright © 2016 Robbert Brandsma. All rights reserved.
-//  Copyright © 2023 Nick McQuade. All rights reserved.
+//  Copyright © 2022-2023 Nick McQuade. All rights reserved.
 
 import Cocoa
 import WebKit
