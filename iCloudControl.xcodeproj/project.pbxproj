@@ -44,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		113D48F027FA7295002B3C73 /* iCloud Extension.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "iCloud Extension.xctestplan"; path = "iCloudControl.xcodeproj/iCloud Extension.xctestplan"; sourceTree = "<group>"; };
 		115ED40129E3C7D900A84A65 /* iCloud Control.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iCloud Control.entitlements"; sourceTree = "<group>"; };
 		11D9E8F329A9C3670047F2E3 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		F21B54E21D2568A400C4B4D9 /* iCloud Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iCloud Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,7 +54,7 @@
 		F21B54EC1D2568A400C4B4D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F21B54EE1D2568A400C4B4D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F21B54F81D2568E000C4B4D9 /* iCloud Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iCloud Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F21B54FB1D2568E000C4B4D9 /* iCloud Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iCloud Extension.entitlements"; sourceTree = "<group>"; };
+		F21B54FB1D2568E000C4B4D9 /* iCloudExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iCloudExtension.entitlements; sourceTree = "<group>"; };
 		F21B54FC1D2568E000C4B4D9 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		F21B54FE1D2568E000C4B4D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F25EF6F61D258F91007F9E06 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
@@ -78,19 +79,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11A2C2C129E3CCB700B6F942 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				115ED40129E3C7D900A84A65 /* iCloud Control.entitlements */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		F21B54D91D2568A300C4B4D9 = {
 			isa = PBXGroup;
 			children = (
-				F21B54E41D2568A400C4B4D9 /* iCloud Control */,
-				F21B54F91D2568E000C4B4D9 /* iCloud Extension */,
+				115ED40129E3C7D900A84A65 /* iCloud Control.entitlements */,
+				113D48F027FA7295002B3C73 /* iCloud Extension.xctestplan */,
+				F21B54E41D2568A400C4B4D9 /* iCloudControl */,
+				F21B54F91D2568E000C4B4D9 /* iCloudExtension */,
 				F21B54E31D2568A400C4B4D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,36 +99,35 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F21B54E41D2568A400C4B4D9 /* iCloud Control */ = {
+		F21B54E41D2568A400C4B4D9 /* iCloudControl */ = {
 			isa = PBXGroup;
 			children = (
 				F21B54E51D2568A400C4B4D9 /* AppDelegate.swift */,
 				F21B54E71D2568A400C4B4D9 /* ViewController.swift */,
 				11D9E8F329A9C3670047F2E3 /* HelpViewController.swift */,
-				F21B54EB1D2568A400C4B4D9 /* Main.storyboard */,
 				F21B54E91D2568A400C4B4D9 /* Assets.xcassets */,
+				F21B54EB1D2568A400C4B4D9 /* Main.storyboard */,
 				F21B54EE1D2568A400C4B4D9 /* Info.plist */,
 				F25EF6F61D258F91007F9E06 /* Credits.rtf */,
-				11A2C2C129E3CCB700B6F942 /* Supporting Files */,
 			);
-			path = "iCloud Control";
+			path = iCloudControl;
 			sourceTree = "<group>";
 		};
-		F21B54F91D2568E000C4B4D9 /* iCloud Extension */ = {
+		F21B54F91D2568E000C4B4D9 /* iCloudExtension */ = {
 			isa = PBXGroup;
 			children = (
 				F21B54FC1D2568E000C4B4D9 /* FinderSync.swift */,
 				F21B54FE1D2568E000C4B4D9 /* Info.plist */,
-				F2C9A9701D256AC200A6495D /* Extension.xcassets */,
 				F21B54FA1D2568E000C4B4D9 /* Supporting Files */,
+				F2C9A9701D256AC200A6495D /* Extension.xcassets */,
 			);
-			path = "iCloud Extension";
+			path = iCloudExtension;
 			sourceTree = "<group>";
 		};
 		F21B54FA1D2568E000C4B4D9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F21B54FB1D2568E000C4B4D9 /* iCloud Extension.entitlements */,
+				F21B54FB1D2568E000C4B4D9 /* iCloudExtension.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -185,9 +179,8 @@
 		F21B54DA1D2568A300C4B4D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Nick McQuade";
 				TargetAttributes = {
 					F21B54E11D2568A300C4B4D9 = {
@@ -209,7 +202,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F21B54DD1D2568A300C4B4D9 /* Build configuration list for PBXProject "iCloud Control" */;
+			buildConfigurationList = F21B54DD1D2568A300C4B4D9 /* Build configuration list for PBXProject "iCloudControl" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -346,7 +339,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -415,14 +408,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = "iCloud Control/iCloud Control.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "iCloud Control.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "10-04-23";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
-				INFOPLIST_FILE = "iCloud Control/Info.plist";
+				INFOPLIST_FILE = iCloudControl/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "iCloud Control";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -444,14 +437,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = "iCloud Control/iCloud Control.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "iCloud Control.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "10-04-23";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
-				INFOPLIST_FILE = "iCloud Control/Info.plist";
+				INFOPLIST_FILE = iCloudControl/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "iCloud Control";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -471,13 +464,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "iCloud Extension/iCloud Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = iCloudExtension/iCloudExtension.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "10-04-23";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
-				INFOPLIST_FILE = "iCloud Extension/Info.plist";
+				INFOPLIST_FILE = iCloudExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -496,13 +489,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "iCloud Extension/iCloud Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = iCloudExtension/iCloudExtension.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "10-04-23";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
-				INFOPLIST_FILE = "iCloud Extension/Info.plist";
+				INFOPLIST_FILE = iCloudExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -520,7 +513,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F21B54DD1D2568A300C4B4D9 /* Build configuration list for PBXProject "iCloud Control" */ = {
+		F21B54DD1D2568A300C4B4D9 /* Build configuration list for PBXProject "iCloudControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F21B54EF1D2568A400C4B4D9 /* Debug */,
