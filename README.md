@@ -5,8 +5,8 @@ Adds a menu to the Finder that allows control over files stored in iCloud, allow
 
 ![](Docs/1.4-Extension-Menu.png)
 
-# :warning: iCloud Control has been discontinued
-As of March 10 2023, iCloud Control has been discontinued with the release of version 1.5.0. This is due to the fact that the app has become redundant with the implementation of similar features in macOS in recent years, and even though the app is quite user-friendly by design, development slowly became stale. Below are instructions to assist with using the native macOS features in the Finder:
+# :warning: Future iCloud Control support
+As of March 10 2023, support for iCloud Control will be winding down. This is due to the fact that the app has become redundant with the implementation of similar features in macOS in recent years, and even though the app is quite user-friendly by design, development slowly became stale. I initially planned on discontinuing the project entirely, but there are some more additions which I would like to make in the future, time permitting. Please refer to the instructions below to learn how to use the native macOS features in the Finder:
 
 ### Remove selected item locally:
 This can be accomplished by selecting files in the Finder, control- or right-clicking the selection, and selecting **Remove Download**. In a selection of files with both local and non-local files, you can hold the **Option** key in the menu to bring up the same action.
@@ -63,16 +63,6 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who
 **Issue:** If Optimise Mac Storage is enabled in your iCloud settings, it may override some of the operations of iCloud Control (such as reversing "Remove selected items locally".
 
 **Workaround:** Unfortunately, there is no way to easily overcome this issue. As a result, you may have to select the option a couple of times if the file reverts to its original state, to force iCloud Control's operation. Otherwise, if this continues to cause issues, consider disabling Optimise Mac Storage.
-
-### Some files may cause the iCloud Control extension to crash
-**Issue:** Some files may cause the FinderSync extension to unexpectedly crash.
-
-**Workaround:** None found.
-
-### Notifications on macOS 10.13 may not work as expected
-**Issue:** This feature was included in 1.5.0 at the last minute, in order to preserve compatibility with 10.13. It was not tested, only the 10.14 and above code for notifications.
-
-**Workaround:** If notifications happen to be broken on 10.13 and you would like to have it patched, feel free to contact me via email to discuss it further. There is no guarantee for additional support though, as the project has been discontinued.
 
 ---
 
