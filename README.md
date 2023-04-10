@@ -6,7 +6,7 @@ Adds a menu to the Finder that allows control over files stored in iCloud, allow
 ![](Docs/1.4-Extension-Menu.png)
 
 # :warning: Future iCloud Control support
-As of March 10 2023, iCloud Control support for iCloud Control will be winding down. This is due to the fact that the app has become redundant with the implementation of similar features in macOS in recent years, and even though the app is quite user-friendly by design, development slowly became stale. I initially planned on discontinuing the project entirely, but there are some more additions which I would like to make in the future, time permitting. Below are instructions to assist with using the native macOS features in the Finder:
+As of March 10 2023, support for iCloud Control will be winding down. This is due to the fact that the app has become redundant with the implementation of similar features in macOS in recent years, and even though the app is quite user-friendly by design, development slowly became stale. I initially planned on discontinuing the project entirely, but there are some more additions which I would like to make in the future, time permitting. Please refer to the instructions below to learn how to use the native macOS features in the Finder:
 
 ### Remove selected item locally:
 This can be accomplished by selecting files in the Finder, control- or right-clicking the selection, and selecting **Remove Download**. In a selection of files with both local and non-local files, you can hold the **Option** key in the menu to bring up the same action.
