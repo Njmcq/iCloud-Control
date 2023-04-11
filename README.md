@@ -30,8 +30,6 @@ Simply remove **.nosync** from the filename. Make sure to retain the original fi
 
 ---
 
-## Now updated for Apple silicon!
-In version 1.3 and above, iCloud Control allows for native execution on Macs based on Apple silicon, with every release compiled as a Universal binary. These updates also add support for Swift 5.
 
 ## Installation & Help
 
@@ -55,8 +53,7 @@ The following options are provided through a toolbar item in the Finder.
 - **Restore selected items**: removes the .nosync extension from files, reverting them to their original file type.
 
 ## Compatibility
-
-iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2.0 published by [@Obbut](https://github.com/Obbut), found at https://github.com/Obbut/iCloud-Control/releases
+iCloud Control 1.3 and above is compatible with macOS 10.13 and above, and runs natively on both Intel and Apple silicon Macs. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2.0 published by [@Obbut](https://github.com/Obbut), found at https://github.com/Obbut/iCloud-Control/releases
 
 ## Known Issues
 ### Optimise Mac Storage may interfere with iCloud Control's features
@@ -64,7 +61,10 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above. Users who
 
 **Workaround:** Unfortunately, there is no way to easily overcome this issue. As a result, you may have to select the option a couple of times if the file reverts to its original state, to force iCloud Control's operation. Otherwise, if this continues to cause issues, consider disabling Optimise Mac Storage.
 
----
+### Check For Updates does not work on pre-release versions of the latest release
+**Issue:** For example, if a user has 1.6.0-rc.2 installed on their Mac and the latest published release is 1.6.0, the code will compare the version number in the installed version (**1.6.0**-rc.2) and the published version (**1.6.0**) and think that it's the same version, thus making it assume that the latest version is already installed. This does not apply if the installed number is different to the latest release (for example, if the user has a hypothetical **1.5.9**-rc.1 installed, and the latest release is **1.6.0**, it will see the latest update as per usual and prompt the user with the appropriate alert.
+
+**Workaround:** Check the [Releases page](https://github.com/Njmcq/iCloud-Control/releases) for the latest stable release if you are running a pre-release version of iCloud Control. I am currently looking into the issue and investigating how it could be fixed.
 
 ## License
 
