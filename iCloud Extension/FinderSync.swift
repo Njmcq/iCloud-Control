@@ -56,7 +56,7 @@ class FinderSync: FIFinderSync {
     }
     
     override var toolbarItemToolTip: String {
-        return "Manually manage iCloud storage"
+        return "Manually manage your files in iCloud Drive"
     }
     
     override var toolbarItemImage: NSImage {

@@ -58,38 +58,6 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="View" id="IOs-s0-k3L">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="View" id="R01-FR-bM4">
-                                    <items>
-                                        <menuItem title="Show Toolbar" keyEquivalent="t" id="3WW-NJ-ZRc">
-                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="toggleToolbarShown:" target="Ady-hI-5gd" id="JQe-PP-9Yo"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Customize Toolbar…" id="lgk-aZ-R28">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="runToolbarCustomizationPalette:" target="Ady-hI-5gd" id="xbl-zP-5xv"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="kNe-y5-hnM"/>
-                                        <menuItem title="Show Sidebar" keyEquivalent="s" id="hnL-rN-Sbv">
-                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="7a7-OJ-eQ7"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Enter Full Screen" keyEquivalent="f" id="E4q-1K-N0T">
-                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="toggleFullScreen:" target="Ady-hI-5gd" id="HE4-hb-3dv"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                            </menuItem>
                             <menuItem title="Window" id="gca-99-wGw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Window" systemMenu="window" id="oUR-Cp-rfU">
@@ -187,7 +155,7 @@
                 </viewController>
                 <customObject id="FqY-aN-piv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749" y="282"/>
+            <point key="canvasLocation" x="807" y="288"/>
         </scene>
         <!--iCloud Control-->
         <scene sceneID="hIz-AP-VOD">

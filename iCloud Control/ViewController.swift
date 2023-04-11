@@ -54,8 +54,7 @@ class ViewController: NSViewController, NSWindowDelegate {
     }
     
     @IBAction func openSystemSettings(_ sender: AnyObject) {
-        NSWorkspace.shared.open(URL(fileURLWithPath:("/System/Library/PreferencePanes/Extensions.prefPane")
-                                   ))
+        NSWorkspace.shared.open(URL(fileURLWithPath:("/System/Library/PreferencePanes/Extensions.prefPane")))
     }
     
     // MARK: - Main UI zoom management
