@@ -60,7 +60,7 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above, and runs 
 ### Optimise Mac Storage may interfere with iCloud Control's features
 **Issue:** If Optimise Mac Storage is enabled in your iCloud settings, it may override some of the operations of iCloud Control (such as reversing "Remove selected items locally".
 
-**Workaround:** Unfortunately, there is no way to easily overcome this issue. As a result, you may have to select the option a couple of times if the file reverts to its original state, to force iCloud Control's operation. Otherwise, if this continues to cause issues, consider disabling Optimise Mac Storage.
+**Workaround:** Unfortunately, there is no way to easily overcome this issue. As a result, you may have to select the action a couple of times if the file reverts to its original state, to force iCloud Control's operation. Otherwise, if this continues to cause issues, consider disabling Optimise Mac Storage.
 
 ### Check For Updates does not work on pre-release versions of the latest release
 **Issue:** For example, if a user has 1.6.0-rc.2 installed on their Mac and the latest published release is 1.6.0, the code will compare the version number in the installed version (**1.6.0**-rc.2) and the published version (**1.6.0**) and think that it's the same version, thus making it assume that the latest version is already installed. This does not apply if the installed number is different to the latest release (for example, if the user has a hypothetical **1.5.9**-rc.1 installed, and the latest release is **1.6.0**, it will see the latest update as per usual and prompt the user with the appropriate alert.
