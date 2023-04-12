@@ -63,6 +63,11 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above, and runs 
 
 **Workaround:** Unfortunately, there is no way to easily overcome this issue. As a result, you may have to select the action a couple of times if the file reverts to its original state, to force iCloud Control's operation. Otherwise, if this continues to cause issues, consider disabling Optimise Mac Storage.
 
+### Available releases before 1.6.0 do not abide by Semantic Versioning
+**Issue:** Because I was unaware of the concept of Semantic Versioning, every release of iCloud Control between 1.3 and 1.6.0 (1.5.0 was technically the first corrected release, but it has since been pulled due to unrelated issues) does not abide by the Semantic Versioning guidelines. As such, every release version from 1.3 follows a broken versioning system and does not reflect the nature of the release.
+
+**Workaround:** 1.6.0 is the first available update which follows Semantic Versioning 2.0.0. Users should update to the latest version as soon as possible.
+
 ### Check For Updates does not work on pre-release versions of the latest release
 **Issue:** For example, if a user has 1.6.0-rc.2 installed on their Mac and the latest published release is 1.6.0, the code will compare the version number in the installed version (**1.6.0**-rc.2) and the published version (**1.6.0**) and think that it's the same version, thus making it assume that the latest version is already installed. This does not apply if the installed number is different to the latest release (for example, if the user has a hypothetical **1.5.9**-rc.1 installed, and the latest release is **1.6.0**, it will see the latest update as per usual and prompt the user with the appropriate alert.
 
