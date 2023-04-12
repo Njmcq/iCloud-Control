@@ -36,16 +36,17 @@ Simply remove **.nosync** from the filename. Make sure to retain the original fi
 
 1. Download the latest version of iCloud Control from the [GitHub releases page](https://github.com/Njmcq/iCloud-Control/releases/latest).
 2. Move iCloud Control from your Downloads to the Applications folder.
-3. Because iCloud Control doesn't have a valid signature as of yet, Gatekeeper flags the app as unknown. iCloud Control is not in any way malicious, and if you are concerned, you are more than welcome to review the source code in the repository. To bypass Gatekeeper, control-click or right-click on the app in the Applications folder, and select "Open". This will bring up a similar alert, but you will be able to select "Open" to run the app.
-4. iCloud Control will open with a window welcoming you! As per the instructions in that window, you need to select Open System Settings (or System Preferences on older versions of macOS) to bring up the Extensions panel.
-5. In the panel, select "Added Extensions" and enable iCloud Control's Finder extension (you may have to scroll down if multiple other apps appear here).
-6. Once you have done this, you can safely close System Settings/Preferences and the iCloud Control app.
-7. Open a Finder window. In the Toolbar at the top, you may see the iCloud Control icon appear. If you don't, control- or right-click the Toolbar and select "Customise Toolbar". A new window will open with a selection of Toolbar extensions. Drag iCloud Control into the Toolbar (the other extensions will be bouncing around). Some may easily confuse the default Toolbar preset at the bottom of the window for the place to drag the extension, so ensure that it's the one which has bouncing icons.
-8. Select "Done".
+3. Because iCloud Control isn't notarised as of yet, Gatekeeper flags the app as unknown and potentially malicious. iCloud Control is not in any way malicious, and if you are concerned, you are more than welcome to review the source code in the repository. To bypass Gatekeeper, Control-click or right-click on the app in the Applications folder, and select "Open". This will bring up a similar alert, but you will be able to select "Open" to run the app.
+4. When iCloud Control first opens, you may be prompted to enable notifications. It is highly recommended to enable notifications as they deliver important alerts when using the **Publish public link** feature, and if an error occurs.
+5. iCloud Control will open with a window welcoming you! As per the instructions in that window, you need to select Open System Settings (or System Preferences on older versions of macOS) to bring up the Extensions panel.
+6. In the panel, select "Added Extensions" and enable iCloud Control's Finder extension (you may have to scroll down if multiple other apps appear here).
+7. Once you have done this, you can safely close System Settings/Preferences and the iCloud Control app.
+8. Open a Finder window. In the Toolbar at the top, you may see the iCloud Control icon appear. If you don't, control- or right-click the Toolbar and select "Customise Toolbar". A new window will open with a selection of Toolbar extensions. Drag iCloud Control into the Toolbar (the other extensions will be bouncing around). Some may easily confuse the default Toolbar preset at the bottom of the window for the place to drag the extension, so ensure that it's the one which has bouncing icons.
+9. Select "Done".
 
 ## Usage
 
-The following options are provided through a toolbar item in the Finder.
+The following actions are provided through a toolbar item in the Finder:
 
 - **Remove selected item locally**: the selected item(s) will be removed from your device, while remaining in iCloud.
 - **Download selected item**: download previously removed files from iCloud.
@@ -58,7 +59,7 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above, and runs 
 
 ## Known Issues
 ### Optimise Mac Storage may interfere with iCloud Control's features
-**Issue:** If Optimise Mac Storage is enabled in your iCloud settings, it may override some of the operations of iCloud Control (such as reversing "Remove selected items locally".
+**Issue:** If Optimise Mac Storage is enabled in your iCloud settings, it may override some of the operations of iCloud Control (such as reversing "Remove selected items locally").
 
 **Workaround:** Unfortunately, there is no way to easily overcome this issue. As a result, you may have to select the action a couple of times if the file reverts to its original state, to force iCloud Control's operation. Otherwise, if this continues to cause issues, consider disabling Optimise Mac Storage.
 
@@ -66,6 +67,11 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above, and runs 
 **Issue:** For example, if a user has 1.6.0-rc.2 installed on their Mac and the latest published release is 1.6.0, the code will compare the version number in the installed version (**1.6.0**-rc.2) and the published version (**1.6.0**) and think that it's the same version, thus making it assume that the latest version is already installed. This does not apply if the installed number is different to the latest release (for example, if the user has a hypothetical **1.5.9**-rc.1 installed, and the latest release is **1.6.0**, it will see the latest update as per usual and prompt the user with the appropriate alert.
 
 **Workaround:** Check the [Releases page](https://github.com/Njmcq/iCloud-Control/releases) for the latest stable release if you are running a pre-release version of iCloud Control. I am currently looking into the issue and investigating how it could be fixed.
+
+### Greeting label in the main app does not update correctly
+**Issue:** For example, if a user opens the app at 5:45pm, leaves it in the background for 30 minutes, and comes back at 6:15pm, the app will still say "Good afternoon!". This is due to the app not updating its ViewController content when it is brought into the foreground.
+
+**Workaround:** This isn't too big of an issue, but you can quit the app and reopen it to refresh the label. This issue should be addressed in a future update.
 
 ## License
 
