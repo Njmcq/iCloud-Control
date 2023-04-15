@@ -71,12 +71,12 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above, and runs 
 ### Check For Updates does not work on pre-release versions of the latest release
 **Issue:** For example, if a user has 1.6.0-rc.2 installed on their Mac and the latest published release is 1.6.0, the code will compare the version number in the installed version (**1.6.0**-rc.2) and the published version (**1.6.0**) and think that it's the same version, thus making it assume that the latest version is already installed. This does not apply if the installed number is different to the latest release (for example, if the user has a hypothetical **1.5.9**-rc.1 installed, and the latest release is **1.6.0**, it will see the latest update as per usual and prompt the user with the appropriate alert.
 
-**Workaround:** Check the [Releases page](https://github.com/Njmcq/iCloud-Control/releases) for the latest stable release if you are running a pre-release version of iCloud Control. I am currently looking into the issue and investigating how it could be fixed.
+**Workaround:** Check the [Releases page](https://github.com/Njmcq/iCloud-Control/releases) for the latest stable release if you are running a pre-release version of iCloud Control.
 
 ### Greeting label in the main app does not update correctly
 **Issue:** For example, if a user opens the app at 5:45pm, leaves it in the background for 30 minutes, and comes back at 6:15pm, the app will still say "Good afternoon!". This is due to the app not updating its ViewController content when it is brought into the foreground.
 
-**Workaround:** This isn't too big of an issue, but you can quit the app and reopen it to refresh the label. This issue should be addressed in a future update.
+**Workaround:** This isn't too big of an issue, but you can quit the app and reopen it to refresh the label. A solution to this issue has been written and will be published in an upcoming release.
 
 ## License
 
