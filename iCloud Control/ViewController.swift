@@ -18,38 +18,39 @@ class ViewController: NSViewController, NSWindowDelegate {
     
     override func viewDidAppear() {
         super.viewDidAppear()
+        updateGreetingLabel() // This sets the Greeting Label in the ViewController when the app is launched, even if it isn't the foreground app.
         
         //MARK: - Change window behaviour
-        // Set the window behavior to zoom instead of maximize
-        view.window?.collectionBehavior = .fullScreenNone
-        view.window?.delegate = self
-        
+
         // Hide the title of the window
         view.window?.titleVisibility = .hidden
         
         // Disable the transparent appearance of the title bar
         view.window?.titlebarAppearsTransparent = true
         
-        // MARK: - Adjust greeting label based on time of day
-        let hour = Calendar.current.component(.hour, from: Date())
+        // Set the window styleMask to include .fullSizeContentView
+        view.window?.styleMask.insert(.fullSizeContentView)
         
-        if hour >= 0 && hour < 12 {
-            greetingLabel.stringValue = "Good morning!"
-        } else if hour >= 12 && hour < 18 {
-            greetingLabel.stringValue = "Good afternoon!"
-        } else {
-            greetingLabel.stringValue = "Good evening!"
+        // Disable the Maximise/Zoom button in the window
+        if let window = view.window {
+            var styleMask = window.styleMask
+            styleMask.remove(.resizable)
+            window.styleMask = styleMask
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateGreetingLabel), name: NSApplication.willBecomeActiveNotification, object: nil)
+            
         // MARK: - Change UI based on OS version
         let version = ProcessInfo.processInfo.operatingSystemVersion
         
         if version.majorVersion >= 13 {
             explainLabel.stringValue = "To get started, enable the iCloud Control Finder extension in System Settings. You can then close this app and get going!"
             openButton.title = "Open System Settings"
+            print("'Explain Label' and 'Open Button' successfully updated with System Settings.")
         } else {
             explainLabel.stringValue = "To get started, enable the iCloud Control Finder extension in System Preferences. You can then close this app and get going!"
             openButton.title = "Open System Preferences"
+            print("'Explain Label' and 'Open Button' successfully updated with System Preferences.")
         }
     }
     
@@ -57,19 +58,19 @@ class ViewController: NSViewController, NSWindowDelegate {
         NSWorkspace.shared.open(URL(fileURLWithPath:("/System/Library/PreferencePanes/Extensions.prefPane")))
     }
     
-    // MARK: - Main UI zoom management
-    var isNotZoomed = true
-    let originalSize = NSRect(x: 0, y: 0, width: 500, height: 350)
-    
-    func windowWillUseStandardFrame(_ window: NSWindow, defaultFrame newFrame: NSRect) -> NSRect {
-        var newFrame = isNotZoomed ? originalSize : NSRect(x: 0, y: 0, width: 500, height: 350)
+    // MARK: - Adjust greeting label based on time of day
+    @objc func updateGreetingLabel() {
+        let hour = Calendar.current.component(.hour, from: Date())
         
-        let screenRect = NSScreen.main!.visibleFrame
-        let screenCenter = NSPoint(x: screenRect.midX, y: screenRect.midY)
-        
-        newFrame.origin.x = screenCenter.x - (newFrame.size.width / 2)
-        newFrame.origin.y = screenCenter.y - (newFrame.size.height / 2)
-        
-        return newFrame
+        if hour >= 0 && hour < 12 {
+            greetingLabel.stringValue = "Good morning!"
+            print("'Greeting Label' successfully updated for morning.")
+        } else if hour >= 12 && hour < 18 {
+            greetingLabel.stringValue = "Good afternoon!"
+            print("'Greeting Label' successfully updated for afternoon.")
+        } else {
+            greetingLabel.stringValue = "Good evening!"
+            print("'Greeting Label' successfully updated for evening.")
+        }
     }
 }

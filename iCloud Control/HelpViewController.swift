@@ -27,6 +27,7 @@ class HelpViewController: NSViewController {
         
         helpWebView.navigationDelegate = self
     }
+    
     // MARK: - Show alert if internet connection is unavailable.
     private func showAlert(message: String) {
         let alert = NSAlert()

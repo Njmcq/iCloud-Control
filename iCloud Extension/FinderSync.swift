@@ -20,11 +20,11 @@ class FinderSync: FIFinderSync {
     
     var currentTargets: [URL] {
         var targets = FIFinderSyncController.default().selectedItemURLs() ?? []
-        
+
         if let targetedUrl = FIFinderSyncController.default().targetedURL(), targets.count == 0 {
             targets.append(targetedUrl)
         }
-        
+
         return targets
     }
     
@@ -64,7 +64,7 @@ class FinderSync: FIFinderSync {
     }
     
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
-        NSLog("menu(for:)")
+        print("menu(for:)")
         let menu = NSMenu(title: "")
         menu.addItem(withTitle: "Remove selected items locally", action: #selector(removeLocal(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Download selected items", action: #selector(downloadItem(_:)), keyEquivalent: "")
@@ -72,6 +72,13 @@ class FinderSync: FIFinderSync {
         menu.addItem(withTitle: "Exclude selected items from iCloud", action: #selector(excludeItem(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Restore selected items", action: #selector(restoreItem(_:)), keyEquivalent: "")
         
+        let onlineToolsMenuItem = NSMenuItem(title: "Manage iCloud on the web", action: nil, keyEquivalent: "")
+        let onlineMenu = NSMenu(title: "Manage iCloud on the web")
+        onlineMenu.addItem(withTitle: "iCloud.com", action: #selector(openiCloudWebsite(_:)), keyEquivalent: "")
+        onlineMenu.addItem(withTitle: "Apple ID", action: #selector(openAppleIDWebsite(_:)), keyEquivalent: "")
+        onlineToolsMenuItem.submenu = onlineMenu
+        menu.addItem(onlineToolsMenuItem)
+
         return menu
     }
     
@@ -198,6 +205,18 @@ class FinderSync: FIFinderSync {
                 print("Restore of \(target) failed")
                 functionError()
             }
+        }
+    }
+    
+    @IBAction func openiCloudWebsite(_ sender: AnyObject?) {
+        if let url = URL(string: "https://www.icloud.com") {
+            NSWorkspace.shared.open(url)
+        }
+    }
+    
+    @IBAction func openAppleIDWebsite(_ sender: AnyObject?) {
+        if let url = URL(string: "https://appleid.apple.com") {
+            NSWorkspace.shared.open(url)
         }
     }
 }

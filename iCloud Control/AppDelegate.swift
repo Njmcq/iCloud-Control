@@ -27,13 +27,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             center.getNotificationSettings { (settings) in
                 switch settings.authorizationStatus {
                 case .authorized:
-                    print("Notifications already authorised")
+                    print("Notifications already authorised.")
                 case .denied:
-                    print("Notifications denied by user")
+                    print("Notifications denied by user.")
                 case .notDetermined:
                     center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
                         if granted {
-                            print("Notifications authorisation granted")
+                            print("Notifications authorisation granted.")
                         }
                     }
                     NSApplication.shared.registerForRemoteNotifications()
@@ -50,9 +50,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
                         }
                     }
                 case .provisional:
-                    print("Notifications provisionally authorised")
+                    print("Notifications provisionally authorised.")
                 @unknown default:
-                    print("Unknown authorisation status")
+                    print("Unknown authorisation status.")
                 }
             }
         } else {
@@ -79,33 +79,33 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             NSWorkspace.shared.open(url)
         }
     }
-
+    
     // MARK: - Check For Updates function
     @IBAction func checkForUpdates(_ sender: Any) {
         let owner = "Njmcq"
         let repo = "iCloud-Control"
         let url = URL(string: "https://api.github.com/repos/\(owner)/\(repo)/releases/latest")
-        
+
         let task = URLSession.shared.dataTask(with: url!) { data, response, error in
             if error != nil {
                 print("Error: \(error!.localizedDescription)")
                 return
             }
-            
+
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode) else {
                 print("Error: Invalid HTTP response status code")
                 return
             }
-            
+
             if let data = data,
                let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
                let tagName = json["tag_name"] as? String,
                let downloadURLString = json["html_url"] as? String {
                 let downloadURL = URL(string: downloadURLString)!
-                
+
                 let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
-                
+
                 if currentVersion.compare(tagName, options: .numeric) == .orderedAscending {
                     // A new update is available
                     let releaseNotes = json["body"] as? String ?? ""
@@ -116,7 +116,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
                 }
             }
         }
-        
+
         task.resume()
     }
 
@@ -127,14 +127,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             alert.informativeText = "Version \(version) is now available. Do you want to download it? \n(This will open GitHub in your browser)"
             alert.addButton(withTitle: "Download")
             alert.addButton(withTitle: "Cancel")
-            
+
             let modalResult = alert.runModal()
             if modalResult == NSApplication.ModalResponse.alertFirstButtonReturn {
                 NSWorkspace.shared.open(downloadURL)
             }
         }
     }
-    
+
     func showLatestVersionInstalledAlert() {
         DispatchQueue.main.async {
             let alert = NSAlert()
@@ -142,6 +142,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             alert.informativeText = "You are already running the latest version of the app."
             alert.addButton(withTitle: "OK")
             alert.runModal()
-            }
         }
     }
+}
