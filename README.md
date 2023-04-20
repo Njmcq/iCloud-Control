@@ -2,7 +2,7 @@
 
 ---
 
-### Adds a menu to the Finder that allows control over files stored in iCloud, providing user-controlled selective synchronisation.
+### Adds a menu to the Finder that allows control over files stored in iCloud Drive, providing user-controlled selective synchronisation.
 
 ![](Docs/1.7.0-Extension-Menu.png)
 
