@@ -55,7 +55,7 @@ The following actions are provided through a toolbar item in the Finder:
 - **Manage iCloud on the web**: includes quick links to both iCloud.com and appleid.apple.com.
 
 ## Compatibility
-iCloud Control 1.3 and above is compatible with macOS 10.13 and above, and runs natively on both Intel and Apple silicon Macs. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2.0 published by [@Obbut](https://github.com/Obbut), found at https://github.com/Obbut/iCloud-Control/releases
+iCloud Control 1.3.0 and above is compatible with macOS 10.13 and above, and runs natively on both Intel and Apple silicon Macs. Users who wish to use iCloud Control on 10.12 or below may do so with version 1.2.0 published by [@Obbut](https://github.com/Obbut), found at https://github.com/Obbut/iCloud-Control/releases
 
 ## Known Issues
 ### Optimise Mac Storage may interfere with iCloud Control's features
@@ -63,8 +63,13 @@ iCloud Control 1.3 and above is compatible with macOS 10.13 and above, and runs 
 
 **Workaround:** Unfortunately, there is no way to easily overcome this issue. As a result, you may have to select the action a couple of times if the file reverts to its original state, to force iCloud Control's operation. Otherwise, if this continues to cause issues, consider disabling Optimise Mac Storage.
 
+### Releases prior to 1.6.0 are unstable
+**Issue:** Every release from 1.3.0 through 1.5.0 (inclusive) are unstable and have a variety of issues, some of which may not be documented in the release notes.
+
+**Workaround:** 1.6.0 is the first stable release. Users should update to the [latest release](https://github.com/Njmcq/iCloud-Control/releases/latest) as soon as possible.
+
 ### Available releases before 1.6.0 do not abide by Semantic Versioning
-**Issue:** Because I was unaware of the concept of Semantic Versioning, every release of iCloud Control between 1.3 and 1.6.0 (1.5.0 was technically the first corrected release, but it has since been pulled due to unrelated issues) does not abide by the Semantic Versioning guidelines. As such, every release version from 1.3 follows a broken versioning system and does not reflect the nature of the release.
+**Issue:** Because I was unaware of the concept of Semantic Versioning, every release of iCloud Control between 1.3.0 and 1.6.0 (1.5.0 was technically the first corrected release, but it has since been pulled due to unrelated issues) does not abide by the Semantic Versioning guidelines. As such, every release version from 1.3.0 follows a broken versioning system and does not reflect the nature of the release.
 
 **Workaround:** 1.6.0 is the first available update which follows Semantic Versioning 2.0.0. Users should update to the [latest release](https://github.com/Njmcq/iCloud-Control/releases/latest) as soon as possible.
 
