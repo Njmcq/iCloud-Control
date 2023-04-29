@@ -1,4 +1,6 @@
-![](Docs/iCloud%20Control%201280x200%20transparent.png)
+<p align="center">
+  <img width="250" height="250" src="Docs/iCloud-Control-1.4.0.1-Icon-1024.png">
+</p>
 
 ---
 
