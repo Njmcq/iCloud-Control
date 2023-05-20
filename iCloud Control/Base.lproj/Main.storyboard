@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="21701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -90,8 +89,7 @@
                                         <menuItem title="View GitHub README..." id="Ii7-XK-Kjh">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="showHelp:" target="Oky-zY-oP4" id="5Ce-Xp-HKo"/>
-                                                <segue destination="jA6-nE-e6P" kind="modal" id="Ytj-rV-Rvx"/>
+                                                <action selector="helpMenuItem:" target="Voe-Tx-rLC" id="he0-KS-tJU"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -112,7 +110,7 @@
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="iCloud Control" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="242" width="624" height="408"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -126,37 +124,6 @@
                 </windowController>
             </objects>
             <point key="canvasLocation" x="128" y="274"/>
-        </scene>
-        <!--Help-->
-        <scene sceneID="BN0-gl-dBb">
-            <objects>
-                <viewController title="Help" id="jA6-nE-e6P" customClass="HelpViewController" customModule="iCloud_Control" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="xBw-mb-KgA">
-                        <rect key="frame" x="0.0" y="0.0" width="500" height="700"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WVQ-AG-qf0">
-                                <rect key="frame" x="0.0" y="0.0" width="500" height="700"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="WVQ-AG-qf0" firstAttribute="top" secondItem="xBw-mb-KgA" secondAttribute="top" id="WHk-zx-YdD"/>
-                            <constraint firstItem="WVQ-AG-qf0" firstAttribute="leading" secondItem="xBw-mb-KgA" secondAttribute="leading" id="d3n-h5-4cI"/>
-                            <constraint firstAttribute="trailing" secondItem="WVQ-AG-qf0" secondAttribute="trailing" id="el9-70-3mc"/>
-                            <constraint firstAttribute="bottom" secondItem="WVQ-AG-qf0" secondAttribute="bottom" id="ovB-FR-027"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="HelpWebView" destination="WVQ-AG-qf0" id="C91-EU-2mb"/>
-                    </connections>
-                </viewController>
-                <customObject id="FqY-aN-piv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="807" y="288"/>
         </scene>
         <!--iCloud Control-->
         <scene sceneID="hIz-AP-VOD">
@@ -180,7 +147,7 @@
                                 </textFieldCell>
                             </textField>
                             <button identifier="openButton" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Sq-N1Q">
-                                <rect key="frame" x="165" y="48" width="170" height="32"/>
+                                <rect key="frame" x="166" y="48" width="169" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open System Settings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fZL-4i-FEA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -196,7 +163,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="jA6-nE-e6P" kind="modal" id="oI3-6o-bbm"/>
+                                    <action selector="helpButton:" target="XfG-lQ-9wD" id="ewY-Zv-2s0"/>
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-dW-aai">
@@ -255,9 +222,6 @@
             <point key="canvasLocation" x="127.5" y="838"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Ytj-rV-Rvx"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="iCloud-Control-1.4.1-Icon-1024" width="1024" height="1024"/>
     </resources>

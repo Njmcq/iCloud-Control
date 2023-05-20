@@ -39,13 +39,7 @@ class FinderSync: FIFinderSync {
                 let request = UNNotificationRequest(identifier: "funcError", content: content, trigger: trigger)
                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         } else {
-            // Fallback on macOS 10.13
-            let notification = NSUserNotification()
-            notification.title = "An error has occurred"
-            notification.informativeText = "The selected action has not been completed."
-            notification.soundName = NSUserNotificationDefaultSoundName
-            let center = NSUserNotificationCenter.default
-            center.deliver(notification)
+            print("iCloud Control does not support notifications on macOS 10.13.")
         }
     }
     
@@ -71,6 +65,7 @@ class FinderSync: FIFinderSync {
         menu.addItem(withTitle: "Publish public link", action: #selector(publish(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Exclude selected items from iCloud", action: #selector(excludeItem(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Restore selected items", action: #selector(restoreItem(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Force sync", action: #selector(forceSync(_:)), keyEquivalent: "")
         
         let onlineToolsMenuItem = NSMenuItem(title: "Manage iCloud on the web", action: nil, keyEquivalent: "")
         let onlineMenu = NSMenu(title: "Manage iCloud on the web")
@@ -150,22 +145,7 @@ class FinderSync: FIFinderSync {
                 let request = UNNotificationRequest(identifier: "clipboardCopy", content: content, trigger: trigger)
                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
             } else {
-                // Fallback on macOS 10.13
-                let notification = NSUserNotification()
-                if urls.count == 1 {
-                    notification.title = "1 link has been copied to clipboard"
-                    notification.informativeText = "1 link has been copied to the clipboard."
-                } else if urls.count > 1 {
-                    notification.title = "\(urls.count) links have been copied to clipboard"
-                    notification.informativeText = "\(urls.count) links have been copied to the clipboard"
-                } else {
-                    notification.title = "No links found"
-                    notification.informativeText = "No links were found in the selection."
-                }
-                notification.soundName = NSUserNotificationDefaultSoundName
-                
-                let center = NSUserNotificationCenter.default
-                center.deliver(notification)
+                print("iCloud Control does not support notifications on macOS 10.13.")
             }
         }
     }
@@ -208,6 +188,32 @@ class FinderSync: FIFinderSync {
         }
     }
     
+    @IBAction func forceSync(_ sender: AnyObject?) {
+        print("'forceSync' requested")
+        
+        for target in currentTargets {
+            let directoryURL = target.deletingLastPathComponent()
+            do {
+                let tempFileURL = directoryURL.appendingPathComponent(".temp.txt")
+                try "".write(to: tempFileURL, atomically: true, encoding: .utf8)
+                print("Temporary file created successfully at \(tempFileURL)")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    do {
+                        try FileManager.default.removeItem(at: tempFileURL)
+                        print("Temporary file removed successfully")
+                    } catch {
+                        print("Error removing temporary file: \(error)")
+                    }
+                }
+            } catch {
+                print("Error creating temporary file: \(error)")
+            }
+        }
+    }
+
+
+
+
     @IBAction func openiCloudWebsite(_ sender: AnyObject?) {
         if let url = URL(string: "https://www.icloud.com") {
             NSWorkspace.shared.open(url)

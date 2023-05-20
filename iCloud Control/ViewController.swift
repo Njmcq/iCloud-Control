@@ -32,11 +32,7 @@ class ViewController: NSViewController, NSWindowDelegate {
         view.window?.styleMask.insert(.fullSizeContentView)
         
         // Disable the Maximise/Zoom button in the window
-        if let window = view.window {
-            var styleMask = window.styleMask
-            styleMask.remove(.resizable)
-            window.styleMask = styleMask
-        }
+        view.window?.styleMask.remove(.resizable)
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateGreetingLabel), name: NSApplication.willBecomeActiveNotification, object: nil)
             
@@ -56,6 +52,12 @@ class ViewController: NSViewController, NSWindowDelegate {
     
     @IBAction func openSystemSettings(_ sender: AnyObject) {
         NSWorkspace.shared.open(URL(fileURLWithPath:("/System/Library/PreferencePanes/Extensions.prefPane")))
+    }
+    
+    @IBAction func helpButton(_ sender: NSButton) {
+        if let url = URL(string: "https://github.com/Njmcq/iCloud-Control#installation--help") {
+            NSWorkspace.shared.open(url)
+        }
     }
     
     // MARK: - Adjust greeting label based on time of day

@@ -12,7 +12,7 @@ import UserNotifications
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
-
+    
     // Simple function which forces the app to terminate when the last window is closed by the user
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         NSApplication.shared.terminate(self)
@@ -20,62 +20,72 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     }
     
     // MARK: - Notification authorisation permissions & alert
-    func requestAuthorisation() {
-        if #available(macOS 10.14, *) {
-            let center = UNUserNotificationCenter.current()
-            center.delegate = self
-            center.getNotificationSettings { (settings) in
-                switch settings.authorizationStatus {
-                case .authorized:
-                    print("Notifications already authorised.")
-                case .denied:
-                    print("Notifications denied by user.")
-                case .notDetermined:
-                    center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-                        if granted {
-                            print("Notifications authorisation granted.")
+        
+        func requestAuthorisation() {
+            if #available(macOS 10.14, *) {
+                let center = UNUserNotificationCenter.current()
+                center.delegate = self
+                center.getNotificationSettings { (settings) in
+                    switch settings.authorizationStatus {
+                    case .authorized:
+                        print("Notifications already authorised.")
+                    case .denied:
+                        print("Notifications denied by user.")
+                    case .notDetermined:
+                        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+                            if granted {
+                                print("Notifications authorisation granted.")
+                            }
                         }
-                    }
-                    NSApplication.shared.registerForRemoteNotifications()
-                    DispatchQueue.main.async {
-                        let alert = NSAlert()
-                        alert.messageText = "Notifications Required"
-                        alert.informativeText = "iCloud Control requires notification permissions in order to deliver alerts when an action has been completed, or has failed."
-                        alert.addButton(withTitle: "Open Notifications")
-                        alert.addButton(withTitle: "Dismiss")
-                        alert.alertStyle = .informational
-                        let response = alert.runModal()
-                        if response == .alertFirstButtonReturn {
-                            NSWorkspace.shared.open(URL(fileURLWithPath: "/System/Library/PreferencePanes/Notifications.prefPane"))
+                        NSApplication.shared.registerForRemoteNotifications()
+                        DispatchQueue.main.async {
+                            let alert = NSAlert()
+                            alert.messageText = "Notifications Required"
+                            alert.informativeText = "iCloud Control requires notification permissions in order to deliver alerts when an action has been completed, or has failed."
+                            alert.addButton(withTitle: "Open Notifications")
+                            alert.addButton(withTitle: "Dismiss")
+                            alert.alertStyle = .informational
+                            let response = alert.runModal()
+                            if response == .alertFirstButtonReturn {
+                                NSWorkspace.shared.open(URL(fileURLWithPath: "/System/Library/PreferencePanes/Notifications.prefPane"))
+                            }
                         }
+                    case .provisional:
+                        print("Notifications provisionally authorised.")
+                    @unknown default:
+                        print("Unknown authorisation status.")
                     }
-                case .provisional:
-                    print("Notifications provisionally authorised.")
-                @unknown default:
-                    print("Unknown authorisation status.")
                 }
-            }
-        } else {
-            print("Notification authorisation not supported on macOS versions earlier than 10.14")
-            let alert = NSAlert()
-            alert.messageText = "Notifications Required"
-            alert.informativeText = "iCloud Control requires notification permissions in order to deliver alerts when an action has been completed, or has failed."
-            alert.addButton(withTitle: "Open System Preferences")
-            alert.addButton(withTitle: "Dismiss")
-            alert.alertStyle = .informational
-            let response = alert.runModal()
-            if response == .alertFirstButtonReturn {
-                NSWorkspace.shared.open(URL(fileURLWithPath: "/System/Library/PreferencePanes/Notifications.prefPane"))
+            } else {
+                let defaults = UserDefaults.standard
+                
+                // Check if the flag indicating whether the alert has been displayed is set to true
+                if defaults.bool(forKey: "alertDisplayed") {
+                    // Alert has already been displayed, do nothing
+                    return
+                }
+                let alert = NSAlert()
+                alert.messageText = "Notifications not supported"
+                alert.informativeText = "iCloud Control does not support notifications on macOS 10.13."
+                alert.addButton(withTitle: "Dismiss")
+                alert.alertStyle = .informational
+                alert.runModal()
+                defaults.set(true, forKey: "alertDisplayed")
             }
         }
-    }
-
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         requestAuthorisation()
-    }
-    
+        }
+
     @IBAction func openLatestRelease(_ sender: Any) {
         if let url = URL(string: "https://github.com/Njmcq/iCloud-Control/releases/latest") {
+            NSWorkspace.shared.open(url)
+        }
+    }
+    
+    @IBAction func helpMenuItem(_ sender: NSMenuItem) {
+        if let url = URL(string: "https://github.com/Njmcq/iCloud-Control#installation--help") {
             NSWorkspace.shared.open(url)
         }
     }
