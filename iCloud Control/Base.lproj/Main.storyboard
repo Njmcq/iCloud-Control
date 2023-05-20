@@ -147,7 +147,7 @@
                                 </textFieldCell>
                             </textField>
                             <button identifier="openButton" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Sq-N1Q">
-                                <rect key="frame" x="166" y="48" width="169" height="32"/>
+                                <rect key="frame" x="165" y="48" width="170" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open System Settings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fZL-4i-FEA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>

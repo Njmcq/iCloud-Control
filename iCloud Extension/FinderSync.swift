@@ -39,7 +39,7 @@ class FinderSync: FIFinderSync {
                 let request = UNNotificationRequest(identifier: "funcError", content: content, trigger: trigger)
                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         } else {
-            print("iCloud Control does not support notifications on macOS 10.13.")
+            print("An error has occurred. The selected action has not been completed.")
         }
     }
     
@@ -210,8 +210,6 @@ class FinderSync: FIFinderSync {
             }
         }
     }
-
-
 
 
     @IBAction func openiCloudWebsite(_ sender: AnyObject?) {

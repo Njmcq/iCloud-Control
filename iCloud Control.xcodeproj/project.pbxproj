@@ -415,7 +415,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "2023.04.24-stable";
+				CURRENT_PROJECT_VERSION = "2023.05.20-stable";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
@@ -427,7 +427,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickmcquade.iCloudControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,7 +445,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "2023.04.24-stable";
+				CURRENT_PROJECT_VERSION = "2023.05.20-stable";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
@@ -457,7 +457,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickmcquade.iCloudControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -473,7 +473,7 @@
 				CODE_SIGN_ENTITLEMENTS = "iCloud Extension/iCloud Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "2023.04.24-stable";
+				CURRENT_PROJECT_VERSION = "2023.05.20-stable";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
 				INFOPLIST_FILE = "iCloud Extension/Info.plist";
@@ -483,7 +483,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickmcquade.iCloudControl.iCloudExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -499,7 +499,7 @@
 				CODE_SIGN_ENTITLEMENTS = "iCloud Extension/iCloud Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "2023.04.24-stable";
+				CURRENT_PROJECT_VERSION = "2023.05.20-stable";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
 				INFOPLIST_FILE = "iCloud Extension/Info.plist";
@@ -509,7 +509,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickmcquade.iCloudControl.iCloudExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
