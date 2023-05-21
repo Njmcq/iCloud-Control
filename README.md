@@ -54,8 +54,8 @@ The following actions are provided through a toolbar item in the Finder:
 - **Remove selected item locally**: the selected item(s) will be removed from your device, while remaining in iCloud.
 - **Download selected item**: download previously removed files from iCloud.
 - **Publish public link**: places a link to the selected file in your clipboard.
-- **Exclude selected item from iCloud**: using the .nosync file extension, files in an iCloud-based directory will not sync with the service.
-- **Restore selected items**: removes the .nosync extension from files, reverting them to their original file type.
+- **Exclude selected items (add .nosync)**: using the .nosync file extension, files in an iCloud-based directory will not sync with the service.
+- **Restore selected items (remove .nosync)**: removes the .nosync extension from files, reverting them to their original file type.
 - **Manage iCloud on the web**: includes quick links to both iCloud.com, appleid.apple.com, and privacy.apple.com.
 
 ## Compatibility
