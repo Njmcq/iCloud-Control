@@ -188,7 +188,7 @@
                                     <constraint firstAttribute="height" constant="60" id="7zR-lw-3ii"/>
                                     <constraint firstAttribute="width" constant="60" id="HHg-nB-SL0"/>
                                 </constraints>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="iCloud-Control-1.4.1-Icon-1024" id="iq1-7i-jFm"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="iCloud-Control-1.8.0-Icon-1024" id="iq1-7i-jFm"/>
                             </imageView>
                         </subviews>
                         <constraints>
@@ -223,6 +223,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iCloud-Control-1.4.1-Icon-1024" width="1024" height="1024"/>
+        <image name="iCloud-Control-1.8.0-Icon-1024" width="1024" height="1024"/>
     </resources>
 </document>

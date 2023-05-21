@@ -71,12 +71,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
                 alert.alertStyle = .informational
                 alert.runModal()
                 defaults.set(true, forKey: "alertDisplayed")
-            }
         }
+    }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         requestAuthorisation()
-        }
+    }
 
     @IBAction func openLatestRelease(_ sender: Any) {
         if let url = URL(string: "https://github.com/Njmcq/iCloud-Control/releases/latest") {
@@ -100,13 +100,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             if error != nil {
                 print("Error: \(error!.localizedDescription)")
                 return
-            }
+    }
 
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode) else {
                 print("Error: Invalid HTTP response status code")
                 return
-            }
+    }
 
             if let data = data,
                let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
@@ -123,9 +123,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
                 } else {
                     // No updates are available
                     self.showLatestVersionInstalledAlert()
-                }
             }
         }
+    }
 
         task.resume()
     }

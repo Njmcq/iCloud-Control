@@ -63,9 +63,8 @@ class FinderSync: FIFinderSync {
         menu.addItem(withTitle: "Remove selected items locally", action: #selector(removeLocal(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Download selected items", action: #selector(downloadItem(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Publish public link", action: #selector(publish(_:)), keyEquivalent: "")
-        menu.addItem(withTitle: "Exclude selected items from iCloud", action: #selector(excludeItem(_:)), keyEquivalent: "")
-        menu.addItem(withTitle: "Restore selected items", action: #selector(restoreItem(_:)), keyEquivalent: "")
-        menu.addItem(withTitle: "Force sync", action: #selector(forceSync(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Exclude selected items (add .nosync)", action: #selector(excludeItem(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Restore selected items (remove .nosync)", action: #selector(restoreItem(_:)), keyEquivalent: "")
         
         let onlineToolsMenuItem = NSMenuItem(title: "Manage iCloud on the web", action: nil, keyEquivalent: "")
         let onlineMenu = NSMenu(title: "Manage iCloud on the web")
@@ -165,9 +164,9 @@ class FinderSync: FIFinderSync {
                 } catch {
                     print("Exclusion of \(target) failed")
                     functionError()
-                }
             }
         }
+    }
     
     // Restore items function (undo .nosync)
     @IBAction func restoreItem(_ sender: AnyObject?) {
@@ -187,30 +186,6 @@ class FinderSync: FIFinderSync {
             }
         }
     }
-    
-    @IBAction func forceSync(_ sender: AnyObject?) {
-        print("'forceSync' requested")
-        
-        for target in currentTargets {
-            let directoryURL = target.deletingLastPathComponent()
-            do {
-                let tempFileURL = directoryURL.appendingPathComponent(".temp.txt")
-                try "".write(to: tempFileURL, atomically: true, encoding: .utf8)
-                print("Temporary file created successfully at \(tempFileURL)")
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                    do {
-                        try FileManager.default.removeItem(at: tempFileURL)
-                        print("Temporary file removed successfully")
-                    } catch {
-                        print("Error removing temporary file: \(error)")
-                    }
-                }
-            } catch {
-                print("Error creating temporary file: \(error)")
-            }
-        }
-    }
-
 
     @IBAction func openiCloudWebsite(_ sender: AnyObject?) {
         if let url = URL(string: "https://www.icloud.com") {

@@ -42,11 +42,11 @@ class ViewController: NSViewController, NSWindowDelegate {
         if version.majorVersion >= 13 {
             explainLabel.stringValue = "To get started, enable the iCloud Control Finder extension in System Settings. You can then close this app and get going!"
             openButton.title = "Open System Settings"
-            print("'Explain Label' and 'Open Button' successfully updated with System Settings.")
+            print("'Explain Label' and 'Open Button' successfully updated with the System Settings text.")
         } else {
             explainLabel.stringValue = "To get started, enable the iCloud Control Finder extension in System Preferences. You can then close this app and get going!"
             openButton.title = "Open System Preferences"
-            print("'Explain Label' and 'Open Button' successfully updated with System Preferences.")
+            print("'Explain Label' and 'Open Button' successfully updated with the System Preferences text.")
         }
     }
     
@@ -66,13 +66,13 @@ class ViewController: NSViewController, NSWindowDelegate {
         
         if hour >= 0 && hour < 12 {
             greetingLabel.stringValue = "Good morning!"
-            print("'Greeting Label' successfully updated for morning.")
+            print("'Greeting Label' successfully updated for the morning.")
         } else if hour >= 12 && hour < 18 {
             greetingLabel.stringValue = "Good afternoon!"
-            print("'Greeting Label' successfully updated for afternoon.")
+            print("'Greeting Label' successfully updated for the afternoon.")
         } else {
             greetingLabel.stringValue = "Good evening!"
-            print("'Greeting Label' successfully updated for evening.")
+            print("'Greeting Label' successfully updated for the evening.")
         }
     }
 }
