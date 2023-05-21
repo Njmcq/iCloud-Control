@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="250" height="250" src="Docs/iCloud-Control-1.4.0.1-Icon-1024.png">
+  <img width="250" height="250" src="Docs/iCloud-Control-1.8.0-Icon-1024.png">
 </p>
 
 ---
