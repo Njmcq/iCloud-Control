@@ -70,6 +70,7 @@ class FinderSync: FIFinderSync {
         let onlineMenu = NSMenu(title: "Manage iCloud on the web")
         onlineMenu.addItem(withTitle: "iCloud.com", action: #selector(openiCloudWebsite(_:)), keyEquivalent: "")
         onlineMenu.addItem(withTitle: "Apple ID", action: #selector(openAppleIDWebsite(_:)), keyEquivalent: "")
+        onlineMenu.addItem(withTitle: "Data & privacy", action: #selector(openDataAndPrivacy(_:)), keyEquivalent: "")
         onlineToolsMenuItem.submenu = onlineMenu
         menu.addItem(onlineToolsMenuItem)
 
@@ -195,6 +196,12 @@ class FinderSync: FIFinderSync {
     
     @IBAction func openAppleIDWebsite(_ sender: AnyObject?) {
         if let url = URL(string: "https://appleid.apple.com") {
+            NSWorkspace.shared.open(url)
+        }
+    }
+    
+    @IBAction func openDataAndPrivacy(_ sender: AnyObject?) {
+        if let url = URL(string: "https://privacy.apple.com") {
             NSWorkspace.shared.open(url)
         }
     }

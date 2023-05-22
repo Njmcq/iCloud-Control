@@ -191,13 +191,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeamName = "Robbert Brandsma";
 						LastSwiftMigration = 1320;
-						ProvisioningStyle = Automatic;
 					};
 					F21B54F71D2568E000C4B4D9 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeamName = "Robbert Brandsma";
 						LastSwiftMigration = 1320;
-						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -413,11 +411,13 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "iCloud Control/iCloud Control.entitlements";
 				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "2023.05.20-stable";
+				CURRENT_PROJECT_VERSION = "2023.05.22-stable";
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 3D5FQASR4R;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 3D5FQASR4R;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
 				INFOPLIST_FILE = "iCloud Control/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "iCloud Control";
@@ -431,6 +431,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickmcquade.iCloudControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -443,11 +444,13 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "iCloud Control/iCloud Control.entitlements";
 				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "2023.05.20-stable";
+				CURRENT_PROJECT_VERSION = "2023.05.22-stable";
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 3D5FQASR4R;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 3D5FQASR4R;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
 				INFOPLIST_FILE = "iCloud Control/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "iCloud Control";
@@ -461,6 +464,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickmcquade.iCloudControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -472,10 +476,13 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "iCloud Extension/iCloud Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "2023.05.20-stable";
+				CURRENT_PROJECT_VERSION = "2023.05.22-stable";
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 3D5FQASR4R;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 3D5FQASR4R;
 				INFOPLIST_FILE = "iCloud Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,6 +493,7 @@
 				MARKETING_VERSION = 1.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickmcquade.iCloudControl.iCloudExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -498,10 +506,13 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "iCloud Extension/iCloud Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "2023.05.20-stable";
+				CURRENT_PROJECT_VERSION = "2023.05.22-stable";
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 3D5FQASR4R;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 3D5FQASR4R;
 				INFOPLIST_FILE = "iCloud Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -512,6 +523,7 @@
 				MARKETING_VERSION = 1.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickmcquade.iCloudControl.iCloudExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
