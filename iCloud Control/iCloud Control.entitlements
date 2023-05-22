@@ -6,5 +6,9 @@
 	<true/>
 	<key>com.apple.security.get-task-allow</key>
 	<integer>1</integer>
+	<key>com.apple.security.network.client</key>
+	<true/>
+	<key>com.apple.security.network.server</key>
+	<true/>
 </dict>
 </plist>
