@@ -1,61 +1,61 @@
 {
   "images" : [
     {
-      "filename" : "iCloud-Control-SwiftUI-Testing-Icon-16.png",
+      "filename" : "iCloud-Control-Extension-1.8.0-Icon-16.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "iCloud-Control-SwiftUI-Testing-Icon-32.png",
+      "filename" : "iCloud-Control-Extension-1.8.0-Icon-32 1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
-      "filename" : "iCloud-Control-SwiftUI-Testing-Icon-32 1.png",
+      "filename" : "iCloud-Control-Extension-1.8.0-Icon-32.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "iCloud-Control-SwiftUI-Testing-Icon-64.png",
+      "filename" : "iCloud-Control-Extension-1.8.0-Icon-64.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
-      "filename" : "iCloud-Control-SwiftUI-Testing-Icon-128.png",
+      "filename" : "iCloud-Control-Extension-1.8.0-Icon-128.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
-      "filename" : "iCloud-Control-SwiftUI-Testing-Icon-256.png",
+      "filename" : "iCloud-Control-Extension-1.8.0-Icon-256 1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
-      "filename" : "iCloud-Control-SwiftUI-Testing-Icon-256 1.png",
+      "filename" : "iCloud-Control-Extension-1.8.0-Icon-256.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "iCloud-Control-SwiftUI-Testing-Icon-512.png",
+      "filename" : "iCloud-Control-Extension-1.8.0-Icon-512 1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "iCloud-Control-SwiftUI-Testing-Icon-512 1.png",
+      "filename" : "iCloud-Control-Extension-1.8.0-Icon-512.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "iCloud-Control-SwiftUI-Testing-Icon-1024.png",
+      "filename" : "iCloud-Control-Extension-1.8.0-Icon-1024.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"

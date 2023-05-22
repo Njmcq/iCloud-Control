@@ -32,11 +32,7 @@ class ViewController: NSViewController, NSWindowDelegate {
         view.window?.styleMask.insert(.fullSizeContentView)
         
         // Disable the Maximise/Zoom button in the window
-        if let window = view.window {
-            var styleMask = window.styleMask
-            styleMask.remove(.resizable)
-            window.styleMask = styleMask
-        }
+        view.window?.styleMask.remove(.resizable)
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateGreetingLabel), name: NSApplication.willBecomeActiveNotification, object: nil)
             
@@ -46,16 +42,22 @@ class ViewController: NSViewController, NSWindowDelegate {
         if version.majorVersion >= 13 {
             explainLabel.stringValue = "To get started, enable the iCloud Control Finder extension in System Settings. You can then close this app and get going!"
             openButton.title = "Open System Settings"
-            print("'Explain Label' and 'Open Button' successfully updated with System Settings.")
+            print("'Explain Label' and 'Open Button' successfully updated with the System Settings text.")
         } else {
             explainLabel.stringValue = "To get started, enable the iCloud Control Finder extension in System Preferences. You can then close this app and get going!"
             openButton.title = "Open System Preferences"
-            print("'Explain Label' and 'Open Button' successfully updated with System Preferences.")
+            print("'Explain Label' and 'Open Button' successfully updated with the System Preferences text.")
         }
     }
     
     @IBAction func openSystemSettings(_ sender: AnyObject) {
         NSWorkspace.shared.open(URL(fileURLWithPath:("/System/Library/PreferencePanes/Extensions.prefPane")))
+    }
+    
+    @IBAction func helpButton(_ sender: NSButton) {
+        if let url = URL(string: "https://github.com/Njmcq/iCloud-Control#installation--help") {
+            NSWorkspace.shared.open(url)
+        }
     }
     
     // MARK: - Adjust greeting label based on time of day
@@ -64,13 +66,13 @@ class ViewController: NSViewController, NSWindowDelegate {
         
         if hour >= 0 && hour < 12 {
             greetingLabel.stringValue = "Good morning!"
-            print("'Greeting Label' successfully updated for morning.")
+            print("'Greeting Label' successfully updated for the morning.")
         } else if hour >= 12 && hour < 18 {
             greetingLabel.stringValue = "Good afternoon!"
-            print("'Greeting Label' successfully updated for afternoon.")
+            print("'Greeting Label' successfully updated for the afternoon.")
         } else {
             greetingLabel.stringValue = "Good evening!"
-            print("'Greeting Label' successfully updated for evening.")
+            print("'Greeting Label' successfully updated for the evening.")
         }
     }
 }
