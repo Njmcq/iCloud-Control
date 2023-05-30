@@ -6,7 +6,7 @@
 
 ### Adds a menu to the Finder that allows control over files stored in iCloud Drive, providing user-controlled selective synchronisation.
 
-![](Docs/1.7.0-Extension-Menu.png)
+![](Docs/1.8.1-Extension-Menu.png)
 
 # :warning: Future iCloud Control support
 Effective from March 10, 2023, my availability to provide support for iCloud Control may be limited. While I plan to continue working on the project and implementing additional features and improvements, my ability to respond promptly may be impacted.
