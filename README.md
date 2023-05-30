@@ -6,7 +6,7 @@
 
 ### Adds a menu to the Finder that allows control over files stored in iCloud Drive, providing user-controlled selective synchronisation.
 
-![](Docs/1.7.0-Extension-Menu.png)
+![](Docs/1.8.1-Extension-Menu.png)
 
 # :warning: Future iCloud Control support
 Effective from March 10, 2023, my availability to provide support for iCloud Control may be limited. While I plan to continue working on the project and implementing additional features and improvements, my ability to respond promptly may be impacted.
@@ -46,6 +46,9 @@ Simply remove **.nosync** from the filename. Make sure to retain the original fi
 6. Once you have done this, you can safely close System Settings/Preferences and the iCloud Control app.
 7. Open a Finder window. In the Toolbar at the top, you may see the iCloud Control icon appear. If you don't, control- or right-click the Toolbar and select "Customise Toolbar". A new window will open with a selection of Toolbar extensions. Drag iCloud Control into the Toolbar (the other extensions will be bouncing around). Some may easily confuse the default Toolbar preset at the bottom of the window for the place to drag the extension, so ensure that it's the one which has bouncing icons.
 8. Select "Done".
+
+### Having issues with the Toolbar extension?
+In some circumstances, particularly if you are running macOS 10.13 or have multiple versions of iCloud Control stored on your Mac, you may find that the Toolbar extension and its menus do not display correctly, or will be missing entirely. To resolve the issue, open the Apple menu and log out. You can then log back in and try again. Alternatively, restarting the Mac is basically a guaranteed solution.
 
 ## Usage
 
