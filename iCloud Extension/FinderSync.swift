@@ -62,7 +62,7 @@ class FinderSync: FIFinderSync {
         let menu = NSMenu(title: "")
         menu.addItem(withTitle: "Remove selected items locally", action: #selector(removeLocal(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Download selected items", action: #selector(downloadItem(_:)), keyEquivalent: "")
-        menu.addItem(withTitle: "Publish public link", action: #selector(publish(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Create public link", action: #selector(createPublicLink(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Exclude selected items (add .nosync)", action: #selector(excludeItem(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Restore selected items (remove .nosync)", action: #selector(restoreItem(_:)), keyEquivalent: "")
         
@@ -109,19 +109,19 @@ class FinderSync: FIFinderSync {
         }
     }
     
-    // Publish items function
-    @IBAction func publish(_ sender: AnyObject?) {
+    // Create public link function
+    @IBAction func createPublicLink(_ sender: AnyObject?) {
         var urls = [URL]()
-        print("'publish' requested")
+        print("'createPublicLink' requested")
         
         for target in currentTargets {
                 do {
-                    print("Publishing of \(target) requested")
+                    print("Creation of link from \(target) requested")
                     let url = try fm.url(forPublishingUbiquitousItemAt: target, expiration: nil)
                     urls.append(url)
-                    print("Publishing of \(target) complete")
+                    print("Creation of link from \(target) complete")
                 } catch {
-                    print("Publishing of \(target) failed")
+                    print("Creation of link from \(target) failed")
                     functionError()
             }
 
