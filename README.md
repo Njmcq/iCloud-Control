@@ -8,13 +8,13 @@
 
 ![](Docs/1.8.1-Extension-Menu.png)
 
-# :warning: Future iCloud Control support
-Effective from March 10, 2023, my availability to provide support for iCloud Control may be limited. While I plan to continue working on the project and implementing additional features and improvements, my ability to respond promptly may be impacted.
+# :warning: iCloud Control on macOS Sonoma
+With the release of macOS Sonoma, iCloud Control's features have become redundant. Now, you can remove partially-downloaded folders by holding the Option key upon Control-clicking the folder, something which wasn't possible in Monterey and Ventura. A small update (1.8.2) will be released in due course to make some minor changes, but this will likely be the final update.
 
-I should note that a significant portion of iCloud Control's functionality has been integrated natively into macOS. Therefore, for most tasks, I recommend utilising the built-in macOS features in Finder. Please refer to the instructions below to learn how to leverage these native functionalities:
+Please refer to the instructions below to learn how to leverage the native Finder functionalities for iCloud file management:
 
 ### Remove selected items locally:
-This can be accomplished by selecting files in the Finder, control- or right-clicking the selection, and selecting **Remove Download**. In a selection of files with both local and non-local files, you can hold the **Option** key in the menu to bring up the same action.
+This can be accomplished by selecting files/folders in the Finder, Control- or right-clicking the selection, and selecting **Remove Download**. In a selection of files/folders with both local and cloud contents, you can hold the Option key in the menu to bring up the same action.
 
 ### Download selected items:
 This is available through the same Control- or right-click method as the **Remove selected item locally** option.
@@ -54,8 +54,8 @@ In some circumstances, particularly if you are running macOS 10.13 or have multi
 
 The following actions are provided through a toolbar item in the Finder:
 
-- **Remove selected item locally**: the selected item(s) will be removed from your device, while remaining in iCloud.
-- **Download selected item**: download previously removed files from iCloud.
+- **Remove selected items locally**: the selected item(s) will be removed from your device, while remaining in iCloud.
+- **Download selected items**: download previously removed files from iCloud.
 - **Publish public link**: places a link to the selected file in your clipboard.
 - **Exclude selected items**: using the .nosync file extension, files in an iCloud-based directory will not sync with the service.
 - **Restore selected items**: removes the .nosync extension from files, reverting them to their original file type.
