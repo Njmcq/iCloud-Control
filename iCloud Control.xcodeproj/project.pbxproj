@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -413,7 +413,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "2023.06.04-stable";
+				CURRENT_PROJECT_VERSION = "2023.10.27-stable";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -445,7 +445,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "2023.06.04-stable";
+				CURRENT_PROJECT_VERSION = "2023.10.27-stable";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3D5FQASR4R;
 				ENABLE_HARDENED_RUNTIME = YES;

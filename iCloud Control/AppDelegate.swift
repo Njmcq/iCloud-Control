@@ -166,6 +166,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         }
     }
     
+    // This function is specifically for future development/testing
     func showTestingVersionAlert(currentVersion: String) {
         DispatchQueue.main.async {
             let alert = NSAlert()

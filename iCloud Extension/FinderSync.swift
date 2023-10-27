@@ -62,10 +62,9 @@ class FinderSync: FIFinderSync {
         let menu = NSMenu(title: "")
         menu.addItem(withTitle: "Remove selected items locally", action: #selector(removeLocal(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Download selected items", action: #selector(downloadItem(_:)), keyEquivalent: "")
-        menu.addItem(withTitle: "Create public link", action: #selector(createPublicLink(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Copy public link", action: #selector(copyPublicLink(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Exclude selected items (add .nosync)", action: #selector(excludeItem(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Restore selected items (remove .nosync)", action: #selector(restoreItem(_:)), keyEquivalent: "")
-        
         let onlineToolsMenuItem = NSMenuItem(title: "Manage iCloud on the web", action: nil, keyEquivalent: "")
         let onlineMenu = NSMenu(title: "Manage iCloud on the web")
         onlineMenu.addItem(withTitle: "iCloud.com", action: #selector(openiCloudWebsite(_:)), keyEquivalent: "")
@@ -109,19 +108,19 @@ class FinderSync: FIFinderSync {
         }
     }
     
-    // Create public link function
-    @IBAction func createPublicLink(_ sender: AnyObject?) {
+    // Copy public link function
+    @IBAction func copyPublicLink(_ sender: AnyObject?) {
         var urls = [URL]()
-        print("'createPublicLink' requested")
+        print("'copyPublicLink' requested")
         
         for target in currentTargets {
                 do {
-                    print("Creation of link from \(target) requested")
+                    print("Copy of link from \(target) requested")
                     let url = try fm.url(forPublishingUbiquitousItemAt: target, expiration: nil)
                     urls.append(url)
-                    print("Creation of link from \(target) complete")
+                    print("Copy of link from \(target) complete")
                 } catch {
-                    print("Creation of link from \(target) failed")
+                    print("Copy of link from \(target) failed")
                     functionError()
             }
 
