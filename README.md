@@ -60,7 +60,7 @@ Go to the Finder item in the menu bar, and select Settings (or Preferences on ol
 Simply remove **.nosync** from the filename. Make sure to retain the original file type extension.
 
 ## Compatibility
-iCloud Control 1.3.0 and above is compatible with macOS High Sierra (10.13) and above, and runs natively on both Intel and Apple silicon Macs. However, complete functionality is not guaranteed on some older versions of macOS, as illustrated below:
+iCloud Control is compatible with macOS High Sierra (10.13) and above, and runs natively on both Intel and Apple silicon Macs. However, complete functionality is not guaranteed on some older versions of macOS, as illustrated below:
 
 **macOS High Sierra (10.13) – macOS Catalina (10.15):** may have minor issues, complete functionality is not guaranteed.
 
