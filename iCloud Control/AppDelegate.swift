@@ -9,6 +9,7 @@
 
 import Cocoa
 import UserNotifications
+import Foundation
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
