@@ -42,7 +42,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
                             let alert = NSAlert()
                             alert.messageText = "Notifications Required"
                             alert.informativeText = "iCloud Control requires notification permissions in order to deliver alerts when an action has been completed, or has failed."
-                            alert.addButton(withTitle: "Open Notifications")
+                            alert.addButton(withTitle: "Open Notifications Settings")
                             alert.addButton(withTitle: "Dismiss")
                             alert.alertStyle = .informational
                             let response = alert.runModal()
@@ -139,22 +139,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             alert.messageText = "A new update is available"
             alert.informativeText = "Version \(version) is now available. Do you want to download it? \n(This will open GitHub in your browser)"
             alert.addButton(withTitle: "Download")
-            alert.addButton(withTitle: "View Release Notes")
             alert.addButton(withTitle: "Cancel")
             
             let modalResult = alert.runModal()
             if modalResult == NSApplication.ModalResponse.alertFirstButtonReturn {
                 // Download button pressed
                 NSWorkspace.shared.open(downloadURL)
-            } else if modalResult == NSApplication.ModalResponse.alertSecondButtonReturn {
-                // View Release Notes button pressed
-                // Implement the action you want to perform here
-                // For example, open a window or display the release notes in a text view
-                NSWorkspace.shared.open(downloadURL)
             }
         }
     }
-
 
     func showLatestVersionInstalledAlert() {
         DispatchQueue.main.async {
@@ -174,8 +167,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             alert.informativeText = "You are running version \(currentVersion), which is higher than the latest release."
             alert.addButton(withTitle: "View Latest Release")
             alert.addButton(withTitle: "OK")
+           
             let modalResult = alert.runModal()
-            
             if modalResult == NSApplication.ModalResponse.alertFirstButtonReturn {
                 // View Latest Release button pressed
                 let owner = "Njmcq"

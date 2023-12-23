@@ -66,13 +66,13 @@ class ViewController: NSViewController, NSWindowDelegate {
         
         if hour >= 0 && hour < 12 {
             greetingLabel.stringValue = "Good morning!"
-            print("'Greeting Label' successfully updated for the morning.")
+            print("'Greeting Label' successfully updated with \"Good morning!\"")
         } else if hour >= 12 && hour < 18 {
             greetingLabel.stringValue = "Good afternoon!"
-            print("'Greeting Label' successfully updated for the afternoon.")
+            print("'Greeting Label' successfully updated with \"Good afternoon!\"")
         } else {
             greetingLabel.stringValue = "Good evening!"
-            print("'Greeting Label' successfully updated for the evening.")
+            print("'Greeting Label' successfully updated with \"Good evening!\"")
         }
     }
 }
