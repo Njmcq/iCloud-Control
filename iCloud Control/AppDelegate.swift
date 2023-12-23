@@ -9,6 +9,7 @@
 
 import Cocoa
 import UserNotifications
+import Foundation
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -42,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
                             let alert = NSAlert()
                             alert.messageText = "Notifications Required"
                             alert.informativeText = "iCloud Control requires notification permissions in order to deliver alerts when an action has been completed, or has failed."
-                            alert.addButton(withTitle: "Open Notifications")
+                            alert.addButton(withTitle: "Open Notifications Settings")
                             alert.addButton(withTitle: "Dismiss")
                             alert.alertStyle = .informational
                             let response = alert.runModal()
@@ -97,16 +98,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         let url = URL(string: "https://api.github.com/repos/\(owner)/\(repo)/releases/latest")
 
         let task = URLSession.shared.dataTask(with: url!) { data, response, error in
-            if error != nil {
-                print("Error: \(error!.localizedDescription)")
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
                 return
-    }
+            }
 
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode) else {
                 print("Error: Invalid HTTP response status code")
                 return
-    }
+            }
 
             if let data = data,
                let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
@@ -114,18 +115,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
                let downloadURLString = json["html_url"] as? String {
                 let downloadURL = URL(string: downloadURLString)!
 
-                let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
-
-                if currentVersion.compare(tagName, options: .numeric) == .orderedAscending {
-                    // A new update is available
-                    let releaseNotes = json["body"] as? String ?? ""
-                    self.showAlertWithUpdate(version: tagName, releaseNotes: releaseNotes, downloadURL: downloadURL)
-                } else {
-                    // No updates are available
-                    self.showLatestVersionInstalledAlert()
+                if let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+                    if currentVersion.compare(tagName, options: .numeric) == .orderedDescending {
+                        // Current version is higher than the latest release
+                        self.showTestingVersionAlert(currentVersion: currentVersion)
+                    } else if currentVersion.compare(tagName, options: .numeric) == .orderedAscending {
+                        // A new update is available
+                        let releaseNotes = json["body"] as? String ?? ""
+                        self.showAlertWithUpdate(version: tagName, releaseNotes: releaseNotes, downloadURL: downloadURL)
+                    } else {
+                        // Current version is equal to the latest release
+                        self.showLatestVersionInstalledAlert()
+                    }
+                }
             }
         }
-    }
 
         task.resume()
     }
@@ -137,9 +141,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             alert.informativeText = "Version \(version) is now available. Do you want to download it? \n(This will open GitHub in your browser)"
             alert.addButton(withTitle: "Download")
             alert.addButton(withTitle: "Cancel")
-
+            
             let modalResult = alert.runModal()
             if modalResult == NSApplication.ModalResponse.alertFirstButtonReturn {
+                // Download button pressed
                 NSWorkspace.shared.open(downloadURL)
             }
         }
@@ -152,6 +157,49 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             alert.informativeText = "You are already running the latest version of the app."
             alert.addButton(withTitle: "OK")
             alert.runModal()
+        }
+    }
+    
+    // This function is specifically for future development/testing
+    func showTestingVersionAlert(currentVersion: String) {
+        DispatchQueue.main.async {
+            let alert = NSAlert()
+            alert.messageText = "You have a higher version installed"
+            alert.informativeText = "You are running version \(currentVersion), which is higher than the latest release."
+            alert.addButton(withTitle: "View Latest Release")
+            alert.addButton(withTitle: "OK")
+           
+            let modalResult = alert.runModal()
+            if modalResult == NSApplication.ModalResponse.alertFirstButtonReturn {
+                // View Latest Release button pressed
+                let owner = "Njmcq"
+                let repo = "iCloud-Control"
+                let url = URL(string: "https://api.github.com/repos/\(owner)/\(repo)/releases/latest")
+                
+                let task = URLSession.shared.dataTask(with: url!) { data, response, error in
+                    if error != nil {
+                        print("Error: \(error!.localizedDescription)")
+                        return
+                    }
+                    
+                    guard let httpResponse = response as? HTTPURLResponse,
+                          (200...299).contains(httpResponse.statusCode) else {
+                        print("Error: Invalid HTTP response status code")
+                        return
+                    }
+                    
+                    if let data = data,
+                       let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                       let tagName = json["tag_name"] as? String,
+                       let downloadURLString = json["html_url"] as? String {
+                        let downloadURL = URL(string: downloadURLString)!
+                        
+                        self.showAlertWithUpdate(version: tagName, releaseNotes: "", downloadURL: downloadURL)
+                    }
+                }
+                
+                task.resume()
+            }
         }
     }
 }
