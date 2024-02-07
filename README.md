@@ -7,7 +7,7 @@
 ### iCloud Control adds a menu to the Finder that allows user-controlled selective synchronisation for files stored in iCloud Drive
 
 > [!IMPORTANT]
-> As of February 2024, iCloud Control has been officially discontinued. I appreciate all the support and feedback from users since I took on the project. While I won't be providing further updates or support for the application, existing users can still utilise the latest version (1.8.1). I recommend referring to the native Finder features for iCloud synchronisation as per the [iCloud Control on macOS Sonoma](https://github.com/Njmcq/iCloud-Control?tab=readme-ov-file#icloud-control-on-macos-sonoma) section. Thank you!
+> As of February 2024, iCloud Control has been officially discontinued. I appreciate all the support and feedback from users since I took on the project. While I won't be providing further updates or support for the application, users can still utilise the latest version (1.8.1). I recommend referring to the native Finder features for iCloud synchronisation as per the [iCloud Control on macOS Sonoma](https://github.com/Njmcq/iCloud-Control?tab=readme-ov-file#icloud-control-on-macos-sonoma) section. Thank you!
 
 ## Installation & Help
 
