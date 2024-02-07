@@ -6,12 +6,15 @@
 
 ### iCloud Control adds a menu to the Finder that allows user-controlled selective synchronisation for files stored in iCloud Drive
 
+> [!IMPORTANT]
+> As of February 2024, iCloud Control has been officially discontinued. I appreciate all the support and feedback from users since I took on the project. While I won't be providing further updates or support for the application, existing users can still utilise the latest version (1.8.1). I recommend referring to the native Finder features for iCloud synchronisation as per the [iCloud Control on macOS Sonoma](https://github.com/Njmcq/iCloud-Control?tab=readme-ov-file#icloud-control-on-macos-sonoma) section. Thank you!
+
 ## Installation & Help
 
 1. Download the latest version of iCloud Control from the [GitHub releases page](https://github.com/Njmcq/iCloud-Control/releases/latest).
 2. Move iCloud Control from your Downloads to the Applications folder.
 3. When iCloud Control first opens, you may be prompted to enable notifications. It is highly recommended to enable notifications as they deliver important alerts when using the **Publish public link** feature, and if an error occurs.
-> **Note**
+> [!NOTE]
 > Notifications are currently not available on macOS High Sierra (10.13).
 4. iCloud Control will open with a window welcoming you! As per the instructions in that window, you need to select Open System Settings (or System Preferences on older versions of macOS) to bring up the Extensions panel.
 5. In the panel, select "Added Extensions" and enable iCloud Control's Finder extension (you may have to scroll down if multiple other apps appear here).
